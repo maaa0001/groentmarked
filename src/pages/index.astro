@@ -1,15 +1,49 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import Navbar from "../components/Navbar.astro";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <article>
+    <h1>Index overskrift</h1>
+    <Button>Klik!</Button>
+    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+    <Image src={thumbsup} alt="" />
+  </article>
+
+  <svg
+    width="1103"
+    height="2045"
+    viewBox="0 0 1103 2045"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="Path"
+  >
+    <path
+      d="M447 49.4993C447 49.4993 1075.03 -91.4542 1095 137.5C1123 458.5 23.5269 181.332 25.0003 638C26.4523 1088 1055.71 788.32 1010 1236C968.538 1642.03 -158.23 1413.05 25.5016 1777.5C126.887 1978.6 484.999 2038 484.999 2038"
+      stroke="#10200A"
+      stroke-width="13"
+      stroke-linecap="round"
+      stroke-dasharray="63 63"></path>
+  </svg>
+
+  <script src="/src/Javascript/Scroll.js"></script>
 </MainLayout>
+
+<style>
+  body {
+    min-height: 200vh;
+  }
+  svg.Path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 200vh;
+    z-index: 1;
+  }
+</style>
