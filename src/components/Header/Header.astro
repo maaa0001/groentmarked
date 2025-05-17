@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import Logo from "src/assets/images/GM_logo.svg";
+import { LanguageSelector } from "./language-selector";
+import { Toggle } from "./toggle-button";
+---
+
+<div class="fixed w-full flex z-10 items-center py-4 px-8 bg-ForestFresh-opacity
+ backdrop-blur-xs">
+  <a href="/" class="text-gray-700 text-sm mr-4">
+    <Image src={Logo} alt="Logo" />
+  </a>
+  <Toggle client:load />
+
+  <div class="ml-auto flex items-center">
+    <a href="/#markederne" class="text-white text-sm mr-4">Markederne</a>
+    <a href="arrangementer" class="text-white text-sm mr-4">Arrangementer</a>
+    <a href="kalender" class="text-white text-sm mr-4">Kalender</a>
+    <a href="om-os" class="text-white text-sm mr-4">
+      <div class="relative mr-4">
+        <button class="bg-transparent py-2 px-3 text-sm flex items-center">
+          Om os
+          <svg
+            class="ml-1 w-2.5 h-1.5"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L5 5L9 1"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        {/* Dropdown indhold kan tilføjes her */}
+      </div>
+    </a>
+    <a href="stoet" class="text-gray-700 text-sm mr-4">
+      <button
+        class="bg-[#D26B74] hover:bg-[#E4A6AB] text-white py-3 px-5 rounded-full text-sm cursor-pointer"
+        >Støt Grønt Marked</button
+      >
+    </a>
+    <div class="relative">
+      <LanguageSelector client:load />
+    </div>
+  </div>
+</div>

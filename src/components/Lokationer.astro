@@ -1,0 +1,47 @@
+---
+import GridCard from "@/components/cards/GridCard1_1.astro";
+import PathDashed from "../components/animationer/PathDashed.astro";
+---
+
+<img class="ml-auto mb-[-1px]" src="src/assets/images/vector/HjørneGold.svg" alt="Vector Hjørne" />
+<section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
+  <h2>Lokationer for Grønne markeder</h2>
+  <p class="mb-52 w-1/2">
+    Vi holder Grønne markeder hver søndag fra kl. 10.00 til 15.00 fra maj til december. Herunder kan
+    du finde de fire lokationer for markederne, og nederst komme dirkete til vores markedskalender.
+  </p>
+  <div>
+    <GridCard
+      image="forside/3.webp"
+      title="Indre by"
+      subtitle="Sted: Gammelholm - Havnegade 54"
+      text1="Denne beskedne lille plads for enden af Nyhavn danner rammen for månedens første madmarked i år. Den er nemt tilgængelig med både bus og metro til Kongens Nytorv – og derfra er der kun en lille gåtur."
+      textB="Hver første søndag i måneden!"
+      extra="no"
+    />
+    <GridCard
+      image="forside/4.webp"
+      title="Vesterbro"
+      subtitle="Sted: Litauens Plads, København V"
+      text1="Der er meget at lave på Vesterbro. Et herligt torv ved den gamle kirke i et charmerende område, som man snildt kan vandre eller cykle til fra hovedbanegården."
+      textB="Hver anden søndag i måneden!"
+      direction="-reverse"
+    />
+    <GridCard
+      image="forside/5.webp"
+      title="Nørrebro"
+      subtitle="Sted: Skjolds Plads, København N"
+      text1="Nemt at komme dertil fra metrostoppet Cityringen Metro, 6A bussen eller cykel, området omkring Skjoldsplads i ydre Nørrebro er begyndt at spire op og blive mere levende. Det ligger halvvejs til Østerbro og tæt på Bispebjerg Park."
+      textB="Hver tredje søndag i måneden!"
+    />
+    <GridCard
+      image="forside/6.webp"
+      title="Freberiksberg"
+      subtitle="Aksel Møllers Have, Frederiksberg"
+      text1="Det flade, grønne område ved Aksel Møllers Have danner en ganske fin ramme for et madmarked. Den ellers stille og rolige græsplæne forvandles til et travlt og livligt marked én søndag om måneden."
+      textB="Hver fjerde søndag i måneden!"
+      direction="-reverse"
+    />
+  </div>
+</section>
+<img class="mt-[-1px] rotate-180" src="src/assets/images/vector/HjørneGold.svg" alt="" />

@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import Knap from "src/assets/images/vector/Knap.svg";
+import Pil from "src/assets/images/icons/ArrowGold.svg";
+const { link = "", text = "" } = Astro.props;
+---
+
+<a href={link}>
+  <div class="flex items-center mt-20 cursor-pointer">
+    <div class="relative w-64 h-64 flex justify-center items-center">
+      {/* First rotating SVG - slower rotation */}
+      <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
+        <Image src={Knap} alt="Rotating SVG 1" width={256} height={256} class="w-full h-full" />
+      </div>
+
+      {/* Second rotating SVG - faster rotation */}
+      <div class="absolute inset-0 animate-[spin_10s_linear_infinite_reverse]">
+        <Image src={Knap} alt="Rotating SVG 2" width={256} height={256} class="w-full h-full" />
+      </div>
+      <Image src={Pil} alt="Arrow svg" />
+    </div>
+    <div><p class="text-[#DBC885]">{text}</p></div>
+  </div>
+</a>

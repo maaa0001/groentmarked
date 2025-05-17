@@ -1,0 +1,33 @@
+---
+import Button from "./Button.astro";
+import KalenderCard from "./cards/KalenderCard.astro";
+import EventCalendar from "./filter/event-calendar";
+---
+
+<section class="bg-GoldenGrain-300 pb-40 px-[167px] relative z-0">
+  <h2>Kalender for Grønt Marked</h2>
+  <p>
+    Ønsker du at booke en oplevelse, kan du nemt klikke på den ønskede begivenhed i kalenderen.
+    Herefter bliver du guidet videre til tilmelding. Vil du læse mere om de forskellige
+    arrangementer inden du booker, kan du yderligere information på siden <i> Arrangementer</i> , som
+    du nemt kan tilgå via knappen herunder.
+  </p>
+  <p>
+    Du kan også downloade kalenderen direkte til din egen digitale kalender. Så får du automatisk
+    overblik over kommende begivenheder og på den måde er du altid opdateret og går ikke glip af nye
+    markeder, workshops eller oplevelser.
+  </p>
+  <div>
+    <a href=""> <Button variant="primary" size="large">Download kalenderen</Button></a>
+    <a href="/arrangementer"> <Button variant="secondary" size="large">Se arrangementer</Button></a>
+  </div>
+
+  <EventCalendar client:load />
+  <img
+    class="absolute bottom-0 right-0 top-auto"
+    src="src/assets/images/vector/HjørneHvid.svg"
+    alt="Vector Hjørne"
+  />
+</section>
+
+<!-- <div class="grid grid-cols-4 gap-x-[129px] gap-y-[100px]"></div> -->

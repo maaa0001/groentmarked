@@ -1,0 +1,21 @@
+---
+import Accordion from "../Accordion.astro";
+
+const { title = "", subtitle = "", direction = "", atitle = "", atext = "" } = Astro.props;
+const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
+---
+
+<section class="m-auto">
+  <div class={`flex ${flexDirection} flex-wrap gap-[68px]`}>
+    <div class="rounded-3xl overflow-hidden">
+      <img src="/src/assets/images/carousel/Jordbær.webp" alt="" />
+    </div>
+    <div>
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+      <Accordion atitle={atitle} atext={atext} />
+      <Accordion atitle={atitle} atext={atext} />
+      <Accordion atitle={atitle} atext={atext} />
+    </div>
+  </div>
+</section>

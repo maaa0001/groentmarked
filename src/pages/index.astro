@@ -4,46 +4,56 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
-import Navbar from "../components/Navbar.astro";
+import PathDashed from "../components/animationer/PathDashed.astro";
+import Markedsbod from "../components/Markedsbod.astro";
+import FAQ from "@/components/FAQ.astro";
+import ProfileCarousel from "@/components/animationer/profile-carousel";
+import ScrollCarousel from "@/components/animationer/scroll-carousel";
+import GridCard from "@/components/cards/GridCard1_1.astro";
+import Lokationer from "@/components/Lokationer.astro";
+import OsBagGM from "@/components/OsBagGM.astro";
+import HeroBackground from "@/components/HeroBackground.astro";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
-  </article>
+<MainLayout title="Forside">
+  <HeroBackground
+    title="Grønt Marked"
+    text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!"
+    image="forside/1.webp"
+    btext="Støt Grønt Marked"
+    link="/stoet"
+  />
 
-  <svg
-    width="1103"
-    height="2045"
-    viewBox="0 0 1103 2045"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    class="Path"
-  >
-    <path
-      d="M447 49.4993C447 49.4993 1075.03 -91.4542 1095 137.5C1123 458.5 23.5269 181.332 25.0003 638C26.4523 1088 1055.71 788.32 1010 1236C968.538 1642.03 -158.23 1413.05 25.5016 1777.5C126.887 1978.6 484.999 2038 484.999 2038"
-      stroke="#10200A"
-      stroke-width="13"
-      stroke-linecap="round"
-      stroke-dasharray="63 63"></path>
-  </svg>
-
-  <script src="/src/Javascript/Scroll.js"></script>
+  <GridCard
+    image="forside/2.webp"
+    title="Velkommen til Grønt Marked"
+    text1="Når du besøger vores markeder, møder du ikke bare producenterne ansigt til ansigt – du bliver en del af en bevægelse, der forbinder byen med jorden og sæsonens rytme."
+    text2="Men vi stopper ikke der. Uden for markedets boder skaber vi også events, fællesspisninger og samarbejder som styrker den lokale madkultur og den grønne omstilling. Vi tror på at forandring starter med fællesskab, og vi har brug for flere der vil være med."
+    text3="Vi søger altid frivillige hænder, engagerede medlemmer og folk som har lyst til at støtte vores arbejde. Og hvis du er producent, vil vi altid opfordre dig til at besøge producent-siden, som du finder øverst i menuen."
+    button1="Læs mere om os"
+    link1="/om-os"
+    button2="Bliv producent"
+    extra="no"
+  />
+  <Lokationer />
+  <GridCard
+    image="forside/7.webp"
+    title="Udover ugentlige markeder"
+    text1="Grønt Marked er meget mere end et sted at handle. Det er også et levende fællesskab, hvor du kan komme tættere på jorden og dem, der dyrker den. "
+    text2="Udover markedsdagene inviterer vi løbende til aktiviteter og begivenheder, hvor der er plads til nysgerrighed, samtale og fælles oplevelser – for alle, uanset erfaring:"
+    dot1="Gårdbesøg"
+    dot2="Workshops"
+    dot3="Fællesspisninger"
+    dot4="Markedskøkken (kan bookes)"
+    dot5="WFMC"
+    button1="Se vores arrangementer"
+    direction="-reverse"
+  />
+  <ScrollCarousel client:only />
+  <OsBagGM />
+  <ProfileCarousel client:load />
+  <FAQ />
+  <div class="bg-[url(src/assets/images/footer_billede.webp)] bg-cover w-full h-200"></div>
 </MainLayout>
 
-<style>
-  body {
-    min-height: 200vh;
-  }
-  svg.Path {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 200vh;
-    z-index: 1;
-  }
-</style>
+<style></style>

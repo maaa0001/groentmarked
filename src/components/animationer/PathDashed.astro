@@ -1,0 +1,86 @@
+<!-- <svg
+  width="1103"
+  height="2045"
+  viewBox="0 0 1103 2045"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="Path"
+>
+  <path
+    d="M447 49.4993C447 49.4993 1075.03 -91.4542 1095 137.5C1123 458.5 23.5269 181.332 25.0003 638C26.4523 1088 1055.71 788.32 1010 1236C968.538 1642.03 -158.23 1413.05 25.5016 1777.5C126.887 1978.6 484.999 2038 484.999 2038"
+    stroke="#10200A"
+    stroke-width="13"
+    stroke-linecap="round"
+    stroke-dasharray="63 63"></path>
+</svg> -->
+<svg
+  width="1338"
+  height="2273"
+  viewBox="0 0 1338 2273"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="Path"
+>
+  <path
+    d="M1117.5 1C1441.06 376.662 -74.5 634.5 41.0002 395C72.0873 330.538 126.887 316.643 193 375.5C275 448.5 20.3347 588.425 41.0002 834C71.0001 1190.5 746.266 1052.51 936.5 1098.5C1073 1131.5 1261.49 1115.52 1332 1403C1429.5 1800.5 97.3671 1976.5 6.00002 1776C-28.012 1701.36 120.688 1608.27 197.5 1720.5C262.5 1815.47 -40.6859 2112.44 198 2272"
+    stroke="black"
+    stroke-width="2"
+    stroke-dasharray="20 20"></path>
+</svg>
+
+<style>
+  body {
+    min-height: 200vh;
+  }
+  svg.Path {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 1590px;
+    right: 134px;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const svg = document.querySelector("svg.Path");
+    const path = svg.querySelector("path");
+    const pathLength = path.getTotalLength();
+
+    // Create mask elements
+    const svgNS = "http://www.w3.org/2000/svg";
+    const mask = document.createElementNS(svgNS, "mask");
+    mask.id = "path-reveal-mask";
+
+    // Create and set up the mask path
+    const maskPath = path.cloneNode();
+    maskPath.setAttribute("stroke", "white");
+    maskPath.setAttribute("stroke-dasharray", pathLength);
+    maskPath.setAttribute("stroke-dashoffset", pathLength);
+
+    // Add elements to the SVG
+    mask.appendChild(maskPath);
+    svg
+      .insertAdjacentElement("afterbegin", document.createElementNS(svgNS, "defs"))
+      .appendChild(mask);
+
+    // Apply the mask to the original path
+    path.setAttribute("mask", "url(#path-reveal-mask)");
+
+    // Update mask on scroll
+    function updateOnScroll() {
+      const scrollProgress = Math.min(
+        Math.max(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight), 0),
+        1
+      );
+      maskPath.setAttribute("stroke-dashoffset", pathLength - scrollProgress * pathLength * 2.5);
+    }
+
+    // Initialize and add listener
+    updateOnScroll();
+    window.addEventListener("scroll", updateOnScroll);
+  });
+</script>

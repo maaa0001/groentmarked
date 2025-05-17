@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import Bod from "../assets/images/Markedsbod.svg";
+---
+
+<div class="flex w-50% justify-items-start">
+  <Image src={Bod} alt="Markedsbod" class="h-50 w-auto flex-initial" />
+
+  <div class="flex flex-col items-center w-80">
+    <h2 class="text-3xl font-bold mb-2">Indre By</h2>
+
+    <p class="text-md text-gray-700 mb-4 text-center">Gammelholm - Havnegade 54</p>
+
+    <p class="text-sm text-gray-600 mb-4 text-center leading-relaxed font-poppins">
+      Denne beskedne lille plads for enden af Nyhavn vil danne rammen om madmarkederne i år. Den er
+      nemt tilgængelig med både bus og metro til Kongens Nytorv - og derfra er der kun en lille
+      gåtur.
+    </p>
+    <p class="text-sm font-semibold text-gray-800 text-center">Hver første søndag i måneden!</p>
+  </div>
+</div>

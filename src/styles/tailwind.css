@@ -1,11 +1,29 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --font-sans: "Poppins", sans-serif;
+  --font-display: "Boogaloo", serif;
+
+  --color-HarvestRose-200: #eec5c8;
+  --color-HarvestRose-300: #e4a6ab;
+  --color-HarvestRose-500: #d26b74;
+
+  --color-MarketMidnight-500: #0f200b;
+
+  --color-ForestFresh-500: #2a4837;
+  --color-ForestFresh-opacity: #2a48371b;
+
+  --color-GoldenGrain-300: #eadeb6;
+  --color-GoldenGrain-500: #dbc885;
+
+  --color-CreamCanvas-500: #f0eae2;
+
+  --color-MarketLinen-500: #ffffff;
+  --color-FormPlaceholder-500: #888888;
 }
 
 @layer base {
@@ -18,9 +36,22 @@
   }
 }
 
-@layer components{
-
+@layer components {
+  h1 {
+    @apply text-7xl font-display;
+  }
+  h2 {
+    @apply text-[54px] font-display;
+  }
+  h3 {
+    @apply text-[40px] font-display;
+  }
+  h4 {
+    @apply text-2xl font-display;
+  }
+  p {
+    @apply text-base max-w-[576px];
+  }
 }
-@layer utilities{
-  
+@layer utilities {
 }

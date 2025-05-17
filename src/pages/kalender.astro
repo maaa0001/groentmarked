@@ -1,0 +1,30 @@
+---
+import HeroBackground from "@/components/HeroBackground.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import KalenderGrid from "@/components/KalenderGrid.astro";
+import { StickyScrollReveal } from "@/components/animationer/StickyScroll";
+import FAQ from "@/components/FAQ.astro";
+---
+
+<MainLayout title="Kalender">
+  <HeroBackground
+    title="Kalender"
+    text="I vores kalender kan du se, hvornår og hvor de <strong>kommende markeder</strong> finder sted. Uanset om du er fast besøgende eller ny i fællesskabet, giver kalenderen dig et overblik over datoer og lokationer, så du nemt kan <strong>planlægge dit besøg</strong> og <strong>støtte lokale producenter</strong>. <br/>Herunder finder du kalenderen, hvor du både kan booke oplevelser eller downloade den direkte til din egen kalender."
+    image="arrangementer/1.webp"
+    bg="bg-GoldenGrain-300"
+  />
+
+  <KalenderGrid />
+  <section class="px-[167px]">
+    <h2>Vidste du...?</h2>
+    <p>
+      Dyk ned i oplevelsen hos Grønt Marked Køkken med vores private dining-oplevelser. Vores kokke
+      tager dig med på en rejse gennem sæsonerne og viser, hvor meget smag der kan fremhæves med
+      friske, lokale råvarer. Undervejs kan du også få værdifulde tips og tricks til, hvordan du kan
+      lave mere bæredygtig mad og spise efter sæsonen i din egen hverdag.
+    </p>
+  </section>
+
+  <StickyScrollReveal client:load />
+  <FAQ />
+</MainLayout>

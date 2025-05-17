@@ -1,5 +1,42 @@
 ---
+// Henter parametrene fra Astro.props
+const { variant = "primary", size = "desktoplarge", link = "" } = Astro.props;
+
+// Definer den styling (Tailwind classes), der gælder for alle knapper
+const buttonStyling = "rounded-full transition duration-300";
+
+// Definer den styling (Tailwind classes), der gælder for de forskellige varianter
+const variantClasses = {
+  primary: "bg-[#D26B74] hover:bg-[#E4A6AB] text-white cursor-pointer",
+  secondary: "border-2 border-black  text-black hover:border-2 hover:text-black cursor-pointer",
+};
+
+// Definer den styling (Tailwind classes), der gælder for de forskellige størrelser
+const sizeClasses = {
+  large: "text-sm py-4 px-5 md:text-base md:py-2 md:px-10",
+  small: "text-sm py-4 px-5 md:text-base md:py-2 md:px-10",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<!-- Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "pulseButton"]}>
+  <slot />
+</button>
+
+<!-- <script>
+  import { animate } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".pulseButton");
+
+    buttons.forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        animate(
+          button,
+          { scale: [1, 1.2, 1] }, // Pulse effect
+          { duration: 1, easing: "ease-in-out" }
+        );
+      });
+    });
+  });
+</script> -->

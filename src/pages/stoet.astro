@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import GridCard from "@/components/cards/GridCard1_1.astro";
+import PopUpCard from "@/components/cards/PopUpCard.astro";
+import AccordionCard from "@/components/cards/AccordionCard.astro";
+import ProducentCard from "@/components/ProducentCard.astro";
+---
+
+<MainLayout title="Støt Grønt Marked">
+  <GridCard title="Overskrift" subtitle="Underoverskrift" text="Brødtekst" />
+  <GridCard title="Overskrift" subtitle="Underoverskrift" text="Brødtekst" direction="-reverse" />
+  <ProducentCard
+    title="Birthesminde"
+    subtitle="Vipperød, Danmark"
+    tekst="Økologisk svinekød fra naturligt fodrede grise. Opvokset langsomt under åben himmel på mark og skov - altid sammen med deres familie."
+  />
+
+  <AccordionCard
+    title="Overskrift"
+    subtitle="Underoverskrift"
+    atitle="Punkt 1"
+    atext="Tekst til punkt 1"
+  />
+  <PopUpCard />
+</MainLayout>
