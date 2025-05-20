@@ -6,9 +6,11 @@ import b8 from "src/assets/images/arrangementer/8.webp";
 import b9 from "src/assets/images/arrangementer/9.webp";
 import b10 from "src/assets/images/arrangementer/10.webp";
 import b11 from "src/assets/images/arrangementer/11.webp";
+import Hjørne from "src/assets/images/vector/HjørneGold.svg";
+import { Image } from "astro:assets";
 ---
 
-<img class="ml-auto mb-[-1px]" src="src/assets/images/vector/HjørneGold.svg" alt="Vector Hjørne" />
+<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
 <section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
   <h2>Udover søndagsmarkederne</h2>
   <p class="mb-20 w-1/2">
@@ -49,4 +51,4 @@ import b11 from "src/assets/images/arrangementer/11.webp";
     />
   </div>
 </section>
-<img class="mt-[-1px] rotate-180" src="src/assets/images/vector/HjørneGold.svg" alt="" />
+<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />

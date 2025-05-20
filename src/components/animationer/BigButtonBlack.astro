@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import Knap from "src/assets/images/vector/Knap.svg";
-import Pil from "src/assets/images/icons/ArrowGold.svg";
+import KnapBlack from "src/assets/images/vector/KnapBlack.svg";
+import Pil from "src/assets/images/icons/ArrowBlack.svg";
 const { link = "", text = "" } = Astro.props;
 ---
 
@@ -9,13 +9,13 @@ const { link = "", text = "" } = Astro.props;
   <div class="flex items-center cursor-pointer">
     <div class="relative w-40 h-64 flex justify-center items-center">
       <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
-        <img src="src/assets/images/vector/KnapBlack.svg" alt="" class="w-full h-full" />
+        <Image src={KnapBlack} alt="Stor sort knap" class="w-full h-full" />
       </div>
       <div class="absolute inset-0 animate-[spin_10s_linear_infinite_reverse]">
-        <img src="src/assets/images/vector/KnapBlack.svg" alt="" class="w-full h-full" />
+        <Image src={KnapBlack} alt="Stor sort knap" class="w-full h-full" />
       </div>
 
-      <img src="src/assets/images/icons/ArrowBlack.svg" alt="" />
+      <Image src={Pil} alt="Sort pil" />
     </div>
     <div>
       <p class="text-MarketMidnight-500">{text}</p>
