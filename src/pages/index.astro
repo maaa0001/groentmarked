@@ -18,12 +18,12 @@ import HeroBackground from "@/components/HeroBackground.astro";
 <MainLayout title="Forside">
   <HeroBackground
     title="Grønt Marked"
+    tsize="text-[180px]"
     text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!"
     image="forside/1.webp"
     btext="Støt Grønt Marked"
     link="/stoet"
   />
-
   <GridCard
     image="forside/2.webp"
     title="Velkommen til Grønt Marked"
@@ -35,7 +35,7 @@ import HeroBackground from "@/components/HeroBackground.astro";
     button2="Bliv producent"
     extra="no"
   />
-  <Lokationer />
+  <Lokationer loading="lazy" />
   <GridCard
     image="forside/7.webp"
     title="Udover ugentlige markeder"
@@ -47,6 +47,7 @@ import HeroBackground from "@/components/HeroBackground.astro";
     dot4="Markedskøkken (kan bookes)"
     dot5="WFMC"
     button1="Se vores arrangementer"
+    link1="/arrangementer"
     direction="-reverse"
   />
   <ScrollCarousel client:only />

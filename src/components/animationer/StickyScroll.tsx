@@ -28,7 +28,7 @@ const content = [
       </a>
     ),
     content: (
-      <img src="/src/assets/images/replacement.jpg" className="h-full w-full object-cover" />
+      <img src="/src/assets/images/arrangementer/2.webp" className="h-full w-full object-cover" />
     ),
   },
   {
@@ -36,7 +36,7 @@ const content = [
     description:
       "Oplev Grønt Marked Køkken gennem en privat middag. Nyd sæsonbaserede retter lavet med lokale råvarer og få tips til bæredygtig madlavning fra vores kokke.",
     content: (
-      <img src="/src/assets/images/replacement.jpg" className="h-full w-full object-cover" />
+      <img src="/src/assets/images/arrangementer/3.webp" className="h-full w-full object-cover" />
     ),
   },
   {
@@ -44,7 +44,7 @@ const content = [
     description:
       "Dyk ned i din passion for god mad og bæredygtighed på vores hands-on workshops. Lær at lave mad med sæsonens råvarer, sanke, konservere og udforske, hvordan vi sammen kan skabe et mere retfærdigt og robust fødevaresystem.",
     content: (
-      <img src="/src/assets/images/replacement.jpg" className="h-full w-full object-cover" />
+      <img src="/src/assets/images/arrangementer/4.webp" className="h-full w-full object-cover" />
     ),
   },
   {
@@ -52,7 +52,7 @@ const content = [
     description:
       "Besøg vores markedskøkken og oplev, hvordan sæsonens råvarer bliver til smagfulde retter. Tag ingredienser og specialvarer med hjem og genskab oplevelsen i dit eget køkken.",
     content: (
-      <img src="/src/assets/images/replacement.jpg" className="h-full w-full object-cover" />
+      <img src="/src/assets/images/arrangementer/5.webp" className="h-full w-full object-cover" />
     ),
   },
 ];

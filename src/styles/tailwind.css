@@ -4,7 +4,6 @@
 @plugin '@tailwindcss/forms';
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
   --font-sans: "Poppins", sans-serif;
   --font-display: "Boogaloo", serif;
 
@@ -23,7 +22,9 @@
   --color-CreamCanvas-500: #f0eae2;
 
   --color-MarketLinen-500: #ffffff;
-  --color-FormPlaceholder-500: #888888;
+  --color-MarketLinen-800: #666666;
+
+  --animate-bounce: bounce 3s infinite;
 }
 
 @layer base {
@@ -51,6 +52,14 @@
   }
   p {
     @apply text-base max-w-[576px];
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 1000px;
   }
 }
 @layer utilities {

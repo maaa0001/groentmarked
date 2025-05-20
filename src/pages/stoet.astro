@@ -1,25 +1,20 @@
 ---
+import HeroBackground from "@/components/HeroBackground.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import GridCard from "@/components/cards/GridCard1_1.astro";
-import PopUpCard from "@/components/cards/PopUpCard.astro";
-import AccordionCard from "@/components/cards/AccordionCard.astro";
-import ProducentCard from "@/components/ProducentCard.astro";
+import Frivillig from "@/components/Frivillig.astro";
+import SupportForm from "@/components/filter/support-form";
+import FAQ from "@/components/FAQ.astro";
+import ScrollCarousel from "@/components/animationer/scroll-carousel";
 ---
 
 <MainLayout title="Støt Grønt Marked">
-  <GridCard title="Overskrift" subtitle="Underoverskrift" text="Brødtekst" />
-  <GridCard title="Overskrift" subtitle="Underoverskrift" text="Brødtekst" direction="-reverse" />
-  <ProducentCard
-    title="Birthesminde"
-    subtitle="Vipperød, Danmark"
-    tekst="Økologisk svinekød fra naturligt fodrede grise. Opvokset langsomt under åben himmel på mark og skov - altid sammen med deres familie."
+  <HeroBackground
+    title="Støt Grønt Marked"
+    textl="Der er flere måder, <strong>du kan bidrage</strong> til, at Grønt Marked fortsat kan vokse og blomstre:<br><br><ul><li><a href='#støt'><u><strong>Støt os økonomisk</strong></u></a></li><li><a href='#støt'><u><strong>Bliv medlem</strong></u></a></li><li><a href='#frivillig'><u><strong>Engagér dig som frivillig (gratis)</strong></u></a></li></ul><br>Herunder kan du læse mere om de forskellige muligheder og, hvordan du kan være med."
+    image="forside/1.webp"
   />
-
-  <AccordionCard
-    title="Overskrift"
-    subtitle="Underoverskrift"
-    atitle="Punkt 1"
-    atext="Tekst til punkt 1"
-  />
-  <PopUpCard />
+  <SupportForm client:load />
+  <Frivillig />
+  <ScrollCarousel client:only />
+  <FAQ />
 </MainLayout>

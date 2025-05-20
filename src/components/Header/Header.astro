@@ -5,46 +5,205 @@ import { LanguageSelector } from "./language-selector";
 import { Toggle } from "./toggle-button";
 ---
 
-<div class="fixed w-full flex z-10 items-center py-4 px-8 bg-ForestFresh-opacity
- backdrop-blur-xs">
-  <a href="/" class="text-gray-700 text-sm mr-4">
-    <Image src={Logo} alt="Logo" />
-  </a>
-  <Toggle client:load />
+<script>
+  // Burger menu funktionalitet
+  const menuButton = document.getElementById("menu-button");
+  const closeButton = document.getElementById("close-button");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-  <div class="ml-auto flex items-center">
-    <a href="/#markederne" class="text-white text-sm mr-4">Markederne</a>
-    <a href="arrangementer" class="text-white text-sm mr-4">Arrangementer</a>
-    <a href="kalender" class="text-white text-sm mr-4">Kalender</a>
-    <a href="om-os" class="text-white text-sm mr-4">
-      <div class="relative mr-4">
-        <button class="bg-transparent py-2 px-3 text-sm flex items-center">
-          Om os
-          <svg
-            class="ml-1 w-2.5 h-1.5"
-            viewBox="0 0 10 6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1L5 5L9 1"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        {/* Dropdown indhold kan tilføjes her */}
+  function openMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.remove("hidden");
+      mobileMenu.classList.add("flex");
+      document.body.style.overflow = "hidden"; // No scrolling
+    }
+  }
+
+  function closeMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+  }
+
+  menuButton?.addEventListener("click", openMenu);
+  closeButton?.addEventListener("click", closeMenu);
+</script>
+
+<!-- Desktop Navbar -->
+<div class="fixed w-full z-10 bg-ForestFresh-opacity backdrop-blur-xs">
+  <div class="hidden lg:flex items-center py-4 px-8">
+    <a href="/" class="mr-10">
+      <Image src={Logo} alt="Logo" />
+    </a>
+    <Toggle client:load />
+
+    <div class="ml-auto flex items-center">
+      <a href="/#markederne" class="text-MarketLinen-500 text-sm mr-[35px]">Markederne</a>
+      <a href="/arrangementer" class="text-MarketLinen-500 text-sm mr-[35px]">Arrangementer</a>
+      <a href="kalender" class="text-MarketLinen-500 text-sm mr-[35px]">Kalender</a>
+      <a href="/stoet#frivillig" class="text-MarketLinen-500 text-sm mr-[35px]">Bliv frivillig</a>
+      <a href="/om-os" class="text-MarketLinen-500 text-sm mr-[35px]">
+        <div class="relative">
+          <button class="bg-transparent py-2 px-3 text-sm flex items-center">
+            Om os
+            <svg
+              class="ml-1 w-2.5 h-1.5"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+      </a>
+
+      <a href="stoet" class="text-gray-700 text-sm mr-[35px]">
+        <button
+          class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] min-w-[167px] text-xs md:text-sm cursor-pointer"
+          >Støt Grønt Marked</button
+        >
+      </a>
+      <div class="relative">
+        <LanguageSelector client:load />
       </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navbar Header -->
+  <div class="flex flex-col lg:hidden bg-ForestFresh-opacity">
+    <!-- Top row with logo, Støt button, and menu button -->
+    <div class="flex items-center justify-between p-4">
+      <a href="/" class="text-MarketLinen-500 font-bold text-xl">
+        <Image src={Logo} alt="Grønt Marked" width={100} height={40} />
+      </a>
+
+      <a href="/stoet" class="flex justify-end">
+        <button
+          class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] text-xs cursor-pointer"
+        >
+          Støt Grønt Marked
+        </button>
+      </a>
+
+      <button id="menu-button" class="text-MarketLinen-500 cursor-pointer">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 12H21M3 6H21M3 18H21"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Bottom row with Toggle, Kalender, and LanguageSelector -->
+    <div class="flex items-center justify-between p-2 border-t border-MarketLinen-500/20">
+      <div class="w">
+        <Toggle client:load />
+      </div>
+
+      <div class="text-center">
+        <a href="/kalender" class="text-MarketLinen-500 text-sm"> Kalender </a>
+      </div>
+
+      <div class="flex justify-end">
+        <LanguageSelector client:load />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-ForestFresh-500 z-50 flex-col overflow-y-auto hidden">
+  <div class="flex items-center justify-between p-4">
+    <a href="/" class="mr-10 w-[100px]">
+      <Image src={Logo} alt="Logo" />
     </a>
-    <a href="stoet" class="text-gray-700 text-sm mr-4">
-      <button
-        class="bg-[#D26B74] hover:bg-[#E4A6AB] text-white py-3 px-5 rounded-full text-sm cursor-pointer"
-        >Støt Grønt Marked</button
+    <button id="close-button" class="text-MarketLinen-500 cursor-pointer">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
+        <path
+          d="M18 6L6 18M6 6L18 18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    class="flex flex-col items-center justify-center flex-1 space-y-6 text-MarketLinen-500 text-lg p-4"
+  >
+    <a href="/" class="py-2">Forside for gæster</a>
+    <a href="/#markederne" class="py-2">Markederne</a>
+    <a href="/arrangementer" class="py-2">Arrangementer</a>
+    <a href="/kalender" class="py-2">Kalender</a>
+    <a href="/stoet/#" class="py-2">Bliv frivillig</a>
+    <a href="/om-os" class="py-2">Om os</a>
+    <a href="#" class="py-2">Mød producenterne</a>
+  </nav>
+
+  <div class="p-4 flex flex-col items-center space-y-6">
+    <a href="/stoet">
+      <button
+        class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] text-sm cursor-pointer"
+      >
+        Støt Grønt Marked
+      </button>
     </a>
-    <div class="relative">
-      <LanguageSelector client:load />
+
+    <div class="flex space-x-6 text-MarketLinen-500">
+      <a href="#" aria-label="Instagram">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"
+          ></rect>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"></circle>
+          <circle cx="18" cy="6" r="1" fill="currentColor"></circle>
+        </svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
     </div>
   </div>
 </div>

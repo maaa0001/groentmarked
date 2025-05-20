@@ -51,12 +51,12 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     const handleScroll = () => {
       if (!ticking) {
         animationFrameId = window.requestAnimationFrame(() => {
-          // Calculate how far down the page we've scrolled
+          // Beregner hvor langt man er scrollet ned på siden
           const scrollTop = window.scrollY;
           const windowHeight = window.innerHeight;
           const documentHeight = document.body.clientHeight;
 
-          // Calculate scroll progress (0 to 1)
+          // Beregner scroll progress (0 to 1)
           const scrollPercentage = scrollTop / (documentHeight - windowHeight);
           setScrollProgress(Math.min(Math.max(scrollPercentage, 0), 1));
           ticking = false;
@@ -74,7 +74,7 @@ const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
     };
   }, []);
 
-  // Calculate the translation amount based on scroll progress
+  // Beregner the translation amount baseret på scroll progress
   const translateX =
     -scrollProgress * (images.length * (imageWidth + 32) - window.innerWidth + 100);
 

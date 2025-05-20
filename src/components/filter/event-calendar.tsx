@@ -216,7 +216,7 @@ const calendarData: Event[] = [
   },
 ];
 
-// Individual event card component
+// Card component
 const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   return (
     <div className="flex-1/4">
@@ -293,11 +293,11 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [onlineFilter, setOnlineFilter] = useState<string>("all");
 
-  // Get unique months and event types from data
+  // Får unike måneder og event typer fra daten
   const months = Array.from(new Set(events.map((event) => event.month)));
   const eventTypes = Array.from(new Set(events.map((event) => event.titel)));
 
-  // Filter events based on selected filters
+  // Filtrer producenterne baseret på filtrering
   const filteredEvents = events.filter((event) => {
     const matchesMonth = monthFilter === "all" || event.month === monthFilter;
     const matchesType = typeFilter === "all" || event.titel === typeFilter;
@@ -311,7 +311,7 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Filter controls */}
+      {/* Filtrering */}
       <div className="p-6 rounded-lg mb-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Dropdown

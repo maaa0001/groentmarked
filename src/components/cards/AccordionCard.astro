@@ -1,21 +1,44 @@
 ---
 import Accordion from "../Accordion.astro";
 
-const { title = "", subtitle = "", direction = "", atitle = "", atext = "" } = Astro.props;
+const {
+  title = "",
+  image = "",
+  subtitle = "",
+  direction = "",
+  atitle1 = "",
+  atext1 = "",
+  atitle2 = "",
+  atext2 = "",
+  atitle3 = "",
+  atext3 = "",
+  atitle4 = "",
+  atext4 = "",
+  atitle5 = "",
+  atext5 = "",
+  atitle6 = "",
+  atext6 = "",
+  atitle7 = "",
+  atext7 = "",
+} = Astro.props;
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 ---
 
-<section class="m-auto">
-  <div class={`flex ${flexDirection} flex-wrap gap-[68px]`}>
-    <div class="rounded-3xl overflow-hidden">
-      <img src="/src/assets/images/carousel/Jordbær.webp" alt="" />
+<section class="m-auto mb-52">
+  <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
+    <div class="rounded-3xl w-full h-auto max-w-[531px] max-h-[553px] overflow-hidden">
+      <img src={`src/assets/images/producent/${image}`} alt={image} />
     </div>
-    <div>
-      <h2>{title}</h2>
+    <div class="w-full max-w-[400px] self-center">
+      <h2 class="">{title}</h2>
       <p>{subtitle}</p>
-      <Accordion atitle={atitle} atext={atext} />
-      <Accordion atitle={atitle} atext={atext} />
-      <Accordion atitle={atitle} atext={atext} />
+      {atitle1 && <Accordion atitle={atitle1} atext={atext1} />}
+      {atitle2 && <Accordion atitle={atitle2} atext={atext2} />}
+      {atitle3 && <Accordion atitle={atitle3} atext={atext3} />}
+      {atitle4 && <Accordion atitle={atitle4} atext={atext4} />}
+      {atitle5 && <Accordion atitle={atitle5} atext={atext5} />}
+      {atitle6 && <Accordion atitle={atitle6} atext={atext6} />}
+      {atitle7 && <Accordion atitle={atitle7} atext={atext7} />}
     </div>
   </div>
 </section>

@@ -5,8 +5,8 @@ const { title = "", subtitle = "", tekst = "", image = "" } = Astro.props;
 ---
 
 <article class="flex flex-col self-center w-xs overflow-hidden">
-  <div class="border rounded-3xl overflow-hidden">
-    <img src={image} alt="Producent" />
+  <div class="rounded-3xl overflow-hidden h-60">
+    <img class="h-full w-full object-cover" src={image} alt="Producent" />
   </div>
   <div>
     <h3>{title}</h3>

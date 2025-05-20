@@ -2,8 +2,174 @@
 import HeroBackground from "@/components/HeroBackground.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
+import GridCard from "@/components/cards/GridCard1_1.astro";
+import PopUpCard from "@/components/cards/PopUpCard.astro";
+import AccordionCard from "@/components/cards/AccordionCard.astro";
+import ProducentCard from "@/components/ProducentCard.astro";
+import HvorforIcons from "@/components/HvorforIcons.astro";
+import Button from "@/components/Button.astro";
+import Accordion from "@/components/Accordion.astro";
+import ScrollCarousel from "@/components/animationer/scroll-carousel";
+import FAQ from "@/components/FAQ.astro";
 ---
 
-<MainLayout title="Mød producenterne">
+<MainLayout variant="secondary" title="Producent">
   <img class="top-0 w-full h-auto" src="src/assets/images/vector/HeroProducent.svg" alt="" />
+
+  <GridCard
+    title="Producent sektionen"
+    image="producent/1.webp"
+    text1="Velkommen til producent sektionen. Her finder du den information, du har brug for som nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand, overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt velkommen."
+    text2="Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe et marked præget af kvalitet, gennemsigtighed og godt samarbejde."
+    text3="Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden inden du ansøger:"
+    dot1="Forventninger"
+    dot2="Retningslinjer og priser"
+    text4="Det giver dig et klart billede af, om dine produkter og værdier matcher Grønt Markeds. Du finder information om, hvordan du ansøger, længere nede på siden under Hvordan bliver du Grønt Marked producent."
+    text5="Vi glæder os til at høre fra dig – og til at lære dine produkter at kende."
+    button1="Ansøg nu"
+    link1="mailto:"
+    direction="-reverse"
+  />
+
+  <img
+    class="ml-auto mb-[-1px] mt-[-290px]"
+    src="src/assets/images/vector/HjørneGold.svg"
+    alt="Vector Hjørne"
+  />
+  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
+    <HvorforIcons
+      subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
+      title1="Større økonomisk stabilitet"
+      text1="Direkte salg giver producenterne både fuld gevinst og ansvar, hvilket styrker deres samlede økonomi."
+      title2="Stærkere relationer og synlighed"
+      text2="Direkte og vedvarende kontakt med kunderne styrker relationer, skaber loyalitet og øger produktets synlighed."
+      title3="Fællesskab og værdiskabelse"
+      text3="Mad betragtes som en fælles sag, hvor alle aktører aktivt bidrager til bæredygtige løsninger sammen."
+      icon1=""
+      icon2=""
+      icon3=""
+    />
+  </section>
+  <img
+    id="hvordan"
+    class="mt-[-1px] rotate-180"
+    src="src/assets/images/vector/HjørneGold.svg"
+    alt="Vector Hjørne"
+  />
+  <GridCard
+    title="Hvordan bliver du producent?"
+    image="producent/2.webp"
+    text="Brødtekst"
+    title2="Ønsker du at deltage?"
+    text4="Vi beder dig venligst følge den enkle 4-trins vejledning nedenfor, hvis du ønsker at søge om optagelse på markedet."
+    text5='<ol class="pl-4 list-decimal"><li>Læs venligst markedets Forventninger og Retningslinjer grundigt igennem.</li><br> <li>Udfyld ansøgningsformularen nedenfor.</li><br> <li>Vi gennemgår din ansøgning og vender tilbage med et svar hurtigst muligt.</li><br> <li>Hvis din ansøgning accepteres, modtager du en automatisk e-mail med vigtig information om, hvordan du opretter en brugerprofil på Grønt Markeds hjemmeside for at færdiggøre din optagelse.</li> </ol>'
+    button1="Ansøg nu"
+    link1="mailto:"
+    direction="-reverse"
+  />
+
+  <img
+    class="ml-auto mb-[-1px] mt-[-290px]"
+    src="src/assets/images/vector/HjørneGreen.svg"
+    alt="Vector Hjørne"
+  />
+  <section class="bg-ForestFresh-500 py-30 px-[167px] w-full flex flex-col justify-center">
+    <h2 class="text-MarketLinen-500 text-center mb-[34px]">
+      “Det bedste ved markedet er fællesskabet. Her deler vi ikke bare mad, men også værdier og
+      glæde!”
+    </h2>
+    <p class="m-auto text-MarketLinen-500 mb-5">Karina Petersen fra Planteunivers</p>
+    <div class="m-auto">
+      <a href="/producenterne">
+        <Button variant="primary" size="large"> Mød producenterne </Button>
+      </a>
+    </div>
+  </section>
+  <img
+    class="mt-[-1px] rotate-180"
+    src="src/assets/images/vector/HjørneGreen.svg"
+    alt="Vector Hjørne"
+  />
+
+  <section class="layout w-full">
+    <h2 class="text-MarketMidnight-500 mb-[34px]">Forventninger til markedsdage</h2>
+    <section id="forventninger" class="flex justify-center mb-52">
+      <div class="flex flex-wrap justify-center gap-[68px]">
+        <div class="w-4/9">
+          <p class="mb-[24px] text-MarketMidnight-500">
+            Vores mål er altid at sikre, at du som deltager har alt, hvad du behøver, herunder el,
+            vand, ekstra plads, telte og meget mere. Vi beder blot om, at du gør os opmærksomme på
+            eventuelle særlige behov i god tid, så vi kan imødekomme dem bedst muligt. Hvis du har
+            særlige behov kan du skrive til os på hello@groentmarked.dk.
+          </p>
+          <p class="mb-[24px] text-MarketMidnight-500">
+            Vores frivillige er altid parate til at assistere, hvis en uventet situation opstår. På
+            Grønt Marked kan vi stole på hinanden, og det er netop denne fællesskabsånd, der gør
+            markedet stærkt.
+          </p>
+          <p class="mb-[24px] text-MarketMidnight-500">
+            Vi designer sammensætningen af markedets deltagere for at sikre en optimal balance i
+            udbuddet. Vores primære mål er at skabe en fair og gennemsigtig markedsplads, hvor alle
+            producenter har lige muligheder for at trives.
+          </p>
+        </div>
+        <div>
+          <Accordion atitle="Besøgende" atext="" />
+          <Accordion atitle="Vejret" atext="" />
+          <Accordion atitle="Forpligtigelse til markedet" atext="" />
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <ScrollCarousel client:only />
+  <section class="layout w-full">
+    <section id="retningslinjer">
+      <h2 class="text-MarketMidnight-500 mb-[34px]">Retningslinjer for Grønt Marked</h2>
+      <p class="mb-[24px] text-MarketMidnight-500">
+        Du kan læse mere om vores retningslinjer for producenter nedenfor. Har du fortsat spørgsmål,
+        er du velkommen til at kontakte os på <a href="mailto:hello1@groentmarled.dk"
+          ><u>hello@groentmarked.dk</u></a
+        >.
+      </p>
+    </section>
+
+    <AccordionCard
+      title="Produktkrav og prissætning"
+      image="3.webp"
+      subtitle="Grønt Marked retningslinjer 2025"
+      atitle1="Tilladte produkter på Grønt Marked"
+      atext1=""
+      atitle2="Grønt Marked produkt retningslinjer"
+      atext2=""
+      atitle3="Krav for animalske produkter"
+      atext3=""
+      atitle4="Prissætning for produkter"
+      atext4=""
+    />
+    <AccordionCard
+      title="Deltagelse og priser"
+      image="4.webp"
+      subtitle="Forskrifter 2023"
+      atitle1="Deltagelsespolitik"
+      atext1=""
+      atitle2="Betaling af stand"
+      atext2=""
+      atitle3="Hvem må stå i standen?"
+      atext3=""
+      atitle4="Præsentation af standen"
+      atext4=""
+      atitle5="Kommunikation"
+      atext5=""
+      atitle6="Telte og sikkerhed"
+      atext6=""
+      atitle7="Privacy"
+      atext7=""
+      direction="-reverse"
+    />
+  </section>
+  <div id="faq">
+    <FAQ />
+  </div>
+  <PopUpCard />
 </MainLayout>

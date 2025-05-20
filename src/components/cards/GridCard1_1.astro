@@ -1,6 +1,6 @@
 ---
-import BigButtonBlack from "../animationer/BigButtonBlack.astro";
 import Button from "../Button.astro";
+import BigButtonBlack from "../animationer/BigButtonBlack.astro";
 
 const {
   title = "",
@@ -23,16 +23,19 @@ const {
   button2 = "",
   link1 = "",
   link2 = "",
-  extra = "",
+  bbtext = "",
+  bblink = "",
   styling = "",
 } = Astro.props;
+
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
-const noExtra = extra === "no" ? "hidden" : "block";
+
+const showList = dot1 || dot2 || dot3 || dot4 || dot5;
 ---
 
 <section class="flex justify-center mb-52">
-  <div class={`flex ${flexDirection} flex-wrap gap-[68px]`}>
-    <h2 class="mb-[24px] lg:hidden">{title}</h2>
+  <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
+    <h2 class="mb-[24px] text-MarketMidnight-500 lg:hidden">{title}</h2>
     <div class="w-[531px] h-[553px]">
       <img
         class="h-full w-auto object-cover rounded-3xl"
@@ -40,27 +43,54 @@ const noExtra = extra === "no" ? "hidden" : "block";
         alt={image}
       />
     </div>
-    <div class="w-[576px] self-center">
-      <h2 class="mb-[24px] hidden lg:block">{title}</h2>
-      <p class="mb-[24px]">{subtitle}</p>
-      <p class="mb-[24px]">{text1}</p>
-      <p class="mb-[24px]">{text2}</p>
-      <p class="mb-[24px]">{text3}</p>
-      <h3 class="text-2xl">{title2}</h3>
-      <p class="mb-[24px]">{text4}</p>
-      <p class="mb-[24px]">{text5}</p>
-      <p class="mb-[24px] font-bold">{textB}</p>
-      <ul class={`pl-5 mb-[24px] list-disc ${noExtra} `}>
-        <li>{dot1}</li>
-        <li>{dot2}</li>
-        <li>{dot3}</li>
-        <li>{dot4}</li>
-        <li>{dot5}</li>
-      </ul>
-      <div class="flex gap-2">
-        <a href={link1}> <Button variant="primary" size="large">{button1}</Button></a>
-        <a href={link2}><Button variant="secondary" size="large">{button2}</Button></a>
-      </div>
+    <div class="w-full max-w-[576px] self-center">
+      <h2 class="mb-[34px] text-MarketMidnight-500 hidden lg:block">{title}</h2>
+      <p class="mb-[24px] text-MarketMidnight-500">{subtitle}</p>
+      <p class="mb-[24px] text-MarketMidnight-500">{text1}</p>
+      <p class="mb-[24px] text-MarketMidnight-500">{text2}</p>
+      <p class="mb-[24px] text-MarketMidnight-500">{text3}</p>
+      <h3 class="text-2xl text-MarketMidnight-500">{title2}</h3>
+
+      <p class="mb-[24px] text-MarketMidnight-500 font-bold">{textB}</p>
+
+      {
+        showList && (
+          <ul class="pl-5 mb-[24px] text-MarketMidnight-500 list-disc">
+            {dot1 && <li>{dot1}</li>}
+            {dot2 && <li>{dot2}</li>}
+            {dot3 && <li>{dot3}</li>}
+            {dot4 && <li>{dot4}</li>}
+            {dot5 && <li>{dot5}</li>}
+          </ul>
+        )
+      }
+
+      <p class="mb-[24px] text-MarketMidnight-500">{text4}</p>
+      <div class="mb-[24px] text-MarketMidnight-500 list-decimal" set:html={text5} />
+
+      {bbtext && bblink && <BigButtonBlack text={bbtext} link={bblink} />}
+
+      {
+        (button1 && link1) || (button2 && link2) ? (
+          <div class="flex gap-5">
+            {button1 && link1 && (
+              <a href={link1}>
+                {" "}
+                <Button variant="primary" size="large">
+                  {button1}
+                </Button>
+              </a>
+            )}
+            {button2 && link2 && (
+              <a href={link2}>
+                <Button variant="secondary" size="large">
+                  {button2}
+                </Button>
+              </a>
+            )}
+          </div>
+        ) : null
+      }
     </div>
   </div>
 </section>

@@ -1,33 +1,46 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function Toggle() {
   const [selected, setSelected] = useState<"guest" | "producer">("guest");
 
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (currentPath.includes("/producent") || currentPath.includes("/log-ind")) {
+      setSelected("producer");
+    } else {
+      setSelected("guest");
+    }
+  }, []);
+
   return (
-    <div className="flex items-center justify-center  ">
-      <div className="relative flex rounded-full border-2 border-white p-0.5 w-[300px]">
-        <button
+    <div className="flex items-center justify-center">
+      <div className="relative flex rounded-[20px] border-2 border-MarketLinen-500 p-0.5 w-[200px] h-[43px] ">
+        <a
+          href="/"
           onClick={() => setSelected("guest")}
           className={cn(
-            "relative z-10 w-1/2 py-1 text-center text-lg font-medium transition-colors duration-200 rounded-full",
-            selected === "guest" ? "text-white" : "text-white"
+            "relative z-10 w-1/2 py-1 pt-2 text-center text-sm md:text-sm transition-colors duration-200 rounded-[20px] cursor-pointer",
+            selected === "guest" ? "text-MarketLinen-500" : "text-MarketLinen-500"
           )}
         >
           Gæst
-        </button>
-        <button
+        </a>
+
+        <a
+          href="/producent"
           onClick={() => setSelected("producer")}
           className={cn(
-            "relative z-10 w-1/2 py-1 text-center text-lg font-medium transition-colors duration-200 rounded-full",
-            selected === "producer" ? "text-white" : "text-white"
+            "relative z-10 w-1/2 py-1 pt-2 text-center text-sm md:text-sm transition-colors duration-200 rounded-[20px] cursor-pointer",
+            selected === "producer" ? "text-MarketLinen-500" : "text-MarketLinen-500"
           )}
         >
           Producent
-        </button>
+        </a>
+
         <div
           className={cn(
-            "absolute top-1 bottom-1 w-[calc(50%-4px)] bg-[#2A4837] border-2 border-white rounded-full transition-transform duration-200 ease-in-out",
+            "absolute h-full py-1 left-0 right-0 top-0 bottom-0 w-[50%] bg-MarketMidnight-500 border-2 border-MarketLinen-500 rounded-[20px] transition-transform duration-200 ease-in-out",
             selected === "producer" ? "translate-x-[calc(100%)]" : ""
           )}
         />

@@ -106,12 +106,12 @@ const Producenter: React.FC<{ producenter?: Producent[] }> = ({
   const [cityFilter, setCityFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
 
-  // Get unique countries, cities and product types from data
+  // Får unike lande, byer og typer fra daten
   const countries = Array.from(new Set(producenter.map((producent) => producent.country)));
   const cities = Array.from(new Set(producenter.map((producent) => producent.city)));
   const types = Array.from(new Set(producenter.map((producent) => producent.type)));
 
-  // Filter producers based on selected filters
+  // Filtrer producenterne baseret på filtrering
   const filteredProducenter = producenter.filter((producent) => {
     const matchesCountry = countryFilter === "all" || producent.country === countryFilter;
     const matchesCity = cityFilter === "all" || producent.city === cityFilter;

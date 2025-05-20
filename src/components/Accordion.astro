@@ -5,7 +5,7 @@ const { atitle = "", atext = "" } = Astro.props;
 <div class="max-w-[576px] w-[400px] mx-auto border-b-1 border-black">
   <div class="accordion-item">
     <button
-      class="accordion-header flex items-center justify-between w-full py-3 font-semibold text-left focus:outline-none"
+      class="accordion-header flex items-center justify-between w-full py-3 text-left text-MarketMidnight-500 focus:outline-none"
     >
       {atitle}
       <svg
@@ -19,9 +19,9 @@ const { atitle = "", atext = "" } = Astro.props;
         ></path>
       </svg>
     </button>
-    <div class="accordion-content hidden overflow-hidden py-2">
+    <p class="accordion-content hidden overflow-hidden py-2 text-MarketMidnight-500">
       {atext}
-    </div>
+    </p>
   </div>
 </div>
 

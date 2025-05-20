@@ -3,18 +3,20 @@
 const { variant = "primary", size = "desktoplarge", link = "" } = Astro.props;
 
 // Definer den styling (Tailwind classes), der gælder for alle knapper
-const buttonStyling = "rounded-full transition duration-300";
+const buttonStyling = "rounded-[20px] transition duration-300";
 
+("h-[41px] px-[20px] rounded-[20px] text-sm cursor-pointer");
 // Definer den styling (Tailwind classes), der gælder for de forskellige varianter
 const variantClasses = {
-  primary: "bg-[#D26B74] hover:bg-[#E4A6AB] text-white cursor-pointer",
-  secondary: "border-2 border-black  text-black hover:border-2 hover:text-black cursor-pointer",
+  primary:
+    "bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 drop-shadow-xl cursor-pointer",
+  secondary:
+    "border-2 border-MarketMidnight-500  text-MarketMidnight-500 hover:border-2 hover:text-black cursor-pointer pulseButton",
 };
 
 // Definer den styling (Tailwind classes), der gælder for de forskellige størrelser
 const sizeClasses = {
-  large: "text-sm py-4 px-5 md:text-base md:py-2 md:px-10",
-  small: "text-sm py-4 px-5 md:text-base md:py-2 md:px-10",
+  large: "px-[32px] py-[10px] text-xs md:text-sm",
 };
 ---
 
@@ -23,7 +25,7 @@ const sizeClasses = {
   <slot />
 </button>
 
-<!-- <script>
+<script>
   import { animate } from "motion";
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -33,10 +35,10 @@ const sizeClasses = {
       button.addEventListener("mouseenter", () => {
         animate(
           button,
-          { scale: [1, 1.2, 1] }, // Pulse effect
+          { scale: [1, 1.4, 1] }, // Pulse effect
           { duration: 1, easing: "ease-in-out" }
         );
       });
     });
   });
-</script> -->
+</script>

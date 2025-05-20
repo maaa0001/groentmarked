@@ -71,7 +71,7 @@ export default function ProfileCarousel() {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl">
-      <div className="bg-[#2A4837] rounded-3xl flex flex-col md:flex-row relative">
+      <div className="bg-[#2A4837] rounded-3xl flex flex-col gap-10 md:flex-row relative">
         {/* Left side - Image */}
         <div className="md:w-2/5 relative">
           <div className="h-full">
@@ -84,12 +84,12 @@ export default function ProfileCarousel() {
         </div>
 
         {/* Right side - Content */}
-        <div className="md:w-3/5 p-6 md:p-8 text-white relative flex flex-col">
+        <div className="md:w-3/5 p-6 md:p-8 text-white relative flex flex-col self-center">
           <div className="flex-grow">
-            <h2 className="mb-6">{profiles[activeIndex].name}</h2>
+            <h3 className="text-MarketLinen-500 mb-6">{profiles[activeIndex].name}</h3>
 
             {profiles[activeIndex].description.map((paragraph, idx) => (
-              <p key={idx} className="mb-4 text-lg">
+              <p key={idx} className="text-MarketLinen-500 mb-6 w-2/3">
                 {paragraph}
               </p>
             ))}
@@ -114,7 +114,7 @@ export default function ProfileCarousel() {
               />
             </div>
 
-            {/* Pagination dots */}
+            {/* Pagination prikker */}
             <div className="flex justify-end mt-2">
               {profiles.map((_, idx) => (
                 <button

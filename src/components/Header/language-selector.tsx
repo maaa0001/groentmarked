@@ -45,7 +45,7 @@ export function LanguageSelector({ onChange, initialLanguage = "dk" }: LanguageS
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        className="bg-transparent border border-white text-white rounded-full py-2 px-3 text-sm flex items-center cursor-pointer"
+        className="bg-transparent border border-MarketLinen-500 text-MarketLinen-500 rounded-[20px] py-2 px-3 text-sm flex items-center cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedLanguage.code.toUpperCase()}
@@ -68,7 +68,7 @@ export function LanguageSelector({ onChange, initialLanguage = "dk" }: LanguageS
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-1 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10 ">
+        <div className="absolute right-0 mt-1 w-32 rounded-md shadow-lg bg-MarketLinen-500 ring-1 ring-black ring-opacity-5 z-10 ">
           <div className="py-1" role="menu" aria-orientation="vertical">
             {languages.map((language) => (
               <button

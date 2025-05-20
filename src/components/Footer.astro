@@ -9,10 +9,10 @@ import Newsletter from "./Newsletter.astro";
 ---
 
 <div
-  class="flex items-end bg-[url(src/assets/images/VektorFooter.svg)] bg-cover w-full min-h-screen z-10"
+  class="flex items-end bg-[url(src/assets/images/VektorFooter.svg)] bg-cover w-full h-100 min-h-screen z-10"
 >
   <div class="w-full flex flex-col flex-wrap ml-10 z-10">
-    <div class="w-1/2 flex justify-items-start mb-10">
+    <div class="w-1/2 flex justify-items-start mb-25">
       <Newsletter />
     </div>
 
@@ -21,26 +21,23 @@ import Newsletter from "./Newsletter.astro";
         <Image src={Logo} alt="Logo" />
       </a>
 
-      <div>
-        <h3 class="text-white md:text-2xl font-bold pb-4">Menu punkt</h3>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-      </div>
-      <div>
-        <h3 class="text-white md:text-2xl font-bold pb-4">Menu punkt</h3>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-      </div>
-      <div>
-        <h3 class="text-white md:text-2xl font-bold pb-4">Menu punkt</h3>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
-        <p class="pb-3 text-xs md:text-white">Lorem ipsum</p>
+      <div class="flex gap-20">
+        <div>
+          <p class="text-MarketLinen-500 text-base font-bold pb-5">Genveje</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Støt os</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Kalender</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Bliv producent</p>
+        </div>
+        <div>
+          <p class="text-MarketLinen-500 text-base font-bold pb-5">Sider</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Om os</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Vilkår og betingelser</p>
+          <p class="pb-3 text-base text-MarketLinen-500">Ressourcer</p>
+        </div>
+        <div>
+          <p class="text-MarketLinen-500 text-base font-bold pb-5">Kontakt</p>
+          <p class="pb-3 text-base text-MarketLinen-500">hello@groentmarked.dk</p>
+        </div>
       </div>
       <div class="flex justify-items-end">
         <Image src={IG} alt="Logo" />
