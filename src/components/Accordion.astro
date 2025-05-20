@@ -34,7 +34,7 @@ const { atitle = "", atext = "" } = Astro.props;
       const accordionContent = header.nextElementSibling;
       const arrowIcon = header.querySelector("svg");
 
-      // Close all other open accordion items
+      // Lukker alle andre accordion-item
       document.querySelectorAll(".accordion-item").forEach((item) => {
         if (item !== accordionItem && item.classList.contains("open")) {
           item.classList.remove("open");
@@ -44,7 +44,7 @@ const { atitle = "", atext = "" } = Astro.props;
         }
       });
 
-      // Toggle the current accordion item
+      // Toggle den valgte accordion
       accordionItem.classList.toggle("open");
       accordionContent.classList.toggle("hidden");
       arrowIcon.classList.toggle("rotate-180");
