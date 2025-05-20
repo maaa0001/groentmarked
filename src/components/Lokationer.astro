@@ -3,6 +3,10 @@ import GridCard from "@/components/cards/GridCard1_1.astro";
 import Market from "@/components/cards/Market.astro";
 import PathDashed from "../components/animationer/PathDashed.astro";
 import BigButtonBlack from "./animationer/BigButtonBlack.astro";
+import b3 from "src/assets/images/forside/3.webp";
+import b4 from "src/assets/images/forside/4.webp";
+import b5 from "src/assets/images/forside/5.webp";
+import b6 from "src/assets/images/forside/6.webp";
 ---
 
 <img
@@ -20,7 +24,7 @@ import BigButtonBlack from "./animationer/BigButtonBlack.astro";
     </p>
     <div>
       <Market
-        image="forside/3.webp"
+        image={b3}
         title="Indre by"
         subtitle="Sted: Gammelholm - Havnegade 54"
         text="Denne beskedne lille plads for enden af Nyhavn danner rammen for månedens første madmarked i år. Den er nemt tilgængelig med både bus og metro til Kongens Nytorv – og derfra er der kun en lille gåtur."
@@ -28,7 +32,7 @@ import BigButtonBlack from "./animationer/BigButtonBlack.astro";
         extra="no"
       />
       <Market
-        image="forside/4.webp"
+        image={b4}
         title="Vesterbro"
         subtitle="Sted: Litauens Plads, København V"
         text="Der er meget at lave på Vesterbro. Et herligt torv ved den gamle kirke i et charmerende område, som man snildt kan vandre eller cykle til fra hovedbanegården."
@@ -36,14 +40,14 @@ import BigButtonBlack from "./animationer/BigButtonBlack.astro";
         direction="-reverse"
       />
       <Market
-        image="forside/5.webp"
+        image={b5}
         title="Nørrebro"
         subtitle="Sted: Skjolds Plads, København N"
         text="Nemt at komme dertil fra metrostoppet Cityringen Metro, 6A bussen eller cykel, området omkring Skjoldsplads i ydre Nørrebro er begyndt at spire op og blive mere levende. Det ligger halvvejs til Østerbro og tæt på Bispebjerg Park."
         textB="Hver tredje søndag i måneden!"
       />
       <Market
-        image="forside/6.webp"
+        image={b6}
         title="Freberiksberg"
         subtitle="Aksel Møllers Have, Frederiksberg"
         text="Det flade, grønne område ved Aksel Møllers Have danner en ganske fin ramme for et madmarked. Den ellers stille og rolige græsplæne forvandles til et travlt og livligt marked én søndag om måneden."

@@ -1,11 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
-import PathDashed from "../components/animationer/PathDashed.astro";
-import Markedsbod from "../components/Markedsbod.astro";
+import b1 from "src/assets/images/forside/1.webp";
+import b2 from "src/assets/images/forside/2.webp";
+import b7 from "src/assets/images/forside/7.webp";
 import FAQ from "@/components/FAQ.astro";
 import ProfileCarousel from "@/components/animationer/profile-carousel";
 import ScrollCarousel from "@/components/animationer/scroll-carousel";
@@ -20,12 +17,12 @@ import HeroBackground from "@/components/HeroBackground.astro";
     title="Grønt Marked"
     tsize="text-[180px]"
     text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!"
-    image="forside/1.webp"
+    image={b1}
     btext="Støt Grønt Marked"
     link="/stoet"
   />
   <GridCard
-    image="forside/2.webp"
+    image={b2}
     title="Velkommen til Grønt Marked"
     text1="Når du besøger vores markeder, møder du ikke bare producenterne ansigt til ansigt – du bliver en del af en bevægelse, der forbinder byen med jorden og sæsonens rytme."
     text2="Men vi stopper ikke der. Uden for markedets boder skaber vi også events, fællesspisninger og samarbejder som styrker den lokale madkultur og den grønne omstilling. Vi tror på at forandring starter med fællesskab, og vi har brug for flere der vil være med."
@@ -37,7 +34,7 @@ import HeroBackground from "@/components/HeroBackground.astro";
   />
   <Lokationer loading="lazy" />
   <GridCard
-    image="forside/7.webp"
+    image={b7}
     title="Udover ugentlige markeder"
     text1="Grønt Marked er meget mere end et sted at handle. Det er også et levende fællesskab, hvor du kan komme tættere på jorden og dem, der dyrker den. "
     text2="Udover markedsdagene inviterer vi løbende til aktiviteter og begivenheder, hvor der er plads til nysgerrighed, samtale og fælles oplevelser – for alle, uanset erfaring:"

@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import BigButtonBlack from "../animationer/BigButtonBlack.astro";
 
@@ -37,11 +38,7 @@ const showList = dot1 || dot2 || dot3 || dot4 || dot5;
   <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
     <h2 class="mb-[24px] text-MarketMidnight-500 lg:hidden">{title}</h2>
     <div class="w-[531px] h-[553px]">
-      <img
-        class="h-full w-auto object-cover rounded-3xl"
-        src={`/src/assets/images/${image}`}
-        alt={image}
-      />
+      <Image class="h-full w-auto object-cover rounded-3xl" src={image} alt={image} />
     </div>
     <div class="w-full max-w-[576px] self-center">
       <h2 class="mb-[34px] text-MarketMidnight-500 hidden lg:block">{title}</h2>
