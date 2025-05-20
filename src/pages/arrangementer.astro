@@ -1,23 +1,21 @@
 ---
 import { StickyScrollReveal } from "@/components/animationer/StickyScroll";
 import MainLayout from "../layouts/MainLayout.astro";
-
-import ProfileCarousel from "src/components/animationer/profile-carousel";
-import ScrollCarousel from "@/components/animationer/scroll-carousel";
-import KalenderCard from "@/components/cards/KalenderCard.astro";
-import KalenderGrid from "@/components/KalenderGrid.astro";
-
 import FAQ from "@/components/FAQ.astro";
-
 import HeroBackground from "@/components/HeroBackground.astro";
 import UdoverMarkederne from "@/components/UdoverMarkederne.astro";
+import b1 from "src/assets/images/arrangementer/1.webp";
+import Carrot from "src/assets/images/vector/Carrot.svg";
+import Leaf from "src/assets/images/vector/Leaf.svg";
+import Recycle from "src/assets/images/vector/Recycle.svg";
+import HvorforIcons from "@/components/HvorforIcons.astro";
 ---
 
 <MainLayout title="Mere end et marked">
   <HeroBackground
     title="Arrangementer"
     text="Grønt Marked samler mennesker om <strong>kærligheden til ægte </strong>, <strong>lokal mad</strong> og <strong>ansvarlig produktion</strong>. Vi er en bevægelse, der hylder fællesskab, håndværk og sæsonens smag – både gennem vores søndagsmarkeder og Grønt Marked Køkken."
-    image="arrangementer/1.webp"
+    image={b1}
   />
   <section>
     <h2>Hvad vi tilbyder</h2>
@@ -33,39 +31,17 @@ import UdoverMarkederne from "@/components/UdoverMarkederne.astro";
     <StickyScrollReveal client:load />
     <UdoverMarkederne />
 
-    <section>
-      <h2>Hvorfor gør vi det?</h2>
-      <article class="flex gap-10">
-        <img class="w-20 h-auto" src="src/assets/images/vector/Carrot.svg" alt="" />
-        <div class="flex flex-col gap-2">
-          <h3>Lokale råvarer med omtanke</h3>
-          <p>
-            Vi samarbejder med små, danske producenter og bruger kun sæsonens bedste råvarer –
-            økologisk og bæredygtigt dyrket.
-          </p>
-        </div>
-      </article>
-      <article class="flex gap-10">
-        <img class="w-20 h-auto" src="src/assets/images/vector/Leaf.svg" alt="" />
-        <div class="flex flex-col gap-2">
-          <h3>Mad med mening og smag</h3>
-          <p>
-            Vores retter er lavet med respekt for råvarerne – og med kærlighed til god smag og ægte
-            håndværk.
-          </p>
-        </div>
-      </article>
-      <article class="flex gap-10">
-        <img class="w-20 h-auto" src="src/assets/images/vector/Recycle.svg" alt="" />
-        <div class="flex flex-col gap-2">
-          <h3>Støt en madbevægelse i balance</h3>
-          <p>
-            Når du vælger os, støtter du et mere fair og ansvarligt fødevaresystem – og en grønnere
-            fremtid.
-          </p>
-        </div>
-      </article>
-    </section>
+    <HvorforIcons
+      title1="Lokale råvarer med omtanke"
+      text1="Vi samarbejder med små, danske producenter og bruger kun sæsonens bedste råvarer – økologisk og bæredygtigt dyrket."
+      title2="Mad med mening og smag"
+      text2="Vores retter er lavet med respekt for råvarerne – og med kærlighed til god smag og ægte håndværk."
+      title3="Støt en madbevægelse i balance"
+      text3="Når du vælger os, støtter du et mere fair og ansvarligt fødevaresystem – og en grønnere fremtid."
+      icon1={Carrot}
+      icon2={Leaf}
+      icon3={Recycle}
+    />
 
     <FAQ />
   </div>

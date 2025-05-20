@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import Accordion from "./Accordion.astro";
+import Hjørne from "src/assets/images/vector/HjørneRose.svg";
 ---
 
-<img class="ml-auto mb-[-1px]" src="src/assets/images/vector/HjørneRose.svg" alt="" />
+<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="" />
 <section class="bg-[#EEC5C8] w-full py-10 px-10">
   <div class="layout">
     <h2 class="text-MarketMidnight-500 mb-17">Ofte stillede spørgsmål</h2>
@@ -22,4 +24,4 @@ import Accordion from "./Accordion.astro";
     </div>
   </div>
 </section>
-<img class="mt-[-1px] rotate-180" src="src/assets/images/vector/HjørneRose.svg" alt="" />
+<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="" />

@@ -6,7 +6,11 @@ export function Toggle() {
 
   useEffect(() => {
     const currentPath = window.location.pathname;
-    if (currentPath.includes("/producent") || currentPath.includes("/log-ind")) {
+    if (
+      currentPath === "/producent" ||
+      currentPath.startsWith("/producent/") ||
+      currentPath.includes("/log-ind")
+    ) {
       setSelected("producer");
     } else {
       setSelected("guest");

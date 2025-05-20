@@ -1,12 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import Replacement from "src/assets/images/Producent.png";
 const { title = "", subtitle = "", tekst = "", image = "" } = Astro.props;
 ---
 
 <article class="flex flex-col self-center w-xs overflow-hidden">
   <div class="rounded-3xl overflow-hidden h-60">
-    <img class="h-full w-full object-cover" src={image} alt="Producent" />
+    <Image class="h-full w-full object-cover" src={image} alt="Producent" />
   </div>
   <div>
     <h3>{title}</h3>

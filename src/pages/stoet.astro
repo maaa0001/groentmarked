@@ -5,13 +5,14 @@ import Frivillig from "@/components/Frivillig.astro";
 import SupportForm from "@/components/filter/support-form";
 import FAQ from "@/components/FAQ.astro";
 import ScrollCarousel from "@/components/animationer/scroll-carousel";
+import b1 from "src/assets/images/stoet/1.webp";
 ---
 
 <MainLayout title="Støt Grønt Marked">
   <HeroBackground
     title="Støt Grønt Marked"
     textl="Der er flere måder, <strong>du kan bidrage</strong> til, at Grønt Marked fortsat kan vokse og blomstre:<br><br><ul><li><a href='#støt'><u><strong>Støt os økonomisk</strong></u></a></li><li><a href='#støt'><u><strong>Bliv medlem</strong></u></a></li><li><a href='#frivillig'><u><strong>Engagér dig som frivillig (gratis)</strong></u></a></li></ul><br>Herunder kan du læse mere om de forskellige muligheder og, hvordan du kan være med."
-    image="forside/1.webp"
+    image={b1}
   />
   <SupportForm client:load />
   <Frivillig />

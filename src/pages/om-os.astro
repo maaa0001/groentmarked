@@ -6,13 +6,19 @@ import GridCard from "@/components/cards/GridCard1_1.astro";
 import OsBagGM from "@/components/OsBagGM.astro";
 import ProfileCarousel from "@/components/animationer/profile-carousel";
 import FAQ from "@/components/FAQ.astro";
+import b1 from "src/assets/images/om_os/1.webp";
+import b3 from "src/assets/images/om_os/3.webp";
+import b4 from "src/assets/images/om_os/4.webp";
+import b5 from "src/assets/images/om_os/5.webp";
+import Hjørne from "src/assets/images/vector/HjørneGold.svg";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Forside">
   <HeroBackground
     title="Os bag Grønt marked"
     text="Mit navn er MaltheGrønt Marked er en non-profit organisation, der arbejder for at skabe et fællesskabsbaseret og alternativt fødevaresystem, som fremmer småskala, danske råvarer og producenter."
-    image="om_os/1.webp"
+    image={b1}
   />
 
   <section class="flex justify-center">
@@ -26,22 +32,16 @@ import FAQ from "@/components/FAQ.astro";
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
-
-      <!-- <img src="/src/assets/images/om_os/2.webp" alt="" /> -->
     </div>
   </section>
-  <img
-    class="ml-auto mb-[-1px]"
-    src="src/assets/images/vector/HjørneGold.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
   <section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
     <GridCard
       title="Hvordan det hele begyndte"
       text1="Initiativet begyndte i 2019 på Refshaleøen i København, hvor Lille Bakery samlede venner og samarbejdspartnere om en idé, de mente byen manglede: et ægte bondemarked."
       text2="Siden da er Grønt Marked vokset til en levende frivilligforening af mad- og landbrugsentusiaster. Målet er at skabe et sted, hvor man kan møde producenterne ansigt til ansigt og støtte en grønnere fremtid. "
       text3="Uanset vejr og vind er markederne blevet stablet på benene – altid med ambitionen om at starte en ny tradition i Danmark, hvor det ugentlige besøg på markedet igen bliver en del af hverdagen."
-      image="om_os/3.webp"
+      image={b3}
       button1="Støt Grænt Marked"
       link1="/stoet"
       button2="Bliv frivillig"
@@ -56,7 +56,7 @@ import FAQ from "@/components/FAQ.astro";
       title2="Markedet vokser med byen"
       text3="Baseret i København siden 2019 byder markedet producenter fra Sjælland, Bornholm, Fyn og Skåne velkommen. De medbringer de bedste råvarer, og borgerne får mulighed for at etablere socioøkonomiske relationer, lære om maden og dens oprindelse, samt støtte småskala landbrug direkte. "
       text3="Grønt Marked findes nu i fire københavnske bydele (Vesterbro, Nørrebro, Frederiksberg og Indre By) og arbejder for at styrke den fællesskabsorienterede essens af vores by og gøre en forskel i fødevaresystemet."
-      image="/om_os/4.webp"
+      image={b4}
       button1="Se kalenderen"
       link1="/kalender"
       direction="-reverse"
@@ -66,12 +66,12 @@ import FAQ from "@/components/FAQ.astro";
       text1="Når du besøger Grønt Marked, vil du møde producenter, der deler vores værdier om gennemsigtighed, social ansvarlighed, respekt for miljøet og dyrevelfærd. De arbejder hver dag med passion for at dyrke, høste, brygge, destillere og skabe de sundeste og friskeste råvarer. Hver eneste produceret vare er et resultat af hårdt arbejde, hvor de samtidig styrker og respekterer de økosystemer, de er en del af."
       text2="Vores producenter kæmper ikke kun for kvaliteten af deres produkter, men også for at fremme et bæredygtigt og regenerativt landbrug, der beskytter naturen og fremmer en bedre fremtid for vores fødevaresystem."
       text3="Som borger har du mulighed for at blive en del af dette fællesskab og skabe stærke relationer med de mennesker, der står bag maden. Du får indsigt i, hvordan maden bliver til, og hvem du støtter. Samtidig kan du lære om den danske sæson og de råvarer, vi kan producere, mens du tager friskhed, kvalitet, historie, ekspertise og opskrifter med hjem."
-      image="om_os/3.webp"
+      image={b5}
       button1="Mød proudcenterne"
       link1="/producenterne"
     />
   </section>
-  <img class="mt-[-1px] rotate-180" src="src/assets/images/vector/HjørneGold.svg" alt="" />
+  <Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />
   <OsBagGM />
   <ProfileCarousel client:load />
   <FAQ />

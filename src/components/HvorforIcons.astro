@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const {
   subtext = "",
   title1 = "",
@@ -17,7 +19,7 @@ const {
   <h2 class="text-MarketMidnight-500 mb-[34px]">Hvorfor gør vi det?</h2>
   {subtext && <p class="text-MarketMidnight-500 mb-[34px]">{subtext}</p>}
   <article class="flex gap-10 mb-[34px]">
-    <img class="w-20 h-auto" src={`src/assets/images/vector/${icon1}`} alt={icon1} />
+    <Image class="w-20 h-auto" src={icon1} alt={icon1} />
     <div class="flex flex-col gap-2">
       <h3>{title1}</h3>
       <p>
@@ -26,7 +28,7 @@ const {
     </div>
   </article>
   <article class="flex gap-10 mb-[34px]">
-    <img class="w-20 h-auto" src={`src/assets/images/vector/${icon2}`} alt={icon2} />
+    <Image class="w-20 h-auto" src={icon2} alt={icon2} />
     <div class="flex flex-col gap-2">
       <h3>{title2}</h3>
       <p>
@@ -35,7 +37,7 @@ const {
     </div>
   </article>
   <article class="flex gap-10 mb-[34px]">
-    <img class="w-20 h-auto" src={`src/assets/images/vector/${icon3}`} alt={icon3} />
+    <Image class="w-20 h-auto" src={icon3} alt={icon3} />
     <div class="flex flex-col gap-2">
       <h3>{title3}</h3>
       <p>

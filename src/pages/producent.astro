@@ -1,24 +1,32 @@
 ---
-import HeroBackground from "@/components/HeroBackground.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import GridCard from "@/components/cards/GridCard1_1.astro";
 import PopUpCard from "@/components/cards/PopUpCard.astro";
 import AccordionCard from "@/components/cards/AccordionCard.astro";
-import ProducentCard from "@/components/ProducentCard.astro";
 import HvorforIcons from "@/components/HvorforIcons.astro";
 import Button from "@/components/Button.astro";
 import Accordion from "@/components/Accordion.astro";
 import ScrollCarousel from "@/components/animationer/scroll-carousel";
 import FAQ from "@/components/FAQ.astro";
+import b1 from "src/assets/images/producent/1.webp";
+import b2 from "src/assets/images/producent/2.webp";
+import b3 from "src/assets/images/producent/3.webp";
+import b4 from "src/assets/images/producent/4.webp";
+import HjørneGold from "src/assets/images/vector/HjørneGold.svg";
+import HjørneGreen from "src/assets/images/vector/HjørneGreen.svg";
+import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
+import Carrot from "src/assets/images/vector/Carrot.svg";
+import Leaf from "src/assets/images/vector/Leaf.svg";
+import Recycle from "src/assets/images/vector/Recycle.svg";
 ---
 
 <MainLayout variant="secondary" title="Producent">
-  <img class="top-0 w-full h-auto" src="src/assets/images/vector/HeroProducent.svg" alt="" />
+  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="" />
 
   <GridCard
     title="Producent sektionen"
-    image="producent/1.webp"
+    image={b1}
     text1="Velkommen til producent sektionen. Her finder du den information, du har brug for som nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand, overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt velkommen."
     text2="Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe et marked præget af kvalitet, gennemsigtighed og godt samarbejde."
     text3="Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden inden du ansøger:"
@@ -31,11 +39,7 @@ import FAQ from "@/components/FAQ.astro";
     direction="-reverse"
   />
 
-  <img
-    class="ml-auto mb-[-1px] mt-[-290px]"
-    src="src/assets/images/vector/HjørneGold.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGold} alt="Vector Hjørne" />
   <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
     <HvorforIcons
       subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
@@ -45,20 +49,15 @@ import FAQ from "@/components/FAQ.astro";
       text2="Direkte og vedvarende kontakt med kunderne styrker relationer, skaber loyalitet og øger produktets synlighed."
       title3="Fællesskab og værdiskabelse"
       text3="Mad betragtes som en fælles sag, hvor alle aktører aktivt bidrager til bæredygtige løsninger sammen."
-      icon1=""
-      icon2=""
-      icon3=""
+      icon1={Carrot}
+      icon2={Leaf}
+      icon3={Recycle}
     />
   </section>
-  <img
-    id="hvordan"
-    class="mt-[-1px] rotate-180"
-    src="src/assets/images/vector/HjørneGold.svg"
-    alt="Vector Hjørne"
-  />
+  <Image id="hvordan" class="mt-[-1px] rotate-180" src={HjørneGold} alt="Vector Hjørne" />
   <GridCard
     title="Hvordan bliver du producent?"
-    image="producent/2.webp"
+    image={b2}
     text="Brødtekst"
     title2="Ønsker du at deltage?"
     text4="Vi beder dig venligst følge den enkle 4-trins vejledning nedenfor, hvis du ønsker at søge om optagelse på markedet."
@@ -68,11 +67,7 @@ import FAQ from "@/components/FAQ.astro";
     direction="-reverse"
   />
 
-  <img
-    class="ml-auto mb-[-1px] mt-[-290px]"
-    src="src/assets/images/vector/HjørneGreen.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGreen} alt="Vector Hjørne" />
   <section class="bg-ForestFresh-500 py-30 px-[167px] w-full flex flex-col justify-center">
     <h2 class="text-MarketLinen-500 text-center mb-[34px]">
       “Det bedste ved markedet er fællesskabet. Her deler vi ikke bare mad, men også værdier og
@@ -85,11 +80,7 @@ import FAQ from "@/components/FAQ.astro";
       </a>
     </div>
   </section>
-  <img
-    class="mt-[-1px] rotate-180"
-    src="src/assets/images/vector/HjørneGreen.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="mt-[-1px] rotate-180" src={HjørneGreen} alt="Vector Hjørne" />
 
   <section class="layout w-full">
     <h2 class="text-MarketMidnight-500 mb-[34px]">Forventninger til markedsdage</h2>
@@ -136,7 +127,7 @@ import FAQ from "@/components/FAQ.astro";
 
     <AccordionCard
       title="Produktkrav og prissætning"
-      image="3.webp"
+      image={b3}
       subtitle="Grønt Marked retningslinjer 2025"
       atitle1="Tilladte produkter på Grønt Marked"
       atext1=""
@@ -149,7 +140,7 @@ import FAQ from "@/components/FAQ.astro";
     />
     <AccordionCard
       title="Deltagelse og priser"
-      image="4.webp"
+      image={b4}
       subtitle="Forskrifter 2023"
       atitle1="Deltagelsespolitik"
       atext1=""
