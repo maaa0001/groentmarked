@@ -59,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1500px;
   }
 }
 @layer utilities {
