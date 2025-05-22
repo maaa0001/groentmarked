@@ -2,26 +2,34 @@
 import { Image } from "astro:assets";
 import Accordion from "./Accordion.astro";
 import Hjørne from "src/assets/images/vector/HjørneRose.svg";
+import Blomst from "src/assets/images/illustrationer/Blomst1.webp";
 ---
 
-<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="" />
-<section class="bg-[#EEC5C8] w-full py-10 px-10">
-  <div class="layout">
-    <h2 class="text-MarketMidnight-500 mb-17">Ofte stillede spørgsmål</h2>
-    <div class="flex flex-row flex-wrap justify-center gap-x-[119px]">
-      <div>
-        <Accordion atitle="Hvorfor et bondemarked?" atext="Hej" />
-        <Accordion atitle="Hvilke produkter og producenter finder jeg på markedet?" atext="" />
-        <Accordion atitle="Hvem står bag markederne?" atext="" />
-        <Accordion atitle="Hvordan kan jeg være med?" atext="" />
-      </div>
-      <div>
-        <Accordion atitle="Kan Grønt Marked organisere et marked til min begivenhed?" atext="" />
-        <Accordion atitle="Hvilke betalingsformer modtager I?" atext="" />
-        <Accordion atitle="Sælger I plastikposer?" atext="" />
-        <Accordion atitle="Er der læ i tilfælde af regn?" atext="" />
+<div class="relative w-full overflow-hidden">
+  <Image
+    src={Blomst}
+    alt="Illustration af blomst"
+    class="absolute top-30 right-0 h-50 lg:h-80 w-auto rotate-20 z-10"
+  />
+  <Image class="ml-auto mb-[-1px] relative z-0" src={Hjørne} alt="" />
+  <section class="bg-[#EEC5C8] w-full py-10 px-10 relative z-0">
+    <div class="layout">
+      <h2 class="text-MarketMidnight-500 mb-17">Ofte stillede spørgsmål</h2>
+      <div class="flex flex-row flex-wrap justify-center gap-x-[119px]">
+        <div>
+          <Accordion atitle="Hvorfor et bondemarked?" atext="Hej" />
+          <Accordion atitle="Hvilke produkter og producenter finder jeg på markedet?" atext="" />
+          <Accordion atitle="Hvem står bag markederne?" atext="" />
+          <Accordion atitle="Hvordan kan jeg være med?" atext="" />
+        </div>
+        <div>
+          <Accordion atitle="Kan Grønt Marked organisere et marked til min begivenhed?" atext="" />
+          <Accordion atitle="Hvilke betalingsformer modtager I?" atext="" />
+          <Accordion atitle="Sælger I plastikposer?" atext="" />
+          <Accordion atitle="Er der læ i tilfælde af regn?" atext="" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="" />
+  </section>
+  <Image class="mt-[-1px] rotate-180 relative z-0" src={Hjørne} alt="" />
+</div>

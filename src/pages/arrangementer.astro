@@ -9,6 +9,8 @@ import Carrot from "src/assets/images/vector/Carrot.svg";
 import Leaf from "src/assets/images/vector/Leaf.svg";
 import Recycle from "src/assets/images/vector/Recycle.svg";
 import HvorforIcons from "@/components/HvorforIcons.astro";
+import Grøntsager from "src/assets/images/illustrationer/Grøntsager.webp";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Mere end et marked">
@@ -17,9 +19,14 @@ import HvorforIcons from "@/components/HvorforIcons.astro";
     text="Grønt Marked samler mennesker om <strong>kærligheden til ægte </strong>, <strong>lokal mad</strong> og <strong>ansvarlig produktion</strong>. Vi er en bevægelse, der hylder fællesskab, håndværk og sæsonens smag – både gennem vores søndagsmarkeder og Grønt Marked Køkken."
     image={b1}
   />
-  <section>
-    <h2>Hvad vi tilbyder</h2>
-    <p>
+  <section class="layout relative">
+    <Image
+      src={Grøntsager}
+      alt="Tegnet grøntsager"
+      class="absolute top-[-100px] right-0 h-50 lg:h-80 w-auto"
+    />
+    <h2 class="mb-[24px] text-MarketMidnight-500">Hvad vi tilbyder</h2>
+    <p class="mb-[24px] text-MarketMidnight-500">
       Dyk ned i oplevelsen hos Grønt Marked Køkken med vores private dining-oplevelser. Vores kokke
       tager dig med på en rejse gennem sæsonerne og viser, hvor meget smag der kan fremhæves med
       friske, lokale råvarer. Hver oplevelse vil give dig værdifulde tips og tricks til, hvordan du

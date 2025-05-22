@@ -45,8 +45,7 @@ import { Image } from "astro:assets";
       button1="Støt Grænt Marked"
       link1="/stoet"
       button2="Bliv frivillig"
-      link2="/stoet"
-      styling=""
+      link2="/stoet#frivillig"
     />
     <GridCard
       title="En ny måde at handle på"
@@ -54,8 +53,8 @@ import { Image } from "astro:assets";
       text2="Et marked er i sin kerne et fælles projekt – en åben platform, der hylder dem, der arbejder ansvarligt med mad. Det handler om at tage aktiv del i nye, lokale madtraditioner. Det kræver mange hænder og hjerter, men det er det hele værd."
       text3="Vi er dybt taknemmelige for de frivillige, bønder, besøgende og ildsjæle, der er med til at gøre Grønt Marked til noget særligt. Uden jer fandtes det ikke."
       title2="Markedet vokser med byen"
-      text3="Baseret i København siden 2019 byder markedet producenter fra Sjælland, Bornholm, Fyn og Skåne velkommen. De medbringer de bedste råvarer, og borgerne får mulighed for at etablere socioøkonomiske relationer, lære om maden og dens oprindelse, samt støtte småskala landbrug direkte. "
-      text3="Grønt Marked findes nu i fire københavnske bydele (Vesterbro, Nørrebro, Frederiksberg og Indre By) og arbejder for at styrke den fællesskabsorienterede essens af vores by og gøre en forskel i fødevaresystemet."
+      text4="Baseret i København siden 2019 byder markedet producenter fra Sjælland, Bornholm, Fyn og Skåne velkommen. De medbringer de bedste råvarer, og borgerne får mulighed for at etablere socioøkonomiske relationer, lære om maden og dens oprindelse, samt støtte småskala landbrug direkte. "
+      text5="Grønt Marked findes nu i fire københavnske bydele (Vesterbro, Nørrebro, Frederiksberg og Indre By) og arbejder for at styrke den fællesskabsorienterede essens af vores by og gøre en forskel i fødevaresystemet."
       image={b4}
       button1="Se kalenderen"
       link1="/kalender"
@@ -76,9 +75,3 @@ import { Image } from "astro:assets";
   <ProfileCarousel client:load />
   <FAQ />
 </MainLayout>
-
-<style>
-  button.ytp-button:not([aria-disabled="true"]):not([disabled]):not([aria-hidden="true"]) {
-    display: none;
-  }
-</style>
