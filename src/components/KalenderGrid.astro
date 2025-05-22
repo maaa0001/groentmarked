@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Button from "./Button.astro";
 import KalenderCard from "./cards/KalenderCard.astro";
 import EventCalendar from "./filter/event-calendar";
+import Hjørne from "src/assets/images/vector/HjørneHvid.svg";
 ---
 
 <section class="bg-GoldenGrain-300 pb-40 px-[167px] relative z-0">
@@ -9,7 +11,7 @@ import EventCalendar from "./filter/event-calendar";
   <p>
     Ønsker du at booke en oplevelse, kan du nemt klikke på den ønskede begivenhed i kalenderen.
     Herefter bliver du guidet videre til tilmelding. Vil du læse mere om de forskellige
-    arrangementer inden du booker, kan du yderligere information på siden <i> Arrangementer</i> , som
+    arrangementer inden du booker, kan du yderligere information på siden <i>Arrangementer</i> , som
     du nemt kan tilgå via knappen herunder.
   </p>
   <p>
@@ -23,11 +25,5 @@ import EventCalendar from "./filter/event-calendar";
   </div>
 
   <EventCalendar client:load />
-  <img
-    class="absolute bottom-0 right-0 top-auto"
-    src="src/assets/images/vector/HjørneHvid.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="absolute bottom-0 right-0 top-auto" src={Hjørne} alt="Vector Hjørne" />
 </section>
-
-<!-- <div class="grid grid-cols-4 gap-x-[129px] gap-y-[100px]"></div> -->
