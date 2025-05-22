@@ -14,23 +14,23 @@ interface ScrollCarouselProps {
 const ScrollCarousel: React.FC<ScrollCarouselProps> = ({
   images = [
     {
-      src: "carousel/Asparges.webp",
+      src: "/carousel/Asparges.webp",
       alt: "Green asparagus spears",
     },
     {
-      src: "carousel/Kartofler.webp",
+      src: "/carousel/Kartofler.webp",
       alt: "Small potatoes with soil",
     },
     {
-      src: "carousel/Rabarber.webp",
+      src: "/carousel/Rabarber.webp",
       alt: "Fresh rhubarb stalks with green leaves",
     },
     {
-      src: "carousel/Svampe.webp",
+      src: "/carousel/Svampe.webp",
       alt: "Mushrooms",
     },
     {
-      src: "carousel/Jordbær.webp",
+      src: "/carousel/Jordbær.webp",
       alt: "Fresh strawberries in containers",
     },
   ],
