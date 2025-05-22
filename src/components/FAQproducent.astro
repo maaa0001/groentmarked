@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Accordion from "./Accordion.astro";
+import Hjørne from "src/assets/images/vector/HjørneRose.svg";
+---
+
+<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="" />
+<section class="bg-[#EEC5C8] w-full py-[163px]">
+  <div class="layout">
+    <h2 class="text-MarketMidnight-500 mb-[34px]">Ofte stillede spørgsmål</h2>
+    <div class="flex flex-row flex-wrap justify-center gap-x-[119px]">
+      <div>
+        <Accordion atitle="Hvad kan sælges på Grønt Marked?" atext="På Grønt Marked fokuserer vi på lokale, bæredygtige og sæsonbestemte produkter. For at sikre kvalitet og fælles værdier har vi klare retningslinjer for, hvad der kan sælges.<br><br>Du kan læse mere detaljeret om disse retningslinjer under retningslinjer for Grønt Marked." />
+        <Accordion atitle="Hvem kan sælge varer på markedet?" atext="Grønt Marked er et bondemarked, hvor kun landmænd og producenter må sælge deres varer direkte til forbrugerne. Vi har desværre ikke plads til forhandlere eller mellemled, da vi ønsker at sikre nærhed og gennemsigtighed i fødevarekæden. På den måde kan du være sikker på, at varerne er friske og kommer direkte fra dem, der har dyrket eller fremstillet dem." />
+        <Accordion atitle="Kan madvogne deltage i markedet?" atext="Nej, madvogne og street food-sælgere er ikke en del af Grønt Marked. Markedet er dedikeret til producenter, der sælger deres egne varer. Hvis en producent har en kølevogn eller andet udstyr, som de bruger til at opbevare eller transportere deres egne produkter, er det selvfølgelig helt i orden." />
+        <Accordion atitle="Hvordan bestemmes jeres retningslinjer og kriterier?" atext="Retningslinjerne og kriterierne fastlægges af vores kernegruppe bestående af erfarne landmænd, producenter og organisatoriske ildsjæle. Vi trækker på erfaringer fra internationale bondemarkeder og tager løbende imod feedback fra vores producenter og frivillige, så retningslinjerne altid afspejler både faglig indsigt og praktiske behov.<br><br>På den måde sikrer vi, at beslutningerne bliver taget af dem, der kender både landbruget og fællesskabet bedst." />
+      </div>
+      <div>
+        <Accordion atitle="Hvem står bag markederne?" atext="Grønt Marked er skabt af et engageret fællesskab bestående af producenter, frivillige, venner, kollegaer og ildsjæle – alle klar til at støtte projektet og bidrage med deres kompetencer, energi og gode idéer." />
+        <Accordion atitle="Hvordan finansieres projektet?" atext="Grønt Marked er en non-profit forening, og vi finansierer projektet gennem et markedsgebyr på 350 kr. plus moms samt ved at søge offentlige midler. Alle indtægter bliver reinvesteret direkte i projektet for at sikre markedets fortsatte udvikling og drift." />
+        <Accordion atitle="Hvad er jeres mål?" atext="Vores mål er at sprede og styrke kulturen omkring bondemarkeder og gøre dem til en fast, ugentlig del af hverdagen i København. Vi ønsker at skabe en levende platform, hvor lokale producenter og forbrugere kan mødes, dele viden og bygge et bæredygtigt fødevaresystem sammen. På den måde håber vi at gøre det nemt og naturligt for københavnerne at vælge frisk, sæsonbestemt og lokal mad – hver uge.<br><br>Vil du vide mere om os, vores historie og værdier, kan du læse videre på siden <a href='/om-os'><u><strong>Om os</strong></u></a>." />
+      </div>
+    </div>
+  </div>
+</section>
+<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="" />
