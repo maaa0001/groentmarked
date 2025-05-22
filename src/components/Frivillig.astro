@@ -1,9 +1,11 @@
 ---
 import GridCard from "@/components/cards/GridCard1_1.astro";
+import { Image } from "astro:assets";
 import b2 from "src/assets/images/stoet/2.webp";
+import Hjørne from "src/assets/images/vector/HjørneGold.svg";
 ---
 
-<img class="ml-auto mb-[-1px]" src="src/assets/images/vector/HjørneGold.svg" alt="Vector Hjørne" />
+<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
 <section id="frivillig" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
   <GridCard
     title="Bliv frivillig "
@@ -15,8 +17,4 @@ import b2 from "src/assets/images/stoet/2.webp";
     image={b2}
   />
 </section>
-<img
-  class="mt-[-1px] rotate-180"
-  src="src/assets/images/vector/HjørneGold.svg"
-  alt="Vector Hjørne"
-/>
+<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Vector Hjørne" />

@@ -1,7 +1,9 @@
 ---
 import GridCard from "@/components/cards/GridCard1_1.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
 import b1 from "src/assets/images/log-ind/1.webp";
+import Hjørne from "src/assets/images/vector/HjørneGreen.svg";
 ---
 
 <MainLayout variant="secondary" title="Mød producenterne">
@@ -16,9 +18,5 @@ import b1 from "src/assets/images/log-ind/1.webp";
     button2="Ansøg nu"
     link2="#"
   />
-  <img
-    class="ml-auto mb-[-1px] mt-[-290px]"
-    src="src/assets/images/vector/HjørneGreen.svg"
-    alt="Vector Hjørne"
-  />
+  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
 </MainLayout>

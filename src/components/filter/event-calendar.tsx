@@ -228,9 +228,9 @@ const EventCard: React.FC<{ event: Event }> = ({ event }) => {
         </div>
         <div className="grid grid-cols-6 gap-y-4 mt-2">
           <h4 className="col-span-6">{event.titel}</h4>
-          <img className="col-span-1" src="src/assets/images/icons/Ur.svg" alt="Clock icon" />
+          <img className="col-span-1" src="/icons/Ur.svg" alt="Clock icon" />
           <p className="col-span-5">{event.time}</p>
-          <img src="src/assets/images/icons/Pin.svg" alt="Pin location icon" />
+          <img src="/icons/Pin.svg" alt="Pin location icon" />
           <p className="col-span-5">{event.address}</p>
         </div>
       </article>

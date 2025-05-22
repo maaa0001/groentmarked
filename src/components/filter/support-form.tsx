@@ -285,21 +285,13 @@ export default function SupportForm() {
             <button type="submit" className="flex items-center cursor-pointer">
               <div className="relative w-40 h-64 flex justify-center items-center">
                 <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
-                  <img
-                    src="src/assets/images/vector/KnapBlack.svg"
-                    alt=""
-                    className="w-full h-full"
-                  />
+                  <img src="/icons/KnapBlack.svg" alt="" className="w-full h-full" />
                 </div>
                 <div className="absolute inset-0 animate-[spin_10s_linear_infinite_reverse]">
-                  <img
-                    src="src/assets/images/vector/KnapBlack.svg"
-                    alt=""
-                    className="w-full h-full"
-                  />
+                  <img src="/icons/KnapBlack.svg" alt="" className="w-full h-full" />
                 </div>
 
-                <img src="src/assets/images/icons/ArrowBlack.svg" alt="" />
+                <img src="/icons/ArrowBlack.svg" alt="" />
               </div>
 
               {supportType === "economic" ? "Støt nu" : "Bliv medlem nu"}
