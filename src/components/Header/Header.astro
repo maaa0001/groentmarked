@@ -44,9 +44,9 @@ import { Toggle } from "./toggle-button";
       <a href="/arrangementer" class="text-MarketLinen-500 text-sm mr-[35px]">Arrangementer</a>
       <a href="/kalender" class="text-MarketLinen-500 text-sm mr-[35px]">Kalender</a>
       <a href="/stoet#frivillig" class="text-MarketLinen-500 text-sm mr-[35px]">Bliv frivillig</a>
-      <a href="/om-os" class="text-MarketLinen-500 text-sm mr-[35px]">
-        <div class="relative">
-          <button class="bg-transparent py-2 px-3 text-sm flex items-center">
+      <div class="relative group mr-[35px]">
+        <a href="/om-os" class="text-MarketLinen-500 text-sm">
+          <button class="bg-transparent py-4 px-3 text-sm flex items-center">
             Om os
             <svg
               class="ml-1 w-2.5 h-1.5"
@@ -62,8 +62,19 @@ import { Toggle } from "./toggle-button";
                 stroke-linejoin="round"></path>
             </svg>
           </button>
-        </div>
-      </a>
+        </a>
+        <ul
+          class="absolute hidden group-hover:block bg-ForestFresh-500 shadow-lg rounded-md w-48 py-2 z-20"
+        >
+          <li>
+            <a
+              href="/producenterne"
+              class="block px-4 py-2 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300"
+              >Mød producenterne</a
+            >
+          </li>
+        </ul>
+      </div>
 
       <a href="stoet" class="text-gray-700 text-sm mr-[35px]">
         <button
@@ -161,7 +172,7 @@ import { Toggle } from "./toggle-button";
     <a href="/kalender" class="py-2">Kalender</a>
     <a href="/stoet/#" class="py-2">Bliv frivillig</a>
     <a href="/om-os" class="py-2">Om os</a>
-    <a href="#" class="py-2">Mød producenterne</a>
+    <a href="/producenterne" class="py-2">Mød producenterne</a>
   </nav>
 
   <div class="p-4 flex flex-col items-center space-y-6">
