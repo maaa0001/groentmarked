@@ -10,9 +10,23 @@ import GridCard from "@/components/cards/GridCard1_1.astro";
 import Lokationer from "@/components/Lokationer.astro";
 import OsBagGM from "@/components/OsBagGM.astro";
 import HeroBackground from "@/components/HeroBackground.astro";
+import Markedsbod from "src/assets/images/illustrationer/Marked_bod.webp";
+import Knap from "src/assets/images/vector/Knap.svg";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Forside">
+  <section id="preloader" class="bg-ForestFresh-500 z-100 fixed w-full h-full flex justify-center">
+    <div class="relative w-200 h-auto flex justify-center items-center">
+      <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
+        <Image src={Knap} alt="Rotating SVG 1" width={256} height={256} class="w-full h-full" />
+      </div>
+      <div class="absolute inset-0 animate-[spin_10s_linear_infinite_reverse]">
+        <Image src={Knap} alt="Rotating SVG 2" width={256} height={256} class="w-full h-full" />
+      </div>
+      <Image src={Markedsbod} alt="Illustration af markedsbod" class="w-90 h-auto" />
+    </div>
+  </section>
   <HeroBackground
     title="Grønt Marked"
     tsize="text-[180px]"
@@ -54,4 +68,94 @@ import HeroBackground from "@/components/HeroBackground.astro";
   <div class="bg-[url(src/assets/images/footer_billede.webp)] bg-cover w-full h-200"></div>
 </MainLayout>
 
-<style></style>
+<style>
+  #preloader {
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+    display: flex;
+  }
+  #preloader.fade-out {
+    opacity: 0;
+  }
+
+  #preloader.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  declare global {
+    interface HTMLElement {
+      startTime?: number;
+    }
+  }
+
+  const preloader = document.getElementById("preloader") as HTMLElement | null;
+  const body = document.body;
+
+  // Check if this is the first visit in the session
+  const hasVisitedThisSession = sessionStorage.getItem("hasVisitedThisSession");
+
+  if (!hasVisitedThisSession) {
+    body.style.overflow = "hidden";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (preloader) {
+        preloader.startTime = Date.now();
+      }
+    });
+
+    // Handle full page load (after all assets are loaded)
+    window.addEventListener("load", () => {
+      if (preloader) {
+        const minDisplayTime = 3000; // Minimum 3 seconds
+        const loadEndTime = Date.now();
+        const startTime = preloader.startTime || loadEndTime; // Fallback if DOMContentLoaded missed
+        const timePreloaderVisible = loadEndTime - startTime;
+        const remainingTime = Math.max(0, minDisplayTime - timePreloaderVisible);
+
+        setTimeout(() => {
+          preloader.classList.add("fade-out"); // Start fade-out
+          setTimeout(() => {
+            preloader.classList.add("hidden"); // Fully hide after transition
+            body.style.overflow = "auto"; // Restore scrolling
+          }, 500); // Matches CSS transition duration
+        }, remainingTime);
+
+        // Mark that the user has now visited this session
+        sessionStorage.setItem("hasVisitedThisSession", "true");
+      }
+    });
+  } else {
+    // ---- Logic for subsequent visits in the same session (e.g., internal navigation, back/forward) ----
+
+    // Immediately hide the preloader on DOMContentLoaded if already visited this session
+    document.addEventListener("DOMContentLoaded", () => {
+      if (preloader) {
+        preloader.classList.add("hidden"); // Hide immediately
+        preloader.style.opacity = "0"; // Ensure opacity is 0 for immediate hide
+        body.style.overflow = "auto"; // Restore scrolling
+      }
+    });
+  }
+
+  // --- Astro View Transitions Handling (important for internal navigation) ---
+  // This event fires whenever Astro swaps page content (client-side navigation)
+  document.addEventListener("astro:after-swap", () => {
+    if (preloader) {
+      preloader.classList.add("hidden"); // Ensure preloader is hidden after any client-side navigation
+      preloader.style.opacity = "0"; // Ensure opacity is 0
+      body.style.overflow = "auto"; // Restore scrolling
+    }
+  });
+
+  // Ensure scroll is restored if preloader is not shown due to internal navigation
+  // This is a safety net in case 'astro:after-swap' is not always reliable
+  document.addEventListener("astro:page-load", () => {
+    if (hasVisitedThisSession && preloader) {
+      preloader.classList.add("hidden");
+      preloader.style.opacity = "0";
+      body.style.overflow = "auto";
+    }
+  });
+</script>
