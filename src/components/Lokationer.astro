@@ -12,47 +12,50 @@ import { Image } from "astro:assets";
 ---
 
 <Image class="ml-auto mb-[-1px] mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
-<section id="markederne" class="bg-GoldenGrain-300 py-30 px-5 lg:px-[167px] w-full">
-  <div class="m-auto layout">
-    <h2 class="text-MarketMidnight-500">Lokationer for Grønne markeder</h2>
-    <p class="mb-18 w-1/2 text-MarketMidnight-500">
-      Vi holder Grønne markeder hver søndag fra kl. 10.00 til 15.00 fra maj til december. Herunder
-      kan du finde de fire lokationer for markederne, og nederst komme dirkete til vores
-      markedskalender.
-    </p>
-    <div>
-      <Market
-        image={b3}
-        title="Indre by"
-        subtitle="Sted: Gammelholm - Havnegade 54"
-        text="Denne beskedne lille plads for enden af Nyhavn danner rammen for månedens første madmarked i år. Den er nemt tilgængelig med både bus og metro til Kongens Nytorv – og derfra er der kun en lille gåtur."
-        textB="Hver første søndag i måneden!"
-      />
-      <Market
-        image={b4}
-        title="Vesterbro"
-        subtitle="Sted: Litauens Plads, København V"
-        text="Der er meget at lave på Vesterbro. Et herligt torv ved den gamle kirke i et charmerende område, som man snildt kan vandre eller cykle til fra hovedbanegården."
-        textB="Hver anden søndag i måneden!"
-        direction="-reverse"
-      />
-      <Market
-        image={b5}
-        title="Nørrebro"
-        subtitle="Sted: Skjolds Plads, København N"
-        text="Nemt at komme dertil fra metrostoppet Cityringen Metro, 6A bussen eller cykel, området omkring Skjoldsplads i ydre Nørrebro er begyndt at spire op og blive mere levende. Det ligger halvvejs til Østerbro og tæt på Bispebjerg Park."
-        textB="Hver tredje søndag i måneden!"
-      />
-      <Market
-        image={b6}
-        title="Freberiksberg"
-        subtitle="Aksel Møllers Have, Frederiksberg"
-        text="Det flade, grønne område ved Aksel Møllers Have danner en ganske fin ramme for et madmarked. Den ellers stille og rolige græsplæne forvandles til et travlt og livligt marked én søndag om måneden."
-        textB="Hver fjerde søndag i måneden!"
-        direction="-reverse"
-      />
+<section id="markederne" class="bg-GoldenGrain-300 pt-[163px] px-5 lg:px-[167px] w-full">
+  <div class="layout">
+    <div class="m-auto flex justify-center layout">
+      <h2 class="text-MarketMidnight-500 mb-4">Lokationer for Grønne markeder</h2>
+      <p class="mb-[60px] w-1/2 text-MarketMidnight-500">
+        Vi holder Grønne markeder hver søndag fra kl. 10.00 til 15.00 fra maj til december. Herunder
+        kan du finde de fire lokationer for markederne, og nederst komme dirkete til vores
+        markedskalender.
+      </p>
+      <div class="flex flex-col gap-[193px]">
+        <Market
+          image={b3}
+          title="Indre by"
+          subtitle="Sted: Gammelholm - Havnegade 54"
+          text="Denne beskedne lille plads for enden af Nyhavn danner rammen for månedens første madmarked i år. Den er nemt tilgængelig med både bus og metro til Kongens Nytorv – og derfra er der kun en lille gåtur."
+          textB="Hver første søndag i måneden!"
+          extra="no"
+        />
+        <Market
+          image={b4}
+          title="Vesterbro"
+          subtitle="Sted: Litauens Plads, København V"
+          text="Der er meget at lave på Vesterbro. Et herligt torv ved den gamle kirke i et charmerende område, som man snildt kan vandre eller cykle til fra hovedbanegården."
+          textB="Hver anden søndag i måneden!"
+          direction="-reverse"
+        />
+        <Market
+          image={b5}
+          title="Nørrebro"
+          subtitle="Sted: Skjolds Plads, København N"
+          text="Nemt at komme dertil fra metrostoppet Cityringen Metro, 6A bussen eller cykel, området omkring Skjoldsplads i ydre Nørrebro er begyndt at spire op og blive mere levende. Det ligger halvvejs til Østerbro og tæt på Bispebjerg Park."
+          textB="Hver tredje søndag i måneden!"
+        />
+        <Market
+          image={b6}
+          title="Freberiksberg"
+          subtitle="Aksel Møllers Have, Frederiksberg"
+          text="Det flade, grønne område ved Aksel Møllers Have danner en ganske fin ramme for et madmarked. Den ellers stille og rolige græsplæne forvandles til et travlt og livligt marked én søndag om måneden."
+          textB="Hver fjerde søndag i måneden!"
+          direction="-reverse"
+        />
+      </div>
+      <BigButtonBlack text="Se vores kalender" link="/kalender" />
     </div>
-    <BigButtonBlack text="Se vores kalender" link="/kalender" />
   </div>
 </section>
-<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Vector Hjørne" />
+<Image class="mt-[-1px] mb-[-100px] rotate-180" src={Hjørne} alt="Vector Hjørne" />

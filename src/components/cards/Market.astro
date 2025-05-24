@@ -13,14 +13,14 @@ const {
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 ---
 
-<section class="flex justify-center mb-50 w-full">
+<section class="flex justify-center w-full">
   <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
-    <h2 class="mb-[14px] text-MarketMidnight-500 lg:hidden">{title}</h2>
+    <h2 class="mb-4 text-MarketMidnight-500 lg:hidden">{title}</h2>
     <div class="w-4/5 lg:w-2/5 h-auto max-w-[540px]">
       <Image class="h-full w-auto object-cover rounded-3xl" src={image} alt={image} />
     </div>
     <div class="w-4/5 lg:w-2/5 self-center">
-      <h2 class="mb-[34px] text-MarketMidnight-500 hidden lg:block">{title}</h2>
+      <h2 class="mb-4 text-MarketMidnight-500 hidden lg:block">{title}</h2>
       <p class="mb-[24px] text-xl text-MarketMidnight-500">{subtitle}</p>
       <p class="mb-[24px] text-MarketMidnight-500">{text}</p>
       <p class="mb-[24px] text-MarketMidnight-500 font-bold">{textB}</p>
