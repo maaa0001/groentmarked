@@ -70,7 +70,7 @@ export default function ProfileCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl">
+    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl px-20 lg:px-0">
       <img
         src="/illustrationer/Blomst1.webp"
         alt="Illustration af blomst"
@@ -78,23 +78,21 @@ export default function ProfileCarousel() {
       />
       <div className="bg-[#2A4837] rounded-3xl flex flex-col gap-10 md:flex-row relative">
         {/* Left side - Image */}
-        <div className="md:w-2/5  md:h-[490px] relative">
-          <div className="h-full max-h-[490px]">
-            <img
-              src={profiles[activeIndex].image}
-              alt={profiles[activeIndex].name}
-              className="object-cover w-full h-full transition-opacity duration-500 rounded-3xl"
-            />
-          </div>
+        <div className="md:w-2/5 md:h-[490px] relative">
+          <img
+            src={profiles[activeIndex].image}
+            alt={profiles[activeIndex].name}
+            className="object-cover w-full h-full transition-opacity duration-500 rounded-3xl"
+          />
         </div>
 
         {/* Right side - Content */}
-        <div className="md:w-3/5 p-6 md:p-8 text-white relative flex flex-col self-center">
+        <div className="md:w-3/5 p-6 md:p-8 text-MarketLinen-500 relative flex flex-col self-center">
           <div className="flex-grow">
             <h3 className="text-MarketLinen-500 mb-6">{profiles[activeIndex].name}</h3>
 
             {profiles[activeIndex].description.map((paragraph, idx) => (
-              <p key={idx} className="text-MarketLinen-500 mb-6 w-2/3">
+              <p key={idx} className="text-MarketLinen-500 mb-6 w-full lg:w-2/3">
                 {paragraph}
               </p>
             ))}
