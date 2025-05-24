@@ -59,7 +59,7 @@ export default function SupportForm() {
   };
 
   return (
-    <div id="støt" className="max-w-[1000px] mx-auto">
+    <div id="støt" className="max-w-[1000px] mx-auto px-5 lg:px-0">
       {isSubmitted ? (
         <div className="bg-ForestFresh-500 text-MarketLinen-500 p-8 rounded-[20px] text-center animate-fade-in">
           <h2 className="text-2xl font-bold mb-4">Tak for at du vil støtte Grønt Marked!</h2>
