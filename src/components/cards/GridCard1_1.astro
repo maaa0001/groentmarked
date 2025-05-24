@@ -3,33 +3,7 @@ import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import BigButtonBlack from "../animationer/BigButtonBlack.astro";
 
-const {
-  title = "",
-  subtitle = "",
-  text1 = "",
-  text2 = "",
-  text3 = "",
-  title2 = "",
-  text4 = "",
-  text5 = "",
-  textB = "",
-  image = "",
-  dot1 = "",
-  dot2 = "",
-  dot3 = "",
-  dot4 = "",
-  dot5 = "",
-  direction = "",
-  button1 = "",
-  button2 = "",
-  link1 = "",
-  link2 = "",
-  target1 = "",
-  target2 = "",
-  bbtext = "",
-  bblink = "",
-  styling = "",
-} = Astro.props;
+const { title = "", subtitle = "", text1 = "", text2 = "", text3 = "", title2 = "", text4 = "", text5 = "", textB = "", image = "", dot1 = "", dot2 = "", dot3 = "", dot4 = "", dot5 = "", direction = "", button1 = "", button2 = "", link1 = "", link2 = "", target1 = "", target2 = "", bbtext = "", bblink = "", styling = "" } = Astro.props;
 
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 
