@@ -19,6 +19,7 @@ import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
 import Økonomi from "src/assets/images/vector/Økonomi.svg";
 import Relationer from "src/assets/images/vector/Leaf.svg";
 import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
+import FAQproducent from "@/components/FAQproducent.astro";
 ---
 
 <MainLayout variant="secondary" title="Producent">
@@ -107,9 +108,18 @@ import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
           </p>
         </div>
         <div>
-          <Accordion atitle="Besøgende" atext="Vores marked tiltrækker gennemsnitligt 1500-2000 besøgende pr. markedsdag. Du vil møde mange stamgæster samt mennesker i alle aldre og fra forskellige nationaliteter. Vi opfordrer altid forældre til at tage deres børn med og give dem indsigt i, hvor maden kommer fra." />
-          <Accordion atitle="Vejret" atext="Vejret kan have stor indflydelse på både kundetilstrømning og salg på markedet. Både for meget sol og for meget regn kan påvirke oplevelsen. Uanset vejret er vi dog ansvarlige for at sikre, at Grønt Marked gennemføres. Kontinuitet og stabilitet er nøglefaktorer for en succesfuld markedssæson. I tilfælde af ekstreme vejrfænomener (som kraftig regn eller vind) vil vi kommunikere eventuelle ændringer eller aflysninger så tidligt som muligt." />
-          <Accordion atitle="Forpligtigelse til markedet" atext="Vi forventer, at du har et stærkt engagement i det marked, du deltager i, og respekterer markedets fællesskab af producenter og håndværkere. Det er gennem aktivt samarbejde og samarbejde mellem alle parter – arrangører, producenter, bønder, frivillige og forbrugere – at vi kan sikre en vellykket markedsdag.<br><br>Manglende fremmøde uden forudgående varsel eller utilstrækkelig tid til at finde en erstatning påvirker direkte markedets integritet. Huller i markedet, både hvad angår layout og produktudbud, kan underminere kundernes engagement og deres vilje til at vende tilbage til markedet." />
+          <Accordion
+            atitle="Besøgende"
+            atext="Vores marked tiltrækker gennemsnitligt 1500-2000 besøgende pr. markedsdag. Du vil møde mange stamgæster samt mennesker i alle aldre og fra forskellige nationaliteter. Vi opfordrer altid forældre til at tage deres børn med og give dem indsigt i, hvor maden kommer fra."
+          />
+          <Accordion
+            atitle="Vejret"
+            atext="Vejret kan have stor indflydelse på både kundetilstrømning og salg på markedet. Både for meget sol og for meget regn kan påvirke oplevelsen. Uanset vejret er vi dog ansvarlige for at sikre, at Grønt Marked gennemføres. Kontinuitet og stabilitet er nøglefaktorer for en succesfuld markedssæson. I tilfælde af ekstreme vejrfænomener (som kraftig regn eller vind) vil vi kommunikere eventuelle ændringer eller aflysninger så tidligt som muligt."
+          />
+          <Accordion
+            atitle="Forpligtigelse til markedet"
+            atext="Vi forventer, at du har et stærkt engagement i det marked, du deltager i, og respekterer markedets fællesskab af producenter og håndværkere. Det er gennem aktivt samarbejde og samarbejde mellem alle parter – arrangører, producenter, bønder, frivillige og forbrugere – at vi kan sikre en vellykket markedsdag.<br><br>Manglende fremmøde uden forudgående varsel eller utilstrækkelig tid til at finde en erstatning påvirker direkte markedets integritet. Huller i markedet, både hvad angår layout og produktudbud, kan underminere kundernes engagement og deres vilje til at vende tilbage til markedet."
+          />
         </div>
       </div>
     </section>
@@ -162,7 +172,7 @@ import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
     />
   </section>
   <div id="faq">
-    <FAQ />
+    <FAQproducent />
   </div>
   <PopUpCard />
 </MainLayout>
