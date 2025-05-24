@@ -39,19 +39,19 @@
 
 @layer components {
   h1 {
-    @apply text-7xl font-display;
+    @apply text-6xl lg:text-7xl font-display;
   }
   h2 {
-    @apply text-[54px] font-display;
+    @apply text-[32px] lg:text-[54px] font-display;
   }
   h3 {
-    @apply text-[40px] font-display;
+    @apply text-[25px]  text-[40px] font-display;
   }
   h4 {
-    @apply text-2xl font-display;
+    @apply text-xl text-2xl font-display;
   }
   p {
-    @apply text-base max-w-[576px];
+    @apply text-sm lg:text-base max-w-[576px];
   }
 
   .layout {

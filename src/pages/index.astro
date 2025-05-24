@@ -13,6 +13,7 @@ import HeroBackground from "@/components/HeroBackground.astro";
 import Markedsbod from "src/assets/images/illustrationer/Marked_bod.webp";
 import Knap from "src/assets/images/vector/Knap.svg";
 import { Image } from "astro:assets";
+import Instagram from "@/components/Instagram.astro";
 ---
 
 <MainLayout title="Forside">
@@ -27,14 +28,7 @@ import { Image } from "astro:assets";
       <Image src={Markedsbod} alt="Illustration af markedsbod" class="w-90 h-auto" />
     </div>
   </section>
-  <HeroBackground
-    title="Grønt Marked"
-    tsize="text-[180px]"
-    text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!"
-    image={b1}
-    btext="Støt Grønt Marked"
-    link="/stoet"
-  />
+  <HeroBackground title="Grønt Marked" tsize="text-[180px]" text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!" image={b1} btext="Støt Grønt Marked" link="/stoet" />
   <GridCard
     image={b2}
     title="Velkommen til Grønt Marked"
@@ -47,25 +41,13 @@ import { Image } from "astro:assets";
     extra="no"
   />
   <Lokationer loading="lazy" />
-  <GridCard
-    image={b7}
-    title="Udover ugentlige markeder"
-    text1="Grønt Marked er meget mere end et sted at handle. Det er også et levende fællesskab, hvor du kan komme tættere på jorden og dem, der dyrker den. "
-    text2="Udover markedsdagene inviterer vi løbende til aktiviteter og begivenheder, hvor der er plads til nysgerrighed, samtale og fælles oplevelser – for alle, uanset erfaring:"
-    dot1="Gårdbesøg"
-    dot2="Workshops"
-    dot3="Fællesspisninger"
-    dot4="Markedskøkken (kan bookes)"
-    dot5="WFMC"
-    button1="Se vores arrangementer"
-    link1="/arrangementer"
-    direction="-reverse"
-  />
+  <GridCard image={b7} title="Udover ugentlige markeder" text1="Grønt Marked er meget mere end et sted at handle. Det er også et levende fællesskab, hvor du kan komme tættere på jorden og dem, der dyrker den. " text2="Udover markedsdagene inviterer vi løbende til aktiviteter og begivenheder, hvor der er plads til nysgerrighed, samtale og fælles oplevelser – for alle, uanset erfaring:" dot1="Gårdbesøg" dot2="Workshops" dot3="Fællesspisninger" dot4="Markedskøkken (kan bookes)" dot5="WFMC" button1="Se vores arrangementer" link1="/arrangementer" direction="-reverse" />
   <ScrollCarousel client:only />
   <OsBagGM />
   <ProfileCarousel client:load />
   <FAQ />
   <div class="bg-[url(src/assets/images/footer_billede.webp)] bg-cover w-full h-200"></div>
+  <Instagram />
 </MainLayout>
 
 <style>
