@@ -16,30 +16,58 @@ const {
 } = Astro.props;
 ---
 
-<section class={`w-full ${bg} mb-[-300px]`}>
-  <Image src={Hero} alt="Green background" class="w-full object-cover lg:h-auto h-[1413px]" />
-  <div class="w-full flex flex-col absolute top-0">
-    <Image src={image} alt={image} class="w-full max-w-[756px] absolute top-0 right-0" />
-    <div class="relative mt-50 ml-10 w-5/6 max-h-<20>px">
-      <h1 class={`font-display text-MarketLinen-500 ${tsize}`} "font-display text-white">
+<section class={`relative w-full overflow-hidden  ${bg}`}>
+  <!-- Background SVG -->
+  <div class="absolute top-0 left-0 w-full h-[150%] sm:h-full -z-10">
+    <Image src={Hero} alt="Green background" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Main Flex Container -->
+  <div class="relative z-2 flex flex-col lg:flex-row">
+    <!-- Main Image should be on top on mobile, right side on desktop -->
+    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+      <Image src={image} alt="Main image" class="w-full h-full object-cover" />
+
+      <!-- Title overlay only on mobile -->
+      <h1
+        class="lg:hidden absolute inset-0 flex items-center justify-center text-MarketLinen-500 text-5xl font-display text-center px-4"
+      >
         {title}
       </h1>
-      <p class="text-MarketLinen-500 max-h-[20px]" set:html={text} />
-      <div class="text-MarketLinen-500" set:html={textl} />
-      {btext && <BigButton link={link} text={btext} />}
+    </div>
 
-      <div class="animate-bounce">
+    <!-- Text content -->
+    <div
+      class="w-full lg:w-1/2 px-4 lg:px-20 py-10 flex flex-col justify-center order-2 lg:order-1"
+    >
+      <!-- Title for desktop only -->
+      <h1 class={`hidden lg:block font-display text-MarketLinen-500 ${tsize} leading-none`}>
+        {title}
+      </h1>
+
+      <div class="mt-4 text-MarketLinen-500 text-base md:text-lg space-y-4">
+        <p set:html={text} />
+        <div set:html={textl} />
+      </div>
+
+      {
+        btext && (
+          <div class="mt-8">
+            <BigButton link={link} text={btext} />
+          </div>
+        )
+      }
+
+      <div class="mt-10 animate-bounce flex justify-end">
         <img
-          class="flex place-self-end rotate-90"
+          class="rotate-90 w-6 h-6"
           src="/src/assets/images/icons/Arrow.svg"
-          alt=""
+          alt="Scroll down arrow"
         />
       </div>
     </div>
   </div>
-  <Image
-    src={Bær}
-    alt="Illustration af bær"
-    class="h-80 w-auto relative bottom-100 left-0 rotate-300"
-  />
+
+  <!-- Berry illustration -->
+  <Image src={Bær} alt="Illustration af bær" class="absolute bottom-0 left-0 h-40 w-auto" />
 </section>
