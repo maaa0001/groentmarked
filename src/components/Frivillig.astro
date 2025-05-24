@@ -3,10 +3,12 @@ import GridCard from "@/components/cards/GridCard1_1.astro";
 import { Image } from "astro:assets";
 import b2 from "src/assets/images/stoet/2.webp";
 import Hjørne from "src/assets/images/vector/HjørneGold.svg";
+import Bær3 from "src/assets/images/illustrationer/Bær3.webp";
 ---
 
-<section>
+<section class="relative">
   <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
+  <Image src={Bær3} alt="Illustration af blomst" class="absolute top-60 right-20 h-50 w-auto z-1" />
   <div id="frivillig" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
     <GridCard
       title="Bliv frivillig "
@@ -14,7 +16,7 @@ import Hjørne from "src/assets/images/vector/HjørneGold.svg";
       text2="Vagterne er fleksible og varer typisk 3-4 timer, og du behøver ikke være medlem for at være med – alle hænder og ideer er velkomne! Vi er en international gruppe, der ønsker at gøre markedet til et sted, hvor man kan møde ligesindede og bidrage til en mere bæredygtig madkultur."
       text3="Har du lyst til at være fotograf, arrangere et event eller noget helt tredje, hører vi meget gerne fra dig!"
       bbtext="Bliv frivillig"
-      bblink="#"
+      bblink="mailto:hello1@groentmarled.dk?subject=Jeg vil gerne være frivillig"
       image={b2}
     />
   </div>

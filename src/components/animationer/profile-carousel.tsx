@@ -70,7 +70,12 @@ export default function ProfileCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl px-20 lg:px-0">
+    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl px-5 lg:px-0">
+      <img
+        src="/illustrationer/Blomst1.webp"
+        alt="Illustration af blomst"
+        className="absolute bottom-80 right-20 lg:top-[-20px] lg:right-0 h-30 lg:h-60 w-auto rotate-20 z-1"
+      />
       <div className="bg-[#2A4837] rounded-3xl flex flex-col gap-10 md:flex-row relative">
         {/* Left side - Image */}
         <div className="md:w-2/5 md:h-[490px] relative">
@@ -82,7 +87,7 @@ export default function ProfileCarousel() {
         </div>
 
         {/* Right side - Content */}
-        <div className="md:w-3/5 p-6 md:p-8 text-MarketLinen-500 relative flex flex-col self-center">
+        <div className="md:w-3/5 p-6 md:p-8 text-MarketLinen-500 relative flex flex-col self-center z-2">
           <div className="flex-grow">
             <h3 className="text-MarketLinen-500 mb-6">{profiles[activeIndex].name}</h3>
 

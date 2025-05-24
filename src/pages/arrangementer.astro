@@ -10,6 +10,7 @@ import Leaf from "src/assets/images/vector/Leaf.svg";
 import Recycle from "src/assets/images/vector/Recycle.svg";
 import HvorforIcons from "@/components/HvorforIcons.astro";
 import Grøntsager from "src/assets/images/illustrationer/Grøntsager.webp";
+import Bær from "src/assets/images/illustrationer/Bær3.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -37,19 +38,24 @@ import { Image } from "astro:assets";
   <div class="flex flex-col justify-center">
     <StickyScrollReveal client:load />
     <UdoverMarkederne />
-
-    <HvorforIcons
-      title1="Lokale råvarer med omtanke"
-      text1="Vi samarbejder med små, danske producenter og bruger kun sæsonens bedste råvarer – økologisk og bæredygtigt dyrket."
-      title2="Mad med mening og smag"
-      text2="Vores retter er lavet med respekt for råvarerne – og med kærlighed til god smag og ægte håndværk."
-      title3="Støt en madbevægelse i balance"
-      text3="Når du vælger os, støtter du et mere fair og ansvarligt fødevaresystem – og en grønnere fremtid."
-      icon1={Carrot}
-      icon2={Leaf}
-      icon3={Recycle}
-    />
-
+    <div class="relative w-full">
+      <Image
+        src={Bær}
+        alt="Illustration af blomst"
+        class="absolute top-0 right-20 h-50 lg:h-60 w-auto z-1"
+      />
+      <HvorforIcons
+        title1="Lokale råvarer med omtanke"
+        text1="Vi samarbejder med små, danske producenter og bruger kun sæsonens bedste råvarer – økologisk og bæredygtigt dyrket."
+        title2="Mad med mening og smag"
+        text2="Vores retter er lavet med respekt for råvarerne – og med kærlighed til god smag og ægte håndværk."
+        title3="Støt en madbevægelse i balance"
+        text3="Når du vælger os, støtter du et mere fair og ansvarligt fødevaresystem – og en grønnere fremtid."
+        icon1={Carrot}
+        icon2={Leaf}
+        icon3={Recycle}
+      />
+    </div>
     <FAQ />
   </div>
 </MainLayout>

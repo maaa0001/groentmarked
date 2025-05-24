@@ -8,47 +8,63 @@ import b10 from "src/assets/images/arrangementer/10.webp";
 import b11 from "src/assets/images/arrangementer/11.webp";
 import Hjørne from "src/assets/images/vector/HjørneGold.svg";
 import { Image } from "astro:assets";
+import Blomst from "src/assets/images/illustrationer/Blomst1.webp";
+import Jordbær from "src/assets/images/illustrationer/Jordbær.webp";
+import BigButtonBlack from "./animationer/BigButtonBlack.astro";
 ---
 
-<Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
-<section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
-  <h2>Udover søndagsmarkederne</h2>
-  <p class="mb-20 w-1/2">
-    Udover vores søndagsmarkeder tilbyder vi en række spændende oplevelser, som du kan læse mere om
-    herunder. Ønsker du at booke en oplevelse, kan du nemt gøre det i vores
-    <a class="underline" href="/kalender">kalender</a>.
-  </p>
-  <div class="flex flex-row flex-wrap gap-[100px] w-full max-w-300 m-auto">
-    <ProducentCard
-      title="Gårdbesøg"
-      image={b6}
-      tekst="Vi arrangerer ture til nogle af de gårde, der er en del af Grønt Marked. Her får du en rundvisning, frokost og mulighed for at stille spørgsmål direkte til landmanden. Det er en lærerig oplevelse – og en unik chance for at se, hvor forskelligt landbrug kan se ud i praksis."
-    />
-    <ProducentCard
-      title="Workshops"
-      image={b7}
-      tekst="Vi samarbejder med dygtige producenter, fra kombucha og ølbryggere til oste- og marmeladeproducenter, som gerne deler deres viden og håndværk. Sammen afholder vi forskellige workshops, hvor du kan lære og blive inspireret af deres ekspertise."
-    />
-    <ProducentCard
-      title="Middage for biodiversitet"
-      image={b8}
-      tekst="Vi afholder middage med Lille Bakery, hvor én dansk råvare er i fokus. Aftenen starter med et kort oplæg, efterfulgt af fællesspisning og samtaler om råvarens smag, historie og betydning. Pris: ca. 250–300 kr. pr. person."
-    />
-    <ProducentCard
-      title="WFMC"
-      image={b9}
-      tekst="Siden 2021 har Grønt Marked været en del af World Farmers Markets Coalition, som vi medstiftede i 2022. Her deler vi viden og inspiration med markeder verden over – for et mere retfærdigt fødevaresystem."
-    />
-    <ProducentCard
-      title="Grønt Marked Køkken"
-      image={b10}
-      tekst="Grønt Marked Køkken laver mad med lokale, sæsonbaserede råvarer hver søndag på markedet. Vi tilbyder også catering, private middage og workshops."
-    />
-    <ProducentCard
-      title="Høstfest"
-      image={b11}
-      tekst="I 2022 startede vi traditionen med Harvest Festival – en fejring af sæsonens høst med marked, talks, madboder, musik og workshops for både børn og voksne. Vi glæder os allerede til næste gang!"
-    />
-  </div>
-</section>
-<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />
+<div class="relative w-full overflow-hidden">
+  <Image
+    src={Blomst}
+    alt="Illustration af blomst"
+    class="absolute top-30 right-0 h-50 lg:h-80 w-auto rotate-20 z-1"
+  />
+  <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
+  <section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
+    <h2>Udover søndagsmarkederne</h2>
+    <p class="mb-20 w-1/2">
+      Udover vores søndagsmarkeder tilbyder vi en række spændende oplevelser, som du kan læse mere
+      om herunder. Ønsker du at booke en oplevelse, kan du nemt gøre det i vores
+      <a class="underline" href="/kalender">kalender</a>.
+    </p>
+    <div class="flex flex-row flex-wrap gap-[100px] w-full max-w-300 m-auto">
+      <ProducentCard
+        title="Gårdbesøg"
+        image={b6}
+        tekst="Vi arrangerer ture til nogle af de gårde, der er en del af Grønt Marked. Her får du en rundvisning, frokost og mulighed for at stille spørgsmål direkte til landmanden. Det er en lærerig oplevelse – og en unik chance for at se, hvor forskelligt landbrug kan se ud i praksis."
+      />
+      <ProducentCard
+        title="Workshops"
+        image={b7}
+        tekst="Vi samarbejder med dygtige producenter, fra kombucha og ølbryggere til oste- og marmeladeproducenter, som gerne deler deres viden og håndværk. Sammen afholder vi forskellige workshops, hvor du kan lære og blive inspireret af deres ekspertise."
+      />
+      <ProducentCard
+        title="Middage for biodiversitet"
+        image={b8}
+        tekst="Vi afholder middage med Lille Bakery, hvor én dansk råvare er i fokus. Aftenen starter med et kort oplæg, efterfulgt af fællesspisning og samtaler om råvarens smag, historie og betydning. Pris: ca. 250–300 kr. pr. person."
+      />
+      <ProducentCard
+        title="WFMC"
+        image={b9}
+        tekst="Siden 2021 har Grønt Marked været en del af World Farmers Markets Coalition, som vi medstiftede i 2022. Her deler vi viden og inspiration med markeder verden over – for et mere retfærdigt fødevaresystem."
+      />
+      <ProducentCard
+        title="Grønt Marked Køkken"
+        image={b10}
+        tekst="Grønt Marked Køkken laver mad med lokale, sæsonbaserede råvarer hver søndag på markedet. Vi tilbyder også catering, private middage og workshops."
+      />
+      <ProducentCard
+        title="Høstfest"
+        image={b11}
+        tekst="I 2022 startede vi traditionen med Harvest Festival – en fejring af sæsonens høst med marked, talks, madboder, musik og workshops for både børn og voksne. Vi glæder os allerede til næste gang!"
+      />
+    </div>
+    <BigButtonBlack text="Se oplevelser i kalenderen" link="/kalender" />
+  </section>
+  <Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />
+  <Image
+    src={Jordbær}
+    alt="Illustration af blomst"
+    class="absolute bottom-70 left-[-40px] h-50 lg:h-80 w-auto z-1"
+  />
+</div>

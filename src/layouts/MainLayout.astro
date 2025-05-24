@@ -26,7 +26,7 @@ const { variant = "primary", title } = Astro.props;
       {variant === "secondary" ? <HeaderP /> : <Header />}
     </header>
 
-    <main class="m-auto">
+    <main class="m-auto overflow-hidden">
       <slot />
     </main>
 
