@@ -342,7 +342,7 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
 
       {/* Grid */}
       <h3>Det sker hos Grønt Marked</h3>
-      <div className="flex flex-row flex-wrap gap-y-[100px]">
+      <div className="flex flex-row flex-wrap gap-y-[100px] gap-x-5">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}

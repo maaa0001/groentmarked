@@ -3,7 +3,33 @@ import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import BigButtonBlack from "../animationer/BigButtonBlack.astro";
 
-const { title = "", subtitle = "", text1 = "", text2 = "", text3 = "", title2 = "", text4 = "", text5 = "", textB = "", image = "", dot1 = "", dot2 = "", dot3 = "", dot4 = "", dot5 = "", direction = "", button1 = "", button2 = "", link1 = "", link2 = "", bbtext = "", bblink = "", styling = "" } = Astro.props;
+const {
+  title = "",
+  subtitle = "",
+  text1 = "",
+  text2 = "",
+  text3 = "",
+  title2 = "",
+  text4 = "",
+  text5 = "",
+  textB = "",
+  image = "",
+  dot1 = "",
+  dot2 = "",
+  dot3 = "",
+  dot4 = "",
+  dot5 = "",
+  direction = "",
+  button1 = "",
+  button2 = "",
+  link1 = "",
+  link2 = "",
+  target1 = "",
+  target2 = "",
+  bbtext = "",
+  bblink = "",
+  styling = "",
+} = Astro.props;
 
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 
@@ -47,7 +73,7 @@ const showList = dot1 || dot2 || dot3 || dot4 || dot5;
         (button1 && link1) || (button2 && link2) ? (
           <div class="flex gap-5">
             {button1 && link1 && (
-              <a href={link1}>
+              <a href={link1} target={target1}>
                 {" "}
                 <Button variant="primary" size="large">
                   {button1}
@@ -55,7 +81,7 @@ const showList = dot1 || dot2 || dot3 || dot4 || dot5;
               </a>
             )}
             {button2 && link2 && (
-              <a href={link2}>
+              <a href={link2} target={target2}>
                 <Button variant="secondary" size="large">
                   {button2}
                 </Button>

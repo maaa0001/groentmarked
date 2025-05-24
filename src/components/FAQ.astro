@@ -2,8 +2,16 @@
 import { Image } from "astro:assets";
 import Accordion from "./Accordion.astro";
 import Hjørne from "src/assets/images/vector/HjørneRose.svg";
+import Blomst from "src/assets/images/illustrationer/Blomst1.webp";
 ---
 
+
+<div class="relative w-full overflow-hidden">
+  <Image
+    src={Blomst}
+    alt="Illustration af blomst"
+    class="absolute top-30 right-0 h-50 lg:h-60 w-auto rotate-20 z-1"
+  />
 <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="" />
 <section class="bg-[#EEC5C8] w-full py-[163px] layout">
   <div class="layout">
@@ -22,6 +30,6 @@ import Hjørne from "src/assets/images/vector/HjørneRose.svg";
         <Accordion atitle="Er der læ i tilfælde af regn?" atext="Grønt Marked foregår primært under åben himmel, så der er ikke meget læ, hvis det regner. Vi anbefaler derfor at klæde sig efter vejret og medbringe paraply eller regntøj, så du kan nyde markedet uanset vejrforholdene." />
       </div>
     </div>
-  </div>
-</section>
-<Image class="mt-[-1px] rotate-180" src={Hjørne} alt="" />
+  </section>
+  <Image class="mt-[-1px] rotate-180 relative z-0" src={Hjørne} alt="" />
+</div>

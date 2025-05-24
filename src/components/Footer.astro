@@ -6,11 +6,19 @@ import footerBillede from "../assets/images/footer_billede.webp";
 import IG from "../assets/images/icons/Instagram.svg";
 import FB from "../assets/images/icons/Facebook.svg";
 import Newsletter from "./Newsletter.astro";
+import Bær from "src/assets/images/illustrationer/Bær.webp";
 ---
 
-<div class={`flex items-end bg-[url(/VektorFooter.svg)] bg-cover w-full h-100 min-h-screen z-10`}>
+<Image
+  src={Bær}
+  alt="Illustration af bær"
+  class="h-80 w-auto relative top-130 lg:top-120 left-0 rotate-300"
+/>
+<div
+  class={`flex items-end bg-[url(/VektorFooter.svg)] bg-cover w-full h-350 lg:h-250 min-h-screen z-10`}
+>
   <div class="w-full flex flex-col flex-wrap ml-10 z-10">
-    <div class="w-1/2 flex justify-items-start mb-25">
+    <div class="w-1/2 flex justify-items-start mb-15 lg:mb-25">
       <Newsletter />
     </div>
 
@@ -19,19 +27,20 @@ import Newsletter from "./Newsletter.astro";
         <Image src={Logo} alt="Logo" />
       </a>
 
-      <div class="flex gap-20">
+      <div class="flex gap-20 flex-wrap">
         <div>
           <p class="text-MarketLinen-500 text-base font-bold pb-5">Genveje</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Støt os</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Kalender</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Bliv producent</p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="/stoet">Støt os</a></p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="/kalender">Kalender</a></p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="/producent">Bliv producent</a></p>
         </div>
         <div>
           <p class="text-MarketLinen-500 text-base font-bold pb-5">Sider</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Om os</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Vilkår og betingelser</p>
-          <p class="pb-3 text-base text-MarketLinen-500">Ressourcer</p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="/om-os">Om os</a></p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="#">Vilkår og betingelser </a></p>
+          <p class="pb-3 text-base text-MarketLinen-500"><a href="#">Ressourcer</a></p>
         </div>
+
         <div>
           <p class="text-MarketLinen-500 text-base font-bold pb-5">Kontakt</p>
           <p class="pb-3 text-base text-MarketLinen-500">hello@groentmarked.dk</p>
