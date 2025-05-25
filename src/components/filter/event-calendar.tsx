@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react";
 import { useState } from "react";
 
@@ -10,6 +12,7 @@ type Event = {
   time: string;
   address: string;
   online: boolean;
+  description: string;
 };
 
 // Data
@@ -23,6 +26,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Havnegade 54, 1058 København",
     online: false,
+    description:
+      "Kom og oplev det hyggelige marked ved Gammelholm med lokale producenter og friske råvarer direkte fra gården.",
   },
   {
     id: 2,
@@ -33,6 +38,8 @@ const calendarData: Event[] = [
     time: "12:00-16:00",
     address: "Æblehaven 9, 4320 Lejre",
     online: false,
+    description:
+      "Tag med på en guidet tur rundt på gården og lær om økologisk landbrug og bæredygtig produktion.",
   },
   {
     id: 3,
@@ -43,6 +50,8 @@ const calendarData: Event[] = [
     time: "12:00-14:00",
     address: "Online",
     online: true,
+    description:
+      "Online webinar om fremtidens fødevareproduktion og hvordan vi kan skabe mere bæredygtige løsninger.",
   },
   {
     id: 4,
@@ -53,6 +62,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Skjolds Plads, 2200 København",
     online: false,
+    description:
+      "Nørrebros populære marked med økologiske produkter, street food og lokale håndværkere.",
   },
   {
     id: 5,
@@ -63,6 +74,8 @@ const calendarData: Event[] = [
     time: "17:00-20:00",
     address: "Online",
     online: true,
+    description:
+      "Lær om sæsonens bedste råvarer og få tips til hvordan du kan lave lækre retter derhjemme.",
   },
   {
     id: 6,
@@ -73,6 +86,8 @@ const calendarData: Event[] = [
     time: "17:00-20:00",
     address: "Grønttorvet 7 2200 København N,",
     online: false,
+    description:
+      "Hands-on workshop hvor du lærer at lave fermenterede grøntsager og andre sunde snacks.",
   },
   {
     id: 7,
@@ -83,6 +98,8 @@ const calendarData: Event[] = [
     time: "12:00-16:00",
     address: "Markedspladsen 8, 8260 Viby J",
     online: false,
+    description:
+      "Besøg en traditionel dansk gård og mød dyrene, mens du lærer om ansvarlig dyrevelfærd.",
   },
   {
     id: 8,
@@ -93,6 +110,8 @@ const calendarData: Event[] = [
     time: "12:00-16:00",
     address: "Litauens Plads, København",
     online: false,
+    description:
+      "Vesterbros charmerende marked med fokus på lokale delikatesser og håndlavede produkter.",
   },
   {
     id: 9,
@@ -103,6 +122,8 @@ const calendarData: Event[] = [
     time: "16:00-20:00",
     address: "Krydderurteparken 6, 7100 Vejle",
     online: false,
+    description:
+      "Oplev Danmarks største krydderurtehave og lær om de mange anvendelsesmuligheder for friske urter.",
   },
   {
     id: 10,
@@ -113,6 +134,8 @@ const calendarData: Event[] = [
     time: "17:00-19:00",
     address: "Grønttorvet 7, 2200 København N",
     online: false,
+    description:
+      "Kreativ workshop hvor du lærer at lave dine egne krydderiblandinger og marinader.",
   },
   {
     id: 11,
@@ -123,6 +146,8 @@ const calendarData: Event[] = [
     time: "17:00-20:00",
     address: "Høstgade 9, 1750 København V",
     online: false,
+    description:
+      "Eksklusiv middag lavet af lokale kokke med fokus på biodiversitet og sjældne plantesorter.",
   },
   {
     id: 12,
@@ -133,6 +158,8 @@ const calendarData: Event[] = [
     time: "10:00-14:00",
     address: "Online",
     online: true,
+    description:
+      "Omfattende webinar om klimavenlig madlavning og hvordan du kan reducere dit CO2-aftryk.",
   },
   {
     id: 13,
@@ -143,6 +170,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Havnegade 54, 1058 København",
     online: false,
+    description:
+      "Kom og oplev det hyggelige marked ved Gammelholm med lokale producenter og friske råvarer direkte fra gården.",
   },
   {
     id: 14,
@@ -153,6 +182,8 @@ const calendarData: Event[] = [
     time: "17:00-20:00",
     address: "Høstgade 9, 1750 København V",
     online: false,
+    description:
+      "Eksklusiv middag lavet af lokale kokke med fokus på biodiversitet og sjældne plantesorter.",
   },
   {
     id: 15,
@@ -163,6 +194,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Litauens Plads, København",
     online: false,
+    description:
+      "Vesterbros charmerende marked med fokus på lokale delikatesser og håndlavede produkter.",
   },
   {
     id: 16,
@@ -173,6 +206,8 @@ const calendarData: Event[] = [
     time: "12:00-14:00",
     address: "Online",
     online: true,
+    description:
+      "Online webinar om fremtidens fødevareproduktion og hvordan vi kan skabe mere bæredygtige løsninger.",
   },
   {
     id: 17,
@@ -183,6 +218,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Aksel Møllers Have, Frederiksberg",
     online: false,
+    description:
+      "Frederiksbergs grønne marked omgivet af smukke haver og med et stort udvalg af økologiske produkter.",
   },
   {
     id: 18,
@@ -193,6 +230,8 @@ const calendarData: Event[] = [
     time: "16:00-20:00",
     address: "Krydderurteparken 6, 7100 Vejle",
     online: false,
+    description:
+      "Oplev Danmarks største krydderurtehave og lær om de mange anvendelsesmuligheder for friske urter.",
   },
   {
     id: 19,
@@ -203,6 +242,8 @@ const calendarData: Event[] = [
     time: "10:00-15:00",
     address: "Skjolds Plads, 2200 København N",
     online: false,
+    description:
+      "Nørrebros populære marked med økologiske produkter, street food og lokale håndværkere.",
   },
   {
     id: 20,
@@ -213,14 +254,66 @@ const calendarData: Event[] = [
     time: "12:00-14:00",
     address: "Online",
     online: true,
+    description:
+      "Lær om sæsonens bedste råvarer og få tips til hvordan du kan lave lækre retter derhjemme.",
   },
 ];
 
+// Modal component
+const EventModal: React.FC<{ event: Event; onClose: () => void }> = ({ event, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-[#0000007c]  bg-opacity-30 flex items-center justify-center z-50 p-4">
+      <article className="bg-[#2A4837] grid grid-rows-3 w-full max-w-xl mx-auto rounded-3xl overflow-hidden">
+        <div
+          className="row-span-1 bg-cover bg-center relative"
+          style={{ backgroundImage: "url('/jordbær.webp?height=200&width=400')" }}
+        >
+          <img
+            className="ml-auto pt-2 pr-2 cursor-pointer"
+            src="/icons/Kryds.svg"
+            alt="Kryds icon"
+            onClick={onClose}
+          />
+          <h2 className="text-MarketLinen-500 text-center px-4 pb-4">Kom med til {event.titel}</h2>
+        </div>
+        <div className="row-span-2 p-5">
+          <h3 className="text-MarketLinen-500 mb-3">{event.titel}</h3>
+          <p className="text-MarketLinen-500 mb-2">
+            <strong>Tidspunkt:</strong> {event.day}. {event.date}. {event.month} - {event.time}
+          </p>
+          <p className="text-MarketLinen-500 mb-4">
+            <strong>Adresse:</strong> {event.address}
+          </p>
+          <p className="text-MarketLinen-500 mb-6  leading-relaxed">{event.description}</p>
+          <div className="flex items-center cursor-pointer">
+            <div className="relative w-40 h-40 flex justify-center items-center mr-4">
+              <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
+                <img src="/icons/Knap.svg" alt="Stor sort knap" className="w-full h-full" />
+              </div>
+              <div className="absolute inset-0 animate-[spin_10s_linear_infinite_reverse]">
+                <img src="/icons/Knap.svg" alt="Stor sort knap" className="w-full h-full" />
+              </div>
+
+              <img src="/icons/ArrowGold.svg" alt="Sort pil" />
+            </div>
+            <div>
+              <p className="text-GoldenGrain-500">Tilmeld dig nu</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+};
+
 // Card component
-const EventCard: React.FC<{ event: Event }> = ({ event }) => {
+const EventCard: React.FC<{ event: Event; onClick: () => void }> = ({ event, onClick }) => {
   return (
     <div className="flex-1/4">
-      <article className="w-[200px] h-[315px] m-auto flex-1/3">
+      <article
+        className="w-[200px] h-[315px] m-auto flex-1/3 cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={onClick}
+      >
         <div className="text-sm border-b-1 border-black">{event.day}</div>
         <div className="grid grid-cols-3 border-b-1 border-black my-2">
           <p className="text-9xl align-middle col-span-2 m-auto">{event.date}</p>
@@ -252,7 +345,7 @@ const Dropdown: React.FC<{
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full px-4 py-3 bg-GoldenGrain-300 border border-black rounded-full appearance-none webkit-appearance-none  moz-appearance-none cursor-pointer pr-10 focus:outline-none selector"
+          className="w-full px-4 py-3 bg-GoldenGrain-300 border border-black rounded-full appearance-none cursor-pointer pr-10 focus:outline-none"
           style={{
             appearance: "none",
             WebkitAppearance: "none",
@@ -292,6 +385,7 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
   const [monthFilter, setMonthFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [onlineFilter, setOnlineFilter] = useState<string>("all");
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   // Får unike måneder og event typer fra daten
   const months = Array.from(new Set(events.map((event) => event.month)));
@@ -308,6 +402,14 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
 
     return matchesMonth && matchesType && matchesOnline;
   });
+
+  const handleEventClick = (event: Event) => {
+    setSelectedEvent(event);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedEvent(null);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -344,7 +446,7 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
       <h3>Det sker hos Grønt Marked</h3>
       <div className="flex flex-row flex-wrap gap-y-[100px] gap-x-5">
         {filteredEvents.map((event) => (
-          <EventCard key={event.id} event={event} />
+          <EventCard key={event.id} event={event} onClick={() => handleEventClick(event)} />
         ))}
       </div>
 
@@ -354,6 +456,9 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
           <p className="text-black">Ingen begivenheder fundet med de valgte filtre.</p>
         </div>
       )}
+
+      {/* Modal */}
+      {selectedEvent && <EventModal event={selectedEvent} onClose={handleCloseModal} />}
     </div>
   );
 };
