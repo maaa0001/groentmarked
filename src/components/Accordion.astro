@@ -4,13 +4,25 @@ const { atitle = "", atext = "" } = Astro.props;
 
 <div class="max-w-[576px] w-[526px] mx-auto border-b-1 border-black">
   <div class="accordion-item">
-    <button class="accordion-header flex items-center justify-between w-full mt-[35px] py-3 text-left font-medium text-MarketMidnight-500 focus:outline-none">
+    <button
+      class="accordion-header flex items-center justify-between w-full mt-[35px] py-3 text-left font-medium text-MarketMidnight-500 focus:outline-none cursor-pointer"
+    >
       {atitle}
-      <svg class="w-4 h-4 text-black transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+      <svg
+        class="w-4 h-4 text-black transform transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"
+        ></path>
       </svg>
     </button>
-    <p class="accordion-content hidden overflow-hidden py-2 text-MarketMidnight-500" set:html={atext} />
+    <p
+      class="accordion-content hidden overflow-hidden py-2 text-MarketMidnight-500"
+      set:html={atext}
+    />
   </div>
 </div>
 
