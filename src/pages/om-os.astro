@@ -11,6 +11,9 @@ import b3 from "src/assets/images/om_os/3.webp";
 import b4 from "src/assets/images/om_os/4.webp";
 import b5 from "src/assets/images/om_os/5.webp";
 import Hjørne from "src/assets/images/vector/HjørneGold.svg";
+import Grøntsager from "src/assets/images/illustrationer/Grøntsager.webp";
+import Bær3 from "src/assets/images/illustrationer/Bær3.webp";
+import Jordbær from "src/assets/images/illustrationer/Jordbær.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -21,9 +24,9 @@ import { Image } from "astro:assets";
     image={b1}
   />
 
-  <section class="flex justify-center">
+  <section class="flex justify-center relative">
     <div
-      class="aspect-627/784 rounded-[600px] overflow-hidden w-1/2 border-4 border-ForestFresh-500"
+      class="aspect-627/784 rounded-[600px] overflow-hidden w-2/5 border-4 border-ForestFresh-500"
     >
       <iframe
         class="h-full w-full"
@@ -33,9 +36,19 @@ import { Image } from "astro:assets";
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
     </div>
+    <Image
+      src={Grøntsager}
+      alt="Illustration af blomst"
+      class="absolute -bottom-40 left-10 h-50 lg:h-70 w-auto z-1"
+    />
   </section>
   <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
-  <section id="markederne" class="bg-GoldenGrain-300 py-30 px-[167px]">
+  <section class="bg-GoldenGrain-300 py-30 px-[167px] relative">
+    <Image
+      src={Bær3}
+      alt="Illustration af blomst"
+      class="absolute top-0 right-10 h-40 w-auto z-1"
+    />
     <GridCard
       title="Hvordan det hele begyndte"
       text1="Initiativet begyndte i 2019 på Refshaleøen i København, hvor Lille Bakery samlede venner og samarbejdspartnere om en idé, de mente byen manglede: et ægte bondemarked."
@@ -60,6 +73,11 @@ import { Image } from "astro:assets";
       link1="/kalender"
       direction="-reverse"
     />
+    <Image
+      src={Bær3}
+      alt="Illustration af blomst"
+      class="absolute bottom-250 right-10 h-40 w-auto z-1"
+    />
     <GridCard
       title="Dem der gør det muligt"
       text1="Når du besøger Grønt Marked, vil du møde producenter, der deler vores værdier om gennemsigtighed, social ansvarlighed, respekt for miljøet og dyrevelfærd. De arbejder hver dag med passion for at dyrke, høste, brygge, destillere og skabe de sundeste og friskeste råvarer. Hver eneste produceret vare er et resultat af hårdt arbejde, hvor de samtidig styrker og respekterer de økosystemer, de er en del af."
@@ -68,6 +86,11 @@ import { Image } from "astro:assets";
       image={b5}
       button1="Mød proudcenterne"
       link1="/producenterne"
+    />
+    <Image
+      src={Jordbær}
+      alt="Illustration af blomst"
+      class="absolute bottom-20 -left-5 h-80 w-auto z-1"
     />
   </section>
   <Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />

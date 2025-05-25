@@ -4,16 +4,7 @@ import Hero from "../assets/images/Hero.svg";
 import BigButton from "./animationer/BigButton.astro";
 import Bær from "src/assets/images/illustrationer/Bær.webp";
 
-const {
-  title = "",
-  text = "",
-  textl = "",
-  image = "",
-  btext = "",
-  link = "",
-  bg = "",
-  tsize = "",
-} = Astro.props;
+const { title = "", text = "", textl = "", image = "", btext = "", link = "", bg = "", tsize = "" } = Astro.props;
 ---
 
 <section class={`w-full ${bg} mb-[-300px]`}>
@@ -21,7 +12,7 @@ const {
   <div class="w-full flex flex-col absolute top-0">
     <Image src={image} alt={image} class="w-full max-w-[756px] absolute top-0 right-0" />
     <div class="relative mt-50 ml-10 w-5/6 max-h-<20>px">
-      <h1 class={`font-display text-MarketLinen-500 ${tsize}`} "font-display text-white">
+      <h1 class={`font-display text-MarketLinen-500 ${tsize}`}>
         {title}
       </h1>
       <p class="text-MarketLinen-500 max-h-[20px]" set:html={text} />
@@ -29,17 +20,9 @@ const {
       {btext && <BigButton link={link} text={btext} />}
 
       <div class="animate-bounce">
-        <img
-          class="flex place-self-end rotate-90"
-          src="/src/assets/images/icons/Arrow.svg"
-          alt=""
-        />
+        <img class="flex place-self-end rotate-90" src="/src/assets/images/icons/Arrow.svg" alt="" />
       </div>
     </div>
   </div>
-  <Image
-    src={Bær}
-    alt="Illustration af bær"
-    class="h-80 w-auto relative bottom-100 left-0 rotate-300"
-  />
+  <Image src={Bær} alt="Illustration af bær" class="h-80 w-auto relative bottom-100 left-0 rotate-300" />
 </section>

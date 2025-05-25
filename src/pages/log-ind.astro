@@ -4,20 +4,34 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import b1 from "src/assets/images/log-ind/1.webp";
 import Hjørne from "src/assets/images/vector/HjørneGreen.svg";
+import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
+import Bær from "src/assets/images/illustrationer/Bær.webp";
+import Grøntsager3 from "src/assets/images/illustrationer/Grøntsager3.webp";
 ---
 
 <MainLayout variant="secondary" title="Mød producenterne">
-  <img class="top-0 w-full h-auto" src="src/assets/images/vector/HeroProducent.svg" alt="" />
-  <GridCard
-    image={b1}
-    title="Bliv en del af Grønt Marked"
-    text1="Vil du være producent hos Grønt Marked? Så start med at læse vores forventninger og retningslinjer, inden du sender din ansøgning."
-    text2="Har du allerede en profil eller sendt en ansøgning, kan du logge ind for at se din brugerprofil."
-    button1="Log ind"
-    link1="#"
-    button2="Ansøg nu"
-    link2="https://groentmk.mymarket.org/forms/signup"
-    target2="_blank"
+  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+  <Image
+    src={Bær}
+    alt="Illustration af bær"
+    class="h-40 w-auto relative bottom-35 left-2 rotate-300"
   />
-  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
+  <section class="relative -mt-50 -mb-150">
+    <GridCard
+      image={b1}
+      title="Bliv en del af Grønt Marked"
+      text1="Vil du være producent hos Grønt Marked? Så start med at læse vores forventninger og retningslinjer, inden du sender din ansøgning."
+      text2="Har du allerede en profil eller sendt en ansøgning, kan du logge ind for at se din brugerprofil."
+      button1="Log ind"
+      link1="#"
+      button2="Ansøg nu"
+      link2="https://groentmk.mymarket.org/forms/signup"
+      target2="_blank"
+    />
+    <Image
+      src={Grøntsager3}
+      alt="Illustration af grøntsager"
+      class="absolute -bottom-20 right-15 h-60 w-auto z-1"
+    />
+  </section>
 </MainLayout>

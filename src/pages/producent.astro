@@ -19,10 +19,18 @@ import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
 import Økonomi from "src/assets/images/vector/Økonomi.svg";
 import Relationer from "src/assets/images/vector/Leaf.svg";
 import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
+import FAQproducent from "@/components/FAQproducent.astro";
+import Bær from "src/assets/images/illustrationer/Bær.webp";
+import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
 ---
 
 <MainLayout variant="secondary" title="Producent">
-  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="" />
+  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+  <Image
+    src={Bær}
+    alt="Illustration af bær"
+    class="h-40 w-auto relative bottom-35 left-2 rotate-300"
+  />
 
   <GridCard
     title="Producent sektionen"
@@ -41,7 +49,12 @@ import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
   />
 
   <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGold} alt="Vector Hjørne" />
-  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
+  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full relative">
+    <Image
+      src={Grøntsager2}
+      alt="Illustration af grøntsager"
+      class="absolute top-10 right-20 h-60 w-auto z-1"
+    />
     <HvorforIcons
       subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
       title1="Større økonomisk stabilitet"
@@ -91,9 +104,18 @@ import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
           <p class="mb-[24px] text-MarketMidnight-500">Vi designer sammensætningen af markedets deltagere for at sikre en optimal balance i udbuddet. Vores primære mål er at skabe en fair og gennemsigtig markedsplads, hvor alle producenter har lige muligheder for at trives.</p>
         </div>
         <div>
-          <Accordion atitle="Besøgende" atext="Vores marked tiltrækker gennemsnitligt 1500-2000 besøgende pr. markedsdag. Du vil møde mange stamgæster samt mennesker i alle aldre og fra forskellige nationaliteter. Vi opfordrer altid forældre til at tage deres børn med og give dem indsigt i, hvor maden kommer fra." />
-          <Accordion atitle="Vejret" atext="Vejret kan have stor indflydelse på både kundetilstrømning og salg på markedet. Både for meget sol og for meget regn kan påvirke oplevelsen. Uanset vejret er vi dog ansvarlige for at sikre, at Grønt Marked gennemføres. Kontinuitet og stabilitet er nøglefaktorer for en succesfuld markedssæson. I tilfælde af ekstreme vejrfænomener (som kraftig regn eller vind) vil vi kommunikere eventuelle ændringer eller aflysninger så tidligt som muligt." />
-          <Accordion atitle="Forpligtigelse til markedet" atext="Vi forventer, at du har et stærkt engagement i det marked, du deltager i, og respekterer markedets fællesskab af producenter og håndværkere. Det er gennem aktivt samarbejde og samarbejde mellem alle parter – arrangører, producenter, bønder, frivillige og forbrugere – at vi kan sikre en vellykket markedsdag.<br><br>Manglende fremmøde uden forudgående varsel eller utilstrækkelig tid til at finde en erstatning påvirker direkte markedets integritet. Huller i markedet, både hvad angår layout og produktudbud, kan underminere kundernes engagement og deres vilje til at vende tilbage til markedet." />
+          <Accordion
+            atitle="Besøgende"
+            atext="Vores marked tiltrækker gennemsnitligt 1500-2000 besøgende pr. markedsdag. Du vil møde mange stamgæster samt mennesker i alle aldre og fra forskellige nationaliteter. Vi opfordrer altid forældre til at tage deres børn med og give dem indsigt i, hvor maden kommer fra."
+          />
+          <Accordion
+            atitle="Vejret"
+            atext="Vejret kan have stor indflydelse på både kundetilstrømning og salg på markedet. Både for meget sol og for meget regn kan påvirke oplevelsen. Uanset vejret er vi dog ansvarlige for at sikre, at Grønt Marked gennemføres. Kontinuitet og stabilitet er nøglefaktorer for en succesfuld markedssæson. I tilfælde af ekstreme vejrfænomener (som kraftig regn eller vind) vil vi kommunikere eventuelle ændringer eller aflysninger så tidligt som muligt."
+          />
+          <Accordion
+            atitle="Forpligtigelse til markedet"
+            atext="Vi forventer, at du har et stærkt engagement i det marked, du deltager i, og respekterer markedets fællesskab af producenter og håndværkere. Det er gennem aktivt samarbejde og samarbejde mellem alle parter – arrangører, producenter, bønder, frivillige og forbrugere – at vi kan sikre en vellykket markedsdag.<br><br>Manglende fremmøde uden forudgående varsel eller utilstrækkelig tid til at finde en erstatning påvirker direkte markedets integritet. Huller i markedet, både hvad angår layout og produktudbud, kan underminere kundernes engagement og deres vilje til at vende tilbage til markedet."
+          />
         </div>
       </div>
     </section>
@@ -131,7 +153,7 @@ import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
     />
   </section>
   <div id="faq">
-    <FAQ />
+    <FAQproducent />
   </div>
   <PopUpCard />
 </MainLayout>

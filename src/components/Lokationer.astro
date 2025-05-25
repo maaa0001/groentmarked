@@ -8,11 +8,20 @@ import b4 from "src/assets/images/forside/4.webp";
 import b5 from "src/assets/images/forside/5.webp";
 import b6 from "src/assets/images/forside/6.webp";
 import Hjørne from "src/assets/images/vector/HjørneGold.svg";
+import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
+import Jordbær from "src/assets/images/illustrationer/Jordbær.webp";
+import Bær3 from "src/assets/images/illustrationer/Bær3.webp";
+import Gulerod from "src/assets/images/illustrationer/Gulerod.webp";
 import { Image } from "astro:assets";
 ---
 
 <Image class="ml-auto mb-[-1px] mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
-<section id="markederne" class="bg-GoldenGrain-300 pt-[163px] px-5 lg:px-[167px] w-full">
+<section id="markederne" class="bg-GoldenGrain-300 pt-[163px] px-5 lg:px-[167px] w-full relative">
+  <Image
+    src={Grøntsager2}
+    alt="Illustration af grøntsager"
+    class="absolute top-10 right-20 h-60 w-auto z-1"
+  />
   <div class="layout">
     <div class="m-auto flex justify-center layout">
       <h2 class="text-MarketMidnight-500 mb-4">Lokationer for Grønne markeder</h2>
@@ -30,6 +39,11 @@ import { Image } from "astro:assets";
           textB="Hver første søndag i måneden!"
           extra="no"
         />
+        <Image
+          src={Jordbær}
+          alt="Illustration af blomst"
+          class="absolute top-200 -left-5 h-60 w-auto z-1"
+        />
         <Market
           image={b4}
           title="Vesterbro"
@@ -37,6 +51,11 @@ import { Image } from "astro:assets";
           text="Der er meget at lave på Vesterbro. Et herligt torv ved den gamle kirke i et charmerende område, som man snildt kan vandre eller cykle til fra hovedbanegården."
           textB="Hver anden søndag i måneden!"
           direction="-reverse"
+        />
+        <Image
+          src={Gulerod}
+          alt="Illustration af blomst"
+          class="absolute bottom-350 right-10 h-40 w-auto rotate-150 z-1"
         />
         <Market
           image={b5}
@@ -52,6 +71,11 @@ import { Image } from "astro:assets";
           text="Det flade, grønne område ved Aksel Møllers Have danner en ganske fin ramme for et madmarked. Den ellers stille og rolige græsplæne forvandles til et travlt og livligt marked én søndag om måneden."
           textB="Hver fjerde søndag i måneden!"
           direction="-reverse"
+        />
+        <Image
+          src={Bær3}
+          alt="Illustration af blomst"
+          class="absolute bottom-10 right-10 h-40 w-auto z-1"
         />
       </div>
       <BigButtonBlack text="Se vores kalender" link="/kalender" />

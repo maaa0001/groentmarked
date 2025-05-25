@@ -2,14 +2,7 @@
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 
-const {
-  title = "",
-  subtitle = "",
-  text = "",
-  textB = "",
-  image = "",
-  direction = "",
-} = Astro.props;
+const { title = "", subtitle = "", text = "", textB = "", image = "", direction = "" } = Astro.props;
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 ---
 
@@ -17,7 +10,7 @@ const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row"
   <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
     <h2 class="mb-4 text-MarketMidnight-500 lg:hidden">{title}</h2>
     <div class="w-4/5 lg:w-2/5 h-auto max-w-[540px]">
-      <Image class="h-full w-auto object-cover rounded-3xl" src={image} alt={image} />
+      <Image class="h-full w-auto object-cover rounded-[20px]" src={image} alt={image} />
     </div>
     <div class="w-4/5 lg:w-2/5 self-center">
       <h2 class="mb-4 text-MarketMidnight-500 hidden lg:block">{title}</h2>
