@@ -19,7 +19,7 @@ export function Toggle() {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="relative flex rounded-[20px] border-2 border-MarketLinen-500 p-0.5 w-[200px] h-[43px] ">
+      <div className="relative flex rounded-[20px] border-[1.2px] border-MarketLinen-500 p-0.5 w-[200px] h-[43px] ">
         <a
           href="/"
           onClick={() => setSelected("guest")}
@@ -44,7 +44,7 @@ export function Toggle() {
 
         <div
           className={cn(
-            "absolute h-full py-1 left-0 right-0 top-0 bottom-0 w-[50%] bg-MarketMidnight-500 border-2 border-MarketLinen-500 rounded-[20px] transition-transform duration-200 ease-in-out",
+            "absolute h-[43px] left-0 right-[-1px] top-[-1px] bottom-0 w-[50%] bg-MarketMidnight-500 border-[1.2px] border-MarketLinen-500 rounded-[20px] transition-transform duration-200 ease-in-out",
             selected === "producer" ? "translate-x-[calc(100%)]" : ""
           )}
         />
