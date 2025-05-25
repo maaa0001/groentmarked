@@ -11,37 +11,20 @@ import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Støt Grønt Marked">
-  <HeroBackground
-    title="Støt Grønt Marked"
-    textl="Der er flere måder, <strong>du kan bidrage</strong> til, at Grønt Marked fortsat kan vokse og blomstre:<br><br><ul><li><a href='#støt'><u><strong>Støt os økonomisk</strong></u></a></li><li><a href='#støt'><u><strong>Bliv medlem</strong></u></a></li><li><a href='#frivillig'><u><strong>Engagér dig som frivillig (gratis)</strong></u></a></li></ul><br>Herunder kan du læse mere om de forskellige muligheder og, hvordan du kan være med."
-    image={b1}
-  />
-  <section class="layout mb-50 mt-[-50px] relative px-5 lg:px-0">
+  <HeroBackground title="Støt Grønt Marked" textl="Der er flere måder, <strong>du kan bidrage</strong> til, at Grønt Marked fortsat kan vokse og blomstre:<br><br><ul><li><a href='#støt'><u><strong>Støt os økonomisk</strong></u></a></li><li><a href='#støt'><u><strong>Bliv medlem</strong></u></a></li><li><a href='#frivillig'><u><strong>Engagér dig som frivillig (gratis)</strong></u></a></li></ul><br>Herunder kan du læse mere om de forskellige muligheder og, hvordan du kan være med." image={b1} />
+  <section id="stoet" class="layout mb-50 mt-[-50px] relative px-5 lg:px-0">
     <h2 class="mb-[24px] text-MarketMidnight-500">Støt os økonomisk eller bliv medlem</h2>
     <div class="flex flex-row flex-wrap justify-between gap-10">
       <div class="min-w-80">
         <h3 class="mb-[24px] text-MarketMidnight-500">Støt os økonomisk</h3>
-        <p class="text-MarketMidnight-500 max-w-120">
-          Hvis du vil støtte markederne økonomisk, kan du blive fast supporter med et månedligt
-          bidrag på 100 kr. Din støtte går direkte til at sikre markedspladserne, støtte vores team
-          og skabe stabile rammer for lokale landmænd og producenter.
-        </p>
+        <p class="text-MarketMidnight-500 max-w-120">Hvis du vil støtte markederne økonomisk, kan du blive fast supporter med et månedligt bidrag på 100 kr. Din støtte går direkte til at sikre markedspladserne, støtte vores team og skabe stabile rammer for lokale landmænd og producenter.</p>
       </div>
       <div class="min-w-80">
         <h3 class="mb-[24px] text-MarketMidnight-500">Bliv medlem</h3>
-        <p class="text-MarketMidnight-500 max-w-120">
-          Som medlem af foreningen Grønt Marked engagerer du dig på et dybere plan. Medlemskab
-          koster 250 kr. om året og giver dig stemmeret på generalforsamlingen samt mulighed for at
-          være med i aktionsgrupper. Vi forventer, at medlemmer bidrager med deres tid mindst én
-          gang om året, enten ved markeder eller andre aktiviteter.
-        </p>
+        <p class="text-MarketMidnight-500 max-w-120">Som medlem af foreningen Grønt Marked engagerer du dig på et dybere plan. Medlemskab koster 250 kr. om året og giver dig stemmeret på generalforsamlingen samt mulighed for at være med i aktionsgrupper. Vi forventer, at medlemmer bidrager med deres tid mindst én gang om året, enten ved markeder eller andre aktiviteter.</p>
       </div>
     </div>
-    <Image
-      src={Blomst}
-      alt="Illustration af blomst"
-      class="absolute top-80 right-0 h-60 2xl:top-60 2xl:-right-60 2xl:h-100 w-auto rotate-20 z-1"
-    />
+    <Image src={Blomst} alt="Illustration af blomst" class="absolute top-80 right-0 h-60 2xl:top-60 2xl:-right-60 2xl:h-100 w-auto rotate-20 z-1" />
   </section>
   <SupportForm client:load />
   <Frivillig />
