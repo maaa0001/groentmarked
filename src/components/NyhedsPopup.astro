@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+import Frugt_grønt from "src/assets/images/illustrationer/frugt&grønt.webp";
+import Kryds from "src/assets/images/icons/KrydsSort.svg";
+---
+
+<article
+  id="newsletter-popup"
+  class="w-130 h-125 rounded-3xl overflow-hidden fixed bottom-5 right-5 bg-CreamCanvas-500 z-40 hidden"
+>
+  <div class="relative w-full h-full">
+    <Image
+      src={Frugt_grønt}
+      alt="Illustrioner af frugt og grønt"
+      class="object-cover w-full h-full absolute inset-0 z-0"
+    />
+    <button id="close-popup" class="w-12 h-auto absolute top-6 right-6 z-50 cursor-pointer">
+      <Image src={Kryds} alt="Kryds icon" class="w-full h-full" />
+    </button>
+    <div class="pl-15 pr-10 pt-24 absolute inset-0 z-10 flex flex-col items-start">
+      <h3 class="text-MarketMidnight-500">Tilmeld dig vores nyhedsbrev!</h3>
+      <p class="text-MarketMidnight-500 mb-4">
+        Få nyheder om kommende markedsdage, sæsonens råvarer og spændende arrangementer direkte i
+        din indbakke.
+      </p>
+      <div class="relative w-full max-w-100 min-w-[250px]">
+        <input
+          type="email"
+          placeholder="Indtast din e-mail"
+          class="py-2 pl-5 pr-20 w-full rounded-[20px] border border-MarketMidnight-500 text-MarketLinen-800 text-base bg-transparent"
+        />
+        <div id="submit-newsletter" class="absolute inset-y-0 right-0 flex items-center">
+          <Button variant="primary" size="large">Tilmeld</Button>
+        </div>
+      </div>
+      <p class="text-xs text-MarketMidnight-500 mt-2 text-start">
+        Ved at abonnere accepterer du vores <a href="#" class="text-white-400 underline"
+          >privatlivspolitik</a
+        >
+      </p>
+    </div>
+  </div>
+</article>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("newsletter-popup");
+    const closeButton = document.getElementById("close-popup");
+    const submitButton = document.getElementById("submit-newsletter");
+
+    setTimeout(() => {
+      if (popup) {
+        popup.classList.remove("hidden");
+      }
+    }, 10000);
+    if (closeButton) {
+      closeButton.addEventListener("click", () => {
+        if (popup) {
+          popup.classList.add("hidden");
+        }
+      });
+    }
+    if (submitButton) {
+      submitButton.addEventListener("click", () => {
+        if (popup) {
+          popup.classList.add("hidden");
+        }
+      });
+    }
+  });
+</script>
