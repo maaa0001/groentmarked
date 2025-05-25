@@ -20,10 +20,17 @@ import Økonomi from "src/assets/images/vector/Økonomi.svg";
 import Relationer from "src/assets/images/vector/Leaf.svg";
 import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
 import FAQproducent from "@/components/FAQproducent.astro";
+import Bær from "src/assets/images/illustrationer/Bær.webp";
+import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
 ---
 
 <MainLayout variant="secondary" title="Producent">
-  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="" />
+  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+  <Image
+    src={Bær}
+    alt="Illustration af bær"
+    class="h-40 w-auto relative bottom-35 left-2 rotate-300"
+  />
 
   <GridCard
     title="Producent sektionen"
@@ -42,7 +49,12 @@ import FAQproducent from "@/components/FAQproducent.astro";
   />
 
   <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGold} alt="Vector Hjørne" />
-  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full">
+  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full relative">
+    <Image
+      src={Grøntsager2}
+      alt="Illustration af grøntsager"
+      class="absolute top-10 right-20 h-60 w-auto z-1"
+    />
     <HvorforIcons
       subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
       title1="Større økonomisk stabilitet"
