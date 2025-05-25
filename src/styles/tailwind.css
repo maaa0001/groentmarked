@@ -14,7 +14,7 @@
   --color-MarketMidnight-500: #0f200b;
 
   --color-ForestFresh-500: #2a4837;
-  --color-ForestFresh-opacity: #2a48371b;
+  --color-ForestFresh-opacity: #2a48372c;
 
   --color-GoldenGrain-300: #eadeb6;
   --color-GoldenGrain-500: #dbc885;
@@ -45,10 +45,10 @@
     @apply text-[32px] lg:text-[54px] font-display;
   }
   h3 {
-    @apply text-[25px]  text-[40px] font-display;
+    @apply text-[25px]  lg:text-[40px] font-display;
   }
   h4 {
-    @apply text-xl text-2xl font-display;
+    @apply text-xl lg:text-2xl font-display;
   }
   p {
     @apply text-sm lg:text-base max-w-[576px];
