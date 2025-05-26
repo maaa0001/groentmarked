@@ -20,12 +20,13 @@ import { Image } from "astro:assets";
     text="Grønt Marked samler mennesker om <strong>kærligheden til ægte </strong>, <strong>lokal mad</strong> og <strong>ansvarlig produktion</strong>. Vi er en bevægelse, der hylder fællesskab, håndværk og sæsonens smag – både gennem vores søndagsmarkeder og Grønt Marked Køkken."
     image={b1}
   />
-  <section class="layout relative">
+  <section class="px-5 mt-[163px] lg:px-[167px] layout relative">
     <Image
       src={Grøntsager}
       alt="Tegnet grøntsager"
-      class="absolute top-[-100px] right-0 h-50 lg:h-80 w-auto"
+      class="absolute -top-30 md:top-[-100px] right-0 h-40 md:h-50 lg:h-80 w-auto"
     />
+
     <h2 class="mb-[24px] text-MarketMidnight-500">Hvad vi tilbyder</h2>
     <p class="mb-[24px] text-MarketMidnight-500">
       Dyk ned i oplevelsen hos Grønt Marked Køkken med vores private dining-oplevelser. Vores kokke
@@ -38,7 +39,7 @@ import { Image } from "astro:assets";
   <div class="flex flex-col justify-center">
     <StickyScrollReveal client:load />
     <UdoverMarkederne />
-    <div class="relative w-full">
+    <div class="relative w-full layout">
       <Image
         src={Bær}
         alt="Illustration af blomst"
