@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Logo from "src/assets/images/GM_logo.svg";
 import { LanguageSelector } from "./language-selector";
 import { Toggle } from "./toggle-button";
+import Kryds from "src/assets/images/icons/Kryds.svg";
 ---
 
 <script>
@@ -52,7 +53,7 @@ import { Toggle } from "./toggle-button";
 
       <a href="/log-ind" class="text-gray-700 text-sm mr-[35px]">
         <button
-          class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] text-xs md:text-sm cursor-pointer"
+          class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] min-w-23 text-xs md:text-sm cursor-pointer"
           >Log ind</button
         >
       </a>
@@ -120,20 +121,7 @@ import { Toggle } from "./toggle-button";
       <Image src={Logo} alt="Logo" />
     </a>
     <button id="close-button" class="text-MarketLinen-500 cursor-pointer">
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18 6L6 18M6 6L18 18"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+      <Image src={Kryds} alt="Kryds icon" />
     </button>
   </div>
 
