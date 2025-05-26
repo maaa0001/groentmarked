@@ -61,17 +61,29 @@ export default function SupportForm() {
   return (
     <div id="støt" className="max-w-[1000px] mx-auto px-5 lg:px-0">
       {isSubmitted ? (
-        <div className="bg-ForestFresh-500 text-MarketLinen-500 p-8 rounded-[20px] text-center animate-fade-in">
-          <h2 className="text-2xl font-bold mb-4">Tak for at du vil støtte Grønt Marked!</h2>
+        <div className="bg-ForestFresh-500 text-MarketLinen-500 py-20 rounded-[20px] text-center animate-fade-in relative overflow-hidden">
+          <h3 className="font-bold mb-4">Tak for din støtte til Grønt Marked!</h3>
           <p className="m-auto mb-6">
-            Vi har modtaget din information og vil kontakte dig snarest.
+            Din støtte gør en forskel og hjælper os med at fremme lokale, økologiske producenter og
+            skabe grønne fællesskaber.
+            <br />
+            <br />
+            Du modtager en bekræftelse på mail.
+            <br />
+            <br />
+            Tak fordi du er med til at dyrke en grønnere fremtid!
           </p>
-          <button
+          <img
+            src="/icons/Kryds.svg"
+            alt="Kyrds icon"
+            className="absolute top-8 right-8"
             onClick={() => setIsSubmitted(false)}
-            className="px-6 py-2 bg-MarketLinen-500 text-ForestFresh-500 rounded-full hover:bg-white transition-colors duration-300"
-          >
-            Tilbage til formularen
-          </button>
+          />
+          <img
+            src="/illustrationer/Jordbær1.webp"
+            alt="Illustration af jordbær"
+            className="absolute top-0 -left-5 w-40 rotate-325"
+          />
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
