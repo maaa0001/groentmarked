@@ -262,8 +262,8 @@ const calendarData: Event[] = [
 // Modal component
 const EventModal: React.FC<{ event: Event; onClose: () => void }> = ({ event, onClose }) => {
   return (
-    <div className="fixed inset-0 bg-[#0000007c]  bg-opacity-30 flex items-center justify-center z-50 p-4">
-      <article className="bg-[#2A4837] grid grid-rows-3 w-full max-w-xl mx-auto rounded-3xl overflow-hidden">
+    <div className="fixed inset-0 bg-[#0000007c]  bg-opacity-30 flex items-end justify-center z-20 p-4">
+      <article className="bg-[#2A4837] grid grid-rows-3 w-full max-w-xl  mx-auto rounded-3xl mb-10 overflow-hidden">
         <div
           className="row-span-1 bg-cover bg-center relative"
           style={{ backgroundImage: "url('/jordbær.webp?height=200&width=400')" }}
