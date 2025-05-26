@@ -25,12 +25,14 @@ const {
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
 ---
 
-<section class="m-auto mb-52">
+<section class="m-auto mb-[163px] layout px-5">
   <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
-    <div class="rounded-3xl w-full h-auto max-w-[531px] max-h-[553px] overflow-hidden">
+    <div
+      class="rounded-3xl w-full h-auto max-w-[531px] max-h-[553px] justify-self-end overflow-hidden self-center"
+    >
       <Image src={image} alt={image} />
     </div>
-    <div class="w-full max-w-[400px] self-center">
+    <div class="w-full max-w-[500px] self-center">
       <h2 class="">{title}</h2>
       <p>{subtitle}</p>
       {atitle1 && <Accordion atitle={atitle1} atext={atext1} />}

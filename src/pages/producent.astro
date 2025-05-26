@@ -49,11 +49,11 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
   />
 
   <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGold} alt="Vector Hjørne" />
-  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-[167px] w-full relative">
+  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-5 lg:px-[167px] w-full relative">
     <Image
       src={Grøntsager2}
       alt="Illustration af grøntsager"
-      class="absolute top-10 right-20 h-60 w-auto z-1"
+      class="absolute top-10 right-20 h-40 lg:h-60 w-auto z-1"
     />
     <HvorforIcons
       subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
@@ -82,8 +82,8 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
     direction="-reverse"
   />
 
-  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGreen} alt="Vector Hjørne" />
-  <section class="bg-ForestFresh-500 py-30 px-[167px] w-full flex flex-col justify-center">
+  <Image class="ml-auto mb-[-1px] -mt-50 lg:mt-[-290px]" src={HjørneGreen} alt="Vector Hjørne" />
+  <section class="bg-ForestFresh-500 py-30 px-5 lg:px-[167px] w-full flex flex-col justify-center">
     <h2 class="text-MarketLinen-500 text-center mb-[34px]">
       “Det bedste ved markedet er fællesskabet. Her deler vi ikke bare mad, men også værdier og
       glæde!”
@@ -97,10 +97,10 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
   </section>
   <Image class="mt-[-1px] rotate-180" src={HjørneGreen} alt="Vector Hjørne" />
 
-  <section class="layout w-full">
+  <section id="forventninger" class="layout w-full px-5 lg:px-[167px]">
     <h2 class="text-MarketMidnight-500 mb-[34px]">Forventninger til markedsdage</h2>
-    <section id="forventninger" class="flex justify-center mb-52">
-      <div class="flex flex-wrap justify-center gap-[68px]">
+    <section class="flex justify-center mb-52">
+      <div class="flex flex-wrap gap-[68px]">
         <div class="w-4/9">
           <p class="mb-[24px] text-MarketMidnight-500">
             Vores mål er altid at sikre, at du som deltager har alt, hvad du behøver, herunder el,
@@ -139,7 +139,7 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
 
   <ScrollCarousel client:only />
   <section class="layout w-full">
-    <section id="retningslinjer">
+    <section id="retningslinjer" class="px-5 lg:px-[167px]">
       <h2 class="text-MarketMidnight-500 mb-[34px]">Retningslinjer for Grønt Marked</h2>
       <p class="mb-[24px] text-MarketMidnight-500">
         Du kan læse mere om vores retningslinjer for producenter nedenfor. Har du fortsat spørgsmål,
@@ -186,5 +186,4 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
   <div id="faq">
     <FAQproducent />
   </div>
-  <PopUpCard />
 </MainLayout>
