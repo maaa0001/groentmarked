@@ -490,9 +490,9 @@ const ProducentCard: React.FC<{ producent: Producent }> = ({ producent }) => {
           className="w-full aspect-5/4 object-cover rounded-[20px]"
         />
         <div className="flex-grow">
-          <h3 className="mb-1">{producent.titel}</h3>
-          <p className=" text-gray-600 mb-3">{producent.subtitle}</p>
-          <p className="mb-4">{producent.text}</p>
+          <h3 className="text-MarketMidnight-500 mb-1">{producent.titel}</h3>
+          <p className="text-MarketMidnight-500 mb-3">{producent.subtitle}</p>
+          <p className="text-MarketMidnight-500 mb-4">{producent.text}</p>
           <a
             href={producent.link}
             target="_blank"
