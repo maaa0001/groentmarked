@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
+import Button from "../Button.astro";
 
 type Event = {
   id: number;
@@ -327,13 +328,18 @@ const EventCard: React.FC<{ event: Event; onClick: () => void }> = ({ event, onC
           <p className="text-9xl align-middle col-span-2 m-auto">{event.date}</p>
           <p className="text-2xl ml-3 mt-2">{event.month}</p>
         </div>
-        <div className="grid grid-cols-6 gap-y-4 mt-2">
+        <div className="grid grid-cols-6 gap-y-4 mt-2 items-center">
           <h4 className="col-span-6">{event.titel}</h4>
           <img className="col-span-1" src="/icons/Ur.svg" alt="Clock icon" />
           <p className="col-span-5">{event.time}</p>
           <img src="/icons/Pin.svg" alt="Pin location icon" />
-          <p className="col-span-5">{event.address}</p>
+          <div className="col-span-5 min-h-10 content-center">
+            <p className="">{event.address}</p>
+          </div>
         </div>
+        <button className="lg:hidden mt-2 w-full font-bold border-1 border-MarketMidnight-500  text-MarketMidnight-500  hover:text-black cursor-pointer px-[32px] py-[10px] text-xs md:text-sm rounded-[20px]">
+          Læs mere
+        </button>
       </article>
     </div>
   );
