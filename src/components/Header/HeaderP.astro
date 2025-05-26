@@ -7,7 +7,6 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
 ---
 
 <script>
-  // Mobile menu functionality
   const menuButton = document.getElementById("menu-button");
   const closeButton = document.getElementById("close-button");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -16,7 +15,7 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
     if (mobileMenu) {
       mobileMenu.classList.remove("hidden");
       mobileMenu.classList.add("flex");
-      document.body.style.overflow = "hidden"; // No scrolling
+      document.body.style.overflow = "hidden";
     }
   }
 
@@ -30,9 +29,61 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
 
   menuButton?.addEventListener("click", openMenu);
   closeButton?.addEventListener("click", closeMenu);
+
+  function highlightCurrentPage() {
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+    const fullPath = currentPath + currentHash;
+
+    const activeClasses = ["border-b-[1.2px]", "border-MarketLinen-500"];
+    const setActive = (element) => {
+      element.classList.add(...activeClasses);
+    };
+    const removeActive = (element) => {
+      element.classList.remove(...activeClasses);
+    };
+
+    document.querySelectorAll(".desktop-direct-link").forEach((el) => {
+      removeActive(el);
+    });
+
+    const desktopDirectLinks = document.querySelectorAll(".desktop-direct-link");
+    desktopDirectLinks.forEach((link) => {
+      const linkHref = link.getAttribute("href");
+      if (fullPath === linkHref || (linkHref === currentPath && !linkHref.includes("#"))) {
+        setActive(link);
+      }
+    });
+
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+    mobileLinks.forEach((link) => {
+      removeActive(link);
+      const linkHref = link.getAttribute("href");
+
+      const underlineableMobileLinks = [
+        "/producent",
+        "/producent#hvorfor",
+        "/producent#hvordan",
+        "/producent#forventninger",
+        "/producent#retningslinjer",
+        "/producent#faq",
+      ];
+
+      if (
+        (underlineableMobileLinks.includes(fullPath) && fullPath === linkHref) ||
+        (!linkHref.includes("#") &&
+          underlineableMobileLinks.includes(currentPath) &&
+          currentPath === linkHref)
+      ) {
+        setActive(link);
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", highlightCurrentPage);
+  window.addEventListener("hashchange", highlightCurrentPage);
 </script>
 
-<!-- Desktop Navbar -->
 <div class="fixed w-full z-10 bg-ForestFresh-opacity backdrop-blur-xs">
   <div class="hidden lg:flex items-center py-4 px-8">
     <a href="/" class="mr-10">
@@ -41,15 +92,25 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
     <Toggle client:load />
 
     <div class="ml-auto flex items-center">
-      <a href="/producent#hvorfor" class="text-MarketLinen-500 text-sm mr-[35px]">Hvorfor</a>
-      <a href="/producent#hvordan" class="text-MarketLinen-500 text-sm mr-[35px]">Hvordan</a>
-      <a href="/producent#forventninger" class="text-MarketLinen-500 text-sm mr-[35px]"
-        >Forventninger</a
+      <a
+        href="/producent#hvorfor"
+        class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link">Hvorfor</a
       >
-      <a href="/producent#retningslinjer" class="text-MarketLinen-500 text-sm mr-[35px]"
-        >Retningslinjer</a
+      <a
+        href="/producent#hvordan"
+        class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link">Hvordan</a
       >
-      <a href="/producent#faq" class="text-MarketLinen-500 text-sm mr-[35px]">FAQ</a>
+      <a
+        href="/producent#forventninger"
+        class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link">Forventninger</a
+      >
+      <a
+        href="/producent#retningslinjer"
+        class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link">Retningslinjer</a
+      >
+      <a href="/producent#faq" class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link"
+        >FAQ</a
+      >
 
       <a href="/log-ind" class="text-gray-700 text-sm mr-[35px]">
         <button
@@ -63,9 +124,7 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
     </div>
   </div>
 
-  <!-- Mobile Navbar Header -->
   <div class="flex flex-col lg:hidden bg-ForestFresh-opacity">
-    <!-- Top row with logo, Støt button, and menu button -->
     <div class="flex items-center justify-between p-4">
       <a href="/" class="text-MarketLinen-500 font-bold text-xl w-[100px]">
         <Image src={Logo} alt="Grønt Marked" width={100} height={40} />
@@ -97,14 +156,15 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
       </button>
     </div>
 
-    <!-- Bottom row with Toggle, Kalender, and LanguageSelector -->
     <div class="flex items-center justify-between p-2 border-t border-MarketLinen-500/20">
       <div class="w">
         <Toggle client:load />
       </div>
 
       <div class="text-center">
-        <a href="/producent#forventninger" class="text-MarketLinen-500 text-sm">Forventninger</a>
+        <a href="/producent#forventninger" class="text-MarketLinen-500 text-sm mobile-nav-link"
+          >Forventninger</a
+        >
       </div>
 
       <div class="flex justify-end">
@@ -114,7 +174,6 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
   </div>
 </div>
 
-<!-- Mobile Menu Overlay -->
 <div id="mobile-menu" class="fixed inset-0 bg-ForestFresh-500 z-50 flex-col overflow-y-auto hidden">
   <div class="flex items-center justify-between p-4">
     <a href="/" class="mr-10 w-[100px]">
@@ -128,12 +187,12 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
   <nav
     class="flex flex-col items-center justify-center flex-1 space-y-6 text-MarketLinen-500 text-lg p-4"
   >
-    <a href="/producent" class="py-2">Forside for producenter</a>
-    <a href="/producent#hvorfor" class="py-2">Hvorfor</a>
-    <a href="/producent#hvordan" class="py-2">Hvordan</a>
-    <a href="/producent#forventninger" class="py-2">Forventninger</a>
-    <a href="/producent#retningslinjer" class="py-2">Retningslinjer</a>
-    <a href="/producent#faq" class="py-2">FAQ</a>
+    <a href="/producent" class="py-2 mobile-nav-link">Forside for producenter</a>
+    <a href="/producent#hvorfor" class="py-2 mobile-nav-link">Hvorfor</a>
+    <a href="/producent#hvordan" class="py-2 mobile-nav-link">Hvordan</a>
+    <a href="/producent#forventninger" class="py-2 mobile-nav-link">Forventninger</a>
+    <a href="/producent#retningslinjer" class="py-2 mobile-nav-link">Retningslinjer</a>
+    <a href="/producent#faq" class="py-2 mobile-nav-link">FAQ</a>
   </nav>
 
   <div class="p-4 flex flex-col items-center space-y-6">
@@ -141,7 +200,7 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
       <button
         class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] text-sm cursor-pointer"
       >
-        Log ing
+        Log ind
       </button>
     </a>
 

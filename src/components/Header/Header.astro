@@ -30,6 +30,70 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
 
   menuButton?.addEventListener("click", openMenu);
   closeButton?.addEventListener("click", closeMenu);
+
+  // Function to highlight the current page
+  function highlightCurrentPage() {
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+    const fullPath = currentPath + currentHash;
+
+    // Helper to apply/remove active class
+    const activeClasses = ["border-b-[1.2px]", "border-MarketLinen-500"];
+    const setActive = (element) => {
+      element.classList.add(...activeClasses);
+    };
+    const removeActive = (element) => {
+      element.classList.remove(...activeClasses);
+    };
+
+    document.querySelectorAll(".desktop-direct-link, .desktop-dropdown-toggle").forEach((el) => {
+      removeActive(el);
+    });
+
+    document.querySelectorAll(".desktop-dropdown-item").forEach((el) => {
+      removeActive(el);
+    });
+
+    // 2. Highlight direct navigation links (Markederne, Arrangementer, Kalender)
+    const desktopDirectLinks = document.querySelectorAll(".desktop-direct-link");
+    desktopDirectLinks.forEach((link) => {
+      const linkHref = link.getAttribute("href");
+      if (fullPath === linkHref || (linkHref === currentPath && !linkHref.includes("#"))) {
+        setActive(link);
+      }
+    });
+
+    // --- Mobile Menu Highlighting ---
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+    mobileLinks.forEach((link) => {
+      removeActive(link); // Reset all mobile links first
+      const linkHref = link.getAttribute("href");
+
+      const underlineableMobileLinks = [
+        "/",
+        "/#markederne",
+        "/arrangementer",
+        "/kalender",
+        "/om-os",
+        "/stoet#stoet",
+        "/stoet#frivillig",
+        "/producenterne",
+      ];
+
+      if (
+        (underlineableMobileLinks.includes(fullPath) && fullPath === linkHref) ||
+        (!linkHref.includes("#") &&
+          underlineableMobileLinks.includes(currentPath) &&
+          currentPath === linkHref)
+      ) {
+        setActive(link);
+      }
+    });
+  }
+
+  // Run the function when the DOM is fully loaded and on hash change
+  document.addEventListener("DOMContentLoaded", highlightCurrentPage);
+  window.addEventListener("hashchange", highlightCurrentPage); // For links with #anchors
 </script>
 
 <div class="fixed w-full z-10 bg-ForestFresh-opacity backdrop-blur-xs">
@@ -40,12 +104,18 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
     <Toggle client:load />
 
     <div class="ml-auto flex items-center">
-      <a href="/#markederne" class="text-MarketLinen-500 text-sm mr-[35px]">Markederne</a>
-      <a href="/arrangementer" class="text-MarketLinen-500 text-sm mr-[35px]">Arrangementer</a>
-      <a href="/kalender" class="text-MarketLinen-500 text-sm mr-[35px]">Kalender</a>
+      <a href="/#markederne" class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link"
+        >Markederne</a
+      >
+      <a href="/arrangementer" class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link"
+        >Arrangementer</a
+      >
+      <a href="/kalender" class="text-MarketLinen-500 text-sm mr-[35px] desktop-direct-link"
+        >Kalender</a
+      >
 
       <div class="relative group mr-[35px] min-w-25">
-        <a href="/stoet" class="text-MarketLinen-500 text-sm">
+        <a href="/stoet" class="text-MarketLinen-500 text-sm desktop-dropdown-toggle">
           <button class="bg-transparent py-4 text-sm flex items-center cursor-pointer">
             Engagér dig
             <svg
@@ -69,28 +139,29 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
           <li>
             <a
               href="/stoet#stoet"
-              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300"
+              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300 desktop-dropdown-item"
               >Støt økonomisk</a
             >
           </li>
           <li>
             <a
-              href="/stoet#stoet"
-              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300"
+              href="/stoet#medlem"
+              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300 desktop-dropdown-item"
               >Bliv medlem</a
             >
           </li>
           <li>
             <a
               href="/stoet#frivillig"
-              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300"
+              class="block px-4 py-4 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300 desktop-dropdown-item"
               >Bliv frivillig</a
             >
           </li>
         </ul>
       </div>
+
       <div class="relative group mr-[35px]">
-        <a href="/om-os" class="text-MarketLinen-500 text-sm">
+        <a href="/om-os" class="text-MarketLinen-500 text-sm desktop-dropdown-toggle">
           <button class="bg-transparent py-4 text-sm flex items-center min-w-15 cursor-pointer">
             Om os
             <svg
@@ -114,14 +185,14 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
           <li>
             <a
               href="/producenterne"
-              class="block px-4 py-2 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300"
+              class="block px-4 py-2 text-sm text-MarketLinen-500 hover:bg-ForestFresh-300 desktop-dropdown-item"
               >Mød producenterne</a
             >
           </li>
         </ul>
       </div>
 
-      <a href="stoet" class="text-gray-700 text-sm mr-[35px]">
+      <a href="/stoet" class="text-gray-700 text-sm mr-[35px]">
         <button
           class="bg-HarvestRose-500 hover:bg-HarvestRose-300 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] min-w-[167px] text-xs md:text-sm cursor-pointer"
           >Støt Grønt Marked</button
@@ -171,7 +242,7 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
       </div>
 
       <div class="text-center">
-        <a href="/kalender" class="text-MarketLinen-500 text-sm"> Kalender </a>
+        <a href="/kalender" class="text-MarketLinen-500 text-sm mobile-nav-link"> Kalender </a>
       </div>
 
       <div class="flex justify-end">
@@ -194,15 +265,15 @@ import Kryds from "src/assets/images/icons/Kryds.svg";
   <nav
     class="flex flex-col items-center justify-center flex-1 space-y-6 text-MarketLinen-500 text-lg p-4"
   >
-    <a href="/" class="py-2">Forside for gæster</a>
-    <a href="/#markederne" class="py-2">Markederne</a>
-    <a href="/arrangementer" class="py-2">Arrangementer</a>
-    <a href="/kalender" class="py-2">Kalender</a>
-    <a href="/stoet/#stoet" class="py-2">Engagér dig</a>
-    <a href="/stoet/#stoet" class="py-2">Bliv medlem</a>
-    <a href="/stoet/#frivillig" class="py-2">Bliv frivillig</a>
-    <a href="/om-os" class="py-2">Om os</a>
-    <a href="/producenterne" class="py-2">Mød producenterne</a>
+    <a href="/" class="py-2 mobile-nav-link">Forside for gæster</a>
+    <a href="/#markederne" class="py-2 mobile-nav-link">Markederne</a>
+    <a href="/arrangementer" class="py-2 mobile-nav-link">Arrangementer</a>
+    <a href="/kalender" class="py-2 mobile-nav-link">Kalender</a>
+    <a href="/stoet/#stoet" class="py-2 mobile-nav-link">Engagér dig</a>
+    <a href="/stoet#stoet" class="py-2 mobile-nav-link">Bliv medlem</a>
+    <a href="/stoet#frivillig" class="py-2 mobile-nav-link">Bliv frivillig</a>
+    <a href="/om-os" class="py-2 mobile-nav-link">Om os</a>
+    <a href="/producenterne" class="py-2 mobile-nav-link">Mød producenterne</a>
   </nav>
 
   <div class="p-4 flex flex-col items-center space-y-6">
