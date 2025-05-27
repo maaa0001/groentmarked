@@ -34,7 +34,7 @@ const { variant = "primary", title } = Astro.props;
     </main>
 
     <footer>
-      <Footer />
+      {variant === "secondary" ? <Footer ig="hidden" /> : <Footer />}
     </footer>
   </body>
 </html>

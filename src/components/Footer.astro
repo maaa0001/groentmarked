@@ -8,10 +8,12 @@ import FB from "../assets/images/icons/Facebook.svg";
 import Newsletter from "./Newsletter.astro";
 import Bær from "src/assets/images/illustrationer/Bær.webp";
 import Instagram from "./Instagram.astro";
+
+const { ig = "" } = Astro.props;
 ---
 
 <section class="relative z-4">
-  <div class="-mb-70 sm:-mb-100">
+  <div class={`-mb-70 ${ig} sm:-mb-100`}>
     <Instagram />
   </div>
   <Image
