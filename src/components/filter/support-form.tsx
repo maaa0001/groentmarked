@@ -1,5 +1,3 @@
-"use client";
-
 import type React from "react";
 
 import { useState } from "react";
@@ -223,7 +221,7 @@ export default function SupportForm() {
           </div>
 
           {/* Form felter */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mb-[45px]">
             <div>
               <input
                 type="text"
@@ -293,7 +291,7 @@ export default function SupportForm() {
           </div>
 
           {/* Submit button */}
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <button type="submit" className="flex items-center cursor-pointer">
               <div className="relative w-40 h-64 flex justify-center items-center">
                 <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">

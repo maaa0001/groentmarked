@@ -43,7 +43,7 @@
     @apply text-6xl lg:text-7xl font-display;
   }
   h2 {
-    @apply text-[32px] lg:text-[54px] font-display;
+    @apply text-[32px] lg:text-[54px] leading-[38px]  lg:leading-[50px] font-display;
   }
   h3 {
     @apply text-[25px]  lg:text-[40px] font-display;

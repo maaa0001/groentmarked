@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 const { title = "", subtitle = "", tekst = "", image = "" } = Astro.props;
 ---
 
-<article class="flex flex-col self-start w-xs overflow-hidden">
+<article class="flex flex-col self-start w-full sm:w-xs overflow-hidden">
   <div class="rounded-3xl overflow-hidden h-60">
     <Image class="h-full w-full object-cover" src={image} alt="Producent" />
   </div>
   <div>
-    <h3>{title}</h3>
-    <h4>{subtitle}</h4>
-    <p class="--font-display">
+    <h3 class="text-MarketMidnight-500 mb-[16px] mt-[16px]">{title}</h3>
+    <h4 class="text-MarketMidnight-500 mb-[16px]">{subtitle}</h4>
+    <p class="text-MarketMidnight-500 mb-[16px]">
       {tekst}
     </p>
   </div>

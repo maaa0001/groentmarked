@@ -70,7 +70,7 @@ export default function ProfileCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl px-5 lg:px-0">
+    <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl px-5 lg:px-0 mt-[34px]">
       <img
         src="/illustrationer/Blomst1.webp"
         alt="Illustration af blomst"

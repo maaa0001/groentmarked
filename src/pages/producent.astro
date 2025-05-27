@@ -17,29 +17,29 @@ import HjørneGold from "src/assets/images/vector/HjørneGold.svg";
 import HjørneGreen from "src/assets/images/vector/HjørneGreen.svg";
 import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
 import Økonomi from "src/assets/images/vector/Økonomi.svg";
-import Relationer from "src/assets/images/vector/Leaf.svg";
+import Relationer from "src/assets/images/vector/Relationer.svg";
 import Fællesskab from "src/assets/images/vector/Fællesskab.svg";
 import FAQproducent from "@/components/FAQproducent.astro";
 import Bær from "src/assets/images/illustrationer/Bær.webp";
 import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
 ---
 
-<MainLayout variant="secondary" title="Producent">
-  <Image class="top-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+<MainLayout variant="secondary" title="Producent" class="relative">
+  <Image class="absolute -top-10 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
   <Image
     src={Bær}
     alt="Illustration af bær"
-    class="h-40 w-auto relative bottom-35 left-2 rotate-300"
+    class="h-40 w-auto absolute top-20 left-2 rotate-300"
   />
-
+  <div class="sm:h-[324px]"></div>
   <GridCard
     title="Producent sektionen"
     image={b1}
     text1="Velkommen til producent sektionen. Her finder du den information, du har brug for som nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand, overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt velkommen."
     text2="Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe et marked præget af kvalitet, gennemsigtighed og godt samarbejde."
     text3="Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden inden du ansøger:"
-    dot1="Forventninger"
-    dot2="Retningslinjer og priser"
+    dot1="<a href='#forventninger'><u>Forventninger</u></a>"
+    dot2="<a href='#retningslinjer'><u>Retningslinjer og priser</u></a>"
     text4="Det giver dig et klart billede af, om dine produkter og værdier matcher Grønt Markeds. Du finder information om, hvordan du ansøger, længere nede på siden under Hvordan bliver du Grønt Marked producent."
     text5="Vi glæder os til at høre fra dig – og til at lære dine produkter at kende."
     button1="Ansøg nu"
@@ -48,12 +48,19 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
     direction="-reverse"
   />
 
-  <Image class="ml-auto mb-[-1px] mt-[-290px]" src={HjørneGold} alt="Vector Hjørne" />
-  <section id="hvorfor" class="bg-GoldenGrain-300 py-30 px-5 lg:px-[167px] w-full relative">
+  <Image
+    class="ml-auto mb-[-1px] -mt-[108px] sm:mt-[-285px]"
+    src={HjørneGold}
+    alt="Vector Hjørne"
+  />
+  <section
+    id="hvorfor"
+    class="bg-GoldenGrain-300 py-[64px] sm:py-[163px] px-5 lg:px-[167px] w-full relative"
+  >
     <Image
       src={Grøntsager2}
       alt="Illustration af grøntsager"
-      class="absolute top-10 right-20 h-40 lg:h-60 w-auto z-1"
+      class="absolute top-10 right-20 h-20 sm:h-40 lg:h-60 w-auto z-1"
     />
     <HvorforIcons
       subtext="Grønt Marked giver producenter mulighed for at tage del i et strategisk fællesskab, hvor mad ikke blot er en handelsvare, men en del af noget større. Her styrkes de små værdikæder, og du får ejerskab over både din fortælling og din fortjeneste. Sammen bygger vi et marked, hvor nærhed, ansvar og økonomisk robusthed går hånd i hånd. Vi har samlet de 3 bedste grunde til hvorfor du skal sælge på Grønt Marked:"
@@ -68,7 +75,14 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
       icon3={Fællesskab}
     />
   </section>
-  <Image id="hvordan" class="mt-[-1px] rotate-180" src={HjørneGold} alt="Vector Hjørne" />
+  <Image
+    id="hvordan"
+    class="mt-[-1px] rotate-180 -mb-[44px] sm:mb-[-122px]"
+    -mb-[44px]
+    sm:mb-[-100px]
+    src={HjørneGold}
+    alt="Vector Hjørne"
+  />
   <GridCard
     title="Hvordan bliver du producent?"
     image={b2}
@@ -82,8 +96,14 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
     direction="-reverse"
   />
 
-  <Image class="ml-auto mb-[-1px] -mt-50 lg:mt-[-290px]" src={HjørneGreen} alt="Vector Hjørne" />
-  <section class="bg-ForestFresh-500 py-30 px-5 lg:px-[167px] w-full flex flex-col justify-center">
+  <Image
+    class="ml-auto mb-[-1px] -mt-[44px] lg:mt-[-290px]"
+    src={HjørneGreen}
+    alt="Vector Hjørne"
+  />
+  <section
+    class="bg-ForestFresh-500 py-[64px] sm:py-[163px] px-5 lg:px-[167px] w-full flex flex-col justify-center"
+  >
     <h2 class="text-MarketLinen-500 text-center mb-[34px]">
       “Det bedste ved markedet er fællesskabet. Her deler vi ikke bare mad, men også værdier og
       glæde!”
@@ -95,13 +115,17 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
       </a>
     </div>
   </section>
-  <Image class="mt-[-1px] rotate-180" src={HjørneGreen} alt="Vector Hjørne" />
+  <Image
+    class="mt-[-1px] rotate-180 -mb-[44px] sm:mb-[-122px]"
+    src={HjørneGreen}
+    alt="Vector Hjørne"
+  />
 
   <section id="forventninger" class="layout w-full px-5 lg:px-[167px]">
-    <h2 class="text-MarketMidnight-500 mb-[34px]">Forventninger til markedsdage</h2>
-    <section class="flex justify-center mb-52">
-      <div class="flex flex-wrap gap-[68px]">
-        <div class="w-4/9">
+    <h2 class="text-MarketMidnight-500 mb-[24px]">Forventninger til markedsdage</h2>
+    <section class="flex justify-center mb-[64px] sm:mb-[163px]">
+      <div class="flex flex-wrap sm:gap-[68px]">
+        <div class="w-full sm:w-4/9 mb-[60px] sm:mb-0">
           <p class="mb-[24px] text-MarketMidnight-500">
             Vores mål er altid at sikre, at du som deltager har alt, hvad du behøver, herunder el,
             vand, ekstra plads, telte og meget mere. Vi beder blot om, at du gør os opmærksomme på
@@ -113,13 +137,13 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
             Grønt Marked kan vi stole på hinanden, og det er netop denne fællesskabsånd, der gør
             markedet stærkt.
           </p>
-          <p class="mb-[24px] text-MarketMidnight-500">
+          <p class="text-MarketMidnight-500">
             Vi designer sammensætningen af markedets deltagere for at sikre en optimal balance i
             udbuddet. Vores primære mål er at skabe en fair og gennemsigtig markedsplads, hvor alle
             producenter har lige muligheder for at trives.
           </p>
         </div>
-        <div class="sm:w-[475px]">
+        <div class="w-full sm:w-[475px]">
           <Accordion
             atitle="Besøgende"
             atext="Vores marked tiltrækker gennemsnitligt 1500-2000 besøgende pr. markedsdag. Du vil møde mange stamgæster samt mennesker i alle aldre og fra forskellige nationaliteter. Vi opfordrer altid forældre til at tage deres børn med og give dem indsigt i, hvor maden kommer fra."
@@ -140,8 +164,8 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
   <ScrollCarousel client:only />
   <section class="layout w-full">
     <section id="retningslinjer" class="px-5 lg:px-[167px]">
-      <h2 class="text-MarketMidnight-500 mb-[34px]">Retningslinjer for Grønt Marked</h2>
-      <p class="mb-[24px] text-MarketMidnight-500">
+      <h2 class="text-MarketMidnight-500 mb-[24px]">Retningslinjer for Grønt Marked</h2>
+      <p class="mb-[60px] text-MarketMidnight-500">
         Du kan læse mere om vores retningslinjer for producenter nedenfor. Har du fortsat spørgsmål,
         er du velkommen til at kontakte os på <a href="mailto:hello1@groentmarled.dk"
           ><u>hello@groentmarked.dk</u></a
@@ -161,6 +185,7 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
     atext3="<ul class='list-disc pl-5'> <li>Alle producenter skal følge den bedste praksis inden for dyrevelfærd (plads, adgang til udearealer, friland m.m.).</li> <li>Oprindelige og sjældne racer foretrækkes.</li> <li>Dyrene skal fodres 100 % med foder fra egen gård eller lokale produkter (lukket kredsløb).</li> <li>Kun hjemmelavede mejeriprodukter fra egen gård er tilladt.</li> <li>Producenter må kun sælge mælk fra dyr, de selv holder og malker.</li> <li>Kun fisk fra bæredygtige og småskala fiskerier er tilladt.</li> </ul>"
     atitle4="Prissætning for produkter"
     atext4="Vi forventer, at salgspriserne på Grønt Marked ikke overstiger priserne i eksterne butikker (f.eks. supermarkeder).<br><br>Bondemarkeder er globalt set skabt for, at forbrugerne kan købe råvarer til en fair pris direkte fra producenterne, uden mellemled. Grønt Marked er et sted for direkte salg til kunderne, hvilket giver producenterne mulighed for at tjene en større margin end ved salg gennem tredjeparter. Dette er et krav for alle producenter på markedet."
+    mh="140"
   />
   <AccordionCard
     title="Deltagelse og priser"

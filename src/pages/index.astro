@@ -18,7 +18,7 @@ import Preloader from "@/components/Preloader.astro";
   <Preloader />
   <HeroBackground
     title="Grønt Marked"
-    tsize="md:text-[180px]"
+    tsize="text-[100px] md:text-[180px]"
     text="Grønt Marked er en <strong>non-profit organisation</strong> i København. Vores ambition er at gøre lokal, frisk og sæsonbestemt mad <strong>tilgængeligt for alle</strong>, samt at skabe en sund og stærk forbindelse mellem producenterne på landet og folket i byen. Vi er glade for at du besøger vores <strong>univers</strong>!"
     image={b1}
     btext="Støt Grønt Marked"
@@ -33,6 +33,7 @@ import Preloader from "@/components/Preloader.astro";
     button1="Læs mere om os"
     link1="/om-os"
     button2="Bliv producent"
+    link2="/producent"
     extra="no"
   />
   <Lokationer loading="lazy" />
@@ -54,5 +55,5 @@ import Preloader from "@/components/Preloader.astro";
   <OsBagGM />
   <ProfileCarousel client:load />
   <FAQ />
-  <NyhedsPopup />
+  <!-- <NyhedsPopup /> -->
 </MainLayout>

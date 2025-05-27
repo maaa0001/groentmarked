@@ -17,14 +17,14 @@ import { Image } from "astro:assets";
 <MainLayout title="Mere end et marked">
   <HeroBackground
     title="Arrangementer"
-    text="Grønt Marked samler mennesker om <strong>kærligheden til ægte </strong>, <strong>lokal mad</strong> og <strong>ansvarlig produktion</strong>. Vi er en bevægelse, der hylder fællesskab, håndværk og sæsonens smag – både gennem vores søndagsmarkeder og Grønt Marked Køkken."
+    text="Grønt Marked samler mennesker om <strong>kærligheden til ægte </strong>, <strong>lokal mad</strong> og <strong>ansvarlig produktion</strong>. Vi er en bevægelse, der hylder fællesskab, håndværk og sæsonens smag – både gennem vores søndagsmarkeder og Grønt Marked Køkken. <br> <br> På denne side kan du se, hvordan vi arbejder med mad, mennesker og idéer – ud over søndagsmarkederne."
     image={b1}
   />
-  <section class="px-5 mt-[163px] lg:px-[167px] layout relative">
+  <section class="px-5 lg:px-[167px] mb-20 layout relative">
     <Image
       src={Grøntsager}
       alt="Tegnet grøntsager"
-      class="absolute -top-30 md:top-[-100px] right-0 h-40 md:h-50 lg:h-80 w-auto"
+      class="absolute -top-30 md:top-[-60px] right-0 h-40 md:h-50 lg:h-80 w-auto hidden sm:block"
     />
 
     <h2 class="mb-[24px] text-MarketMidnight-500 max-w-150">
@@ -49,7 +49,7 @@ import { Image } from "astro:assets";
       <Image
         src={Bær}
         alt="Illustration af blomst"
-        class="absolute top-0 right-20 h-50 lg:h-60 w-auto z-1"
+        class="absolute top-0 right-20 h-50 lg:h-60 w-auto z-1 hidden sm:block"
       />
       <HvorforIcons
         title1="Lokale råvarer med omtanke"

@@ -13,23 +13,25 @@ import Jordbær from "src/assets/images/illustrationer/Jordbær.webp";
 import BigButtonBlack from "./animationer/BigButtonBlack.astro";
 ---
 
-<div class="relative w-full overflow-hidden">
+<div class="relative w-full overflow-hidden -mt-[120px] sm:mt-[-220px] -mb-[44px] sm:mb-[-122px]">
   <Image
     src={Blomst}
     alt="Illustration af blomst"
-    class="absolute top-30 right-0 h-50 lg:h-80 w-auto rotate-20 z-1"
+    class="absolute top-30 right-0 h-50 lg:h-80 w-auto rotate-20 z-1 hidden sm:block"
   />
   <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
-  <section id="markederne" class="bg-GoldenGrain-300 py-30 px-5 lg:px-[167px]">
+  <section id="markederne" class="bg-GoldenGrain-300 py-[64px] sm:py-[163px] px-5 lg:px-[167px]">
     <div class="layout">
-      <h2>Udover søndagsmarkederne</h2>
-      <p class="mb-20 w-1/2">
+      <h2 class="text-MarketMidnight-500 mb-[24px]">Udover søndagsmarkederne</h2>
+      <p class="mb-15 w-full sm:w-1/2">
         Udover vores søndagsmarkeder tilbyder vi en række spændende oplevelser, som du kan læse mere
         om herunder. Ønsker du at booke en oplevelse, kan du nemt gøre det i vores
         <a class="underline font-bold" href="/kalender">kalender</a>.
       </p>
 
-      <div class="flex flex-row flex-wrap gap-[100px] w-full max-w-300 m-auto justify-center">
+      <div
+        class="flex flex-row flex-wrap gap-[100px] gap-y-[79px] w-full max-w-300 m-auto justify-center"
+      >
         <ProducentCard
           title="Gårdbesøg"
           image={b6}
@@ -68,6 +70,6 @@ import BigButtonBlack from "./animationer/BigButtonBlack.astro";
   <Image
     src={Jordbær}
     alt="Illustration af blomst"
-    class="absolute bottom-70 left-[-40px] h-50 lg:h-80 w-auto z-1"
+    class="absolute bottom-70 left-[-40px] h-50 lg:h-80 w-auto z-1 hidden sm:block"
   />
 </div>

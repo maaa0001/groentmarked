@@ -15,22 +15,25 @@ import Gulerod from "src/assets/images/illustrationer/Gulerod.webp";
 import { Image } from "astro:assets";
 ---
 
-<Image class="ml-auto mb-[-1px] mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
-<section id="markederne" class="bg-GoldenGrain-300 pt-[163px] px-5 lg:px-[167px] w-full relative">
+<Image class="ml-auto mb-[-1px] -mt-[108px] sm:mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
+<section
+  id="markederne"
+  class="bg-GoldenGrain-300 pt-[64px] sm:pt-[163px] px-5 lg:px-[167px] w-full relative"
+>
   <Image
     src={Grøntsager2}
     alt="Illustration af grøntsager"
-    class="absolute top-10 right-20 h-60 w-auto z-1"
+    class="absolute top-10 right-20 h-60 w-auto z-1 hidden sm:block"
   />
   <div class="layout">
     <div class="m-auto flex justify-center layout">
-      <h2 class="text-MarketMidnight-500 mb-4">Lokationer for Grønne markeder</h2>
-      <p class="mb-[60px] w-1/2 text-MarketMidnight-500">
+      <h2 class="text-MarketMidnight-500 mb-[24px]">Lokationer for Grønne markeder</h2>
+      <p class="mb-[35px] sm:mb-[82px] w-full sm:w-1/2 text-MarketMidnight-500">
         Vi holder Grønne markeder hver søndag fra kl. 10.00 til 15.00 fra maj til december. Herunder
         kan du finde de fire lokationer for markederne, og nederst komme dirkete til vores
         markedskalender.
       </p>
-      <div class="flex flex-col gap-[193px]">
+      <div class="flex flex-col gap-25 sm:gap-[165px]">
         <Market
           image={b3}
           title="Indre by"
@@ -42,7 +45,7 @@ import { Image } from "astro:assets";
         <Image
           src={Jordbær}
           alt="Illustration af blomst"
-          class="absolute top-200 -left-5 h-60 w-auto z-1"
+          class="absolute top-200 -left-5 h-60 w-auto z-1 hidden sm:block"
         />
         <Market
           image={b4}
@@ -75,11 +78,11 @@ import { Image } from "astro:assets";
         <Image
           src={Bær3}
           alt="Illustration af blomst"
-          class="absolute bottom-10 right-10 h-40 w-auto z-1"
+          class="absolute bottom-35 right-10 h-25 sm:h-40 w-auto z-1"
         />
       </div>
       <BigButtonBlack text="Se vores kalender" link="/kalender" />
     </div>
   </div>
 </section>
-<Image class="mt-[-1px] mb-[-100px] rotate-180" src={Hjørne} alt="Vector Hjørne" />
+<Image class="mt-[-1px] -mb-[44px] sm:mb-[-100px] rotate-180" src={Hjørne} alt="Vector Hjørne" />

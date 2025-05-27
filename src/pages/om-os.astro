@@ -21,14 +21,14 @@ import { Image } from "astro:assets";
 <MainLayout title="Forside">
   <HeroBackground
     title="Os bag Grønt marked"
-    text="Mit navn er MaltheGrønt Marked er en non-profit organisation, der arbejder for at skabe et fællesskabsbaseret og alternativt fødevaresystem, som fremmer småskala, danske råvarer og producenter."
+    text="Grønt Marked er en non-profit organisation, der arbejder for at skabe et <strong>fællesskabsbaseret</strong> og alternativt fødevaresystem, som fremmer småskala, <strong>danske råvarer</strong> og producenter. <br><br> Vi ønsker at gøre vejen fra <strong>jord til bord</strong> kortere og mere gennemsigtig ved at bringe sæsonens lokale råvarer, dyrket med <strong>bæredygtige</strong> metoder, ind i bylivet."
     image={b1}
   />
 
-  <section class="flex justify-center relative">
+  <section class="flex justify-center relative mt-[64px] sm:mt-[163px]">
     <Image src={RundTekst} alt="" class="absolute -top-10 w-70 sm:w-80 md:w-100 lg:w-145" />
     <div
-      class="aspect-627/784 rounded-[600px] overflow-hidden w-2/5 border-4 border-ForestFresh-500"
+      class="aspect-627/784 rounded-[600px] overflow-hidden w-3/5 sm:w-2/5 border-4 border-ForestFresh-500"
     >
       <iframe
         class="h-full w-full"
@@ -41,15 +41,15 @@ import { Image } from "astro:assets";
     <Image
       src={Grøntsager}
       alt="Illustration af blomst"
-      class="absolute -bottom-40 left-10 h-50 lg:h-70 w-auto z-1"
+      class="absolute -bottom-10 right-3 h-30 sm:-bottom-40 sm:left-10 sm:h-50 lg:h-70 w-auto z-1"
     />
   </section>
-  <Image class="ml-auto mb-[-1px]" src={Hjørne} alt="Vector Hjørne" />
-  <section class="bg-GoldenGrain-300 py-30 px-5 lg:px-[167px] relative">
+  <Image class="ml-auto mb-[-1px] -mt-[44px] sm:mt-[-122px]" src={Hjørne} alt="Vector Hjørne" />
+  <section class="bg-GoldenGrain-300 py-[64px] sm:py-[163px] px-5 lg:px-[167px] relative">
     <Image
       src={Bær3}
       alt="Illustration af blomst"
-      class="absolute top-0 right-10 h-40 w-auto z-1"
+      class="absolute top-0 right-10 h-40 w-auto z-1 hidden sm:block"
     />
     <GridCard
       title="Hvordan det hele begyndte"
@@ -61,6 +61,7 @@ import { Image } from "astro:assets";
       link1="/stoet"
       button2="Bliv frivillig"
       link2="/stoet#frivillig"
+      mh="140"
     />
     <GridCard
       title="En ny måde at handle på"
@@ -78,7 +79,7 @@ import { Image } from "astro:assets";
     <Image
       src={Bær3}
       alt="Illustration af blomst"
-      class="absolute bottom-250 right-10 h-40 w-auto z-1"
+      class="absolute bottom-250 right-10 h-40 w-auto z-1 hidden sm:block"
     />
     <GridCard
       title="Dem der gør det muligt"
@@ -92,10 +93,10 @@ import { Image } from "astro:assets";
     <Image
       src={Jordbær}
       alt="Illustration af blomst"
-      class="absolute bottom-20 -left-5 h-80 w-auto z-1"
+      class="absolute bottom-20 -left-5 h-80 w-auto z-1 hidden sm:block"
     />
   </section>
-  <Image class="mt-[-1px] rotate-180" src={Hjørne} alt="Hjørne svg" />
+  <Image class="mt-[-1px] rotate-180 -mb-[44px] sm:mb-[-122px]" src={Hjørne} alt="Hjørne svg" />
   <OsBagGM />
   <ProfileCarousel client:load />
   <FAQ />

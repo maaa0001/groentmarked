@@ -482,7 +482,7 @@ const producenterData: Producent[] = [
 // Card component
 const ProducentCard: React.FC<{ producent: Producent }> = ({ producent }) => {
   return (
-    <div className="w-full md:w-1/2 lg:w-3/10 p-4 mb-10">
+    <div className="w-full md:w-1/2 lg:w-3/10 p-4 mb-25 sm:mb-10">
       <article className="overflow-hidden h-full flex flex-col">
         <img
           src={producent.image || "/placeholder.svg"}
@@ -539,9 +539,9 @@ const Producenter: React.FC<{ producenter?: Producent[] }> = ({
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 mb-30">
       <h3 className="mb-6">Se producenterne hos Grønt Marked</h3>
-      <div className="rounded-lg mb-8">
+      <div className="rounded-lg mb-20 sm:mb-25">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label className="block text-sm font-medium mb-5">

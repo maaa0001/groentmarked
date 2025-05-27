@@ -28,7 +28,7 @@ const {
   target2 = "",
   bbtext = "",
   bblink = "",
-  styling = "",
+  mh = "",
 } = Astro.props;
 
 const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row";
@@ -36,18 +36,18 @@ const flexDirection = direction === "-reverse" ? "flex-row-reverse" : "flex-row"
 const showList = dot1 || dot2 || dot3 || dot4 || dot5;
 ---
 
-<section class="flex justify-center mb-[163px] layout px-5 lg:px-0">
-  <div class={`flex ${flexDirection} justify-center flex-wrap gap-[68px]`}>
-    <h2 class="mb-[24px] w-screen text-center text-MarketMidnight-500 lg:hidden">{title}</h2>
+<section class="flex justify-center mb-[64px] sm:mb-[163px] layout px-5 lg:px-0">
+  <div class={`flex ${flexDirection} justify-center flex-wrap sm:gap-[68px]`}>
+    <h2 class="mb-[35px] w-screen text-MarketMidnight-500 lg:hidden">{title}</h2>
     <div class="w-[531px] h-[600px]">
       <Image
-        class="w-full h-auto min-h-140 max-h-188 object-cover rounded-3xl"
+        class={`w-full h-auto min-h-140 max-h-${mh} object-cover rounded-3xl`}
         src={image}
         alt={image}
       />
     </div>
     <div class="w-full max-w-[576px] self-center">
-      <h2 class="mb-4 text-MarketMidnight-500 hidden lg:block">{title}</h2>
+      <h2 class="mb-[24px] text-MarketMidnight-500 hidden lg:block">{title}</h2>
       <p class="mb-[24px] text-MarketMidnight-500">{subtitle}</p>
       <p class="mb-[24px] text-MarketMidnight-500">{text1}</p>
       <p class="mb-[24px] text-MarketMidnight-500">{text2}</p>
@@ -59,8 +59,8 @@ const showList = dot1 || dot2 || dot3 || dot4 || dot5;
       {
         showList && (
           <ul class="pl-5 mb-[24px] text-MarketMidnight-500 list-disc">
-            {dot1 && <li>{dot1}</li>}
-            {dot2 && <li>{dot2}</li>}
+            {dot1 && <li set:html={dot1}>{dot1}</li>}
+            {dot2 && <li set:html={dot2}>{dot2}</li>}
             {dot3 && <li>{dot3}</li>}
             {dot4 && <li>{dot4}</li>}
             {dot5 && <li>{dot5}</li>}

@@ -426,9 +426,9 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4">
       {/* Filtrering */}
-      <div className="p-6 rounded-lg mb-8">
+      <div className="rounded-lg mb-25">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Dropdown
             label="Hvilken måned ønsker du at se?"
@@ -457,7 +457,7 @@ const EventCalendar: React.FC<{ events?: Event[] }> = ({ events = calendarData }
       </div>
 
       {/* Grid */}
-      <h3>Det sker hos Grønt Marked</h3>
+      <h3 className="text-MarketMidnight-500 mb-[60px]">Det sker hos Grønt Marked</h3>
       <div className="flex flex-row flex-wrap gap-y-[100px] gap-x-5">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} onClick={() => handleEventClick(event)} />
