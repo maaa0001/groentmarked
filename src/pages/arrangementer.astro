@@ -27,7 +27,7 @@ import { Image } from "astro:assets";
       class="absolute -top-30 md:top-[-100px] right-0 h-40 md:h-50 lg:h-80 w-auto"
     />
 
-    <h2 class="mb-[24px] text-MarketMidnight-500">
+    <h2 class="mb-[24px] text-MarketMidnight-500 max-w-150">
       Book Grønt Marked køkken til din næste begivenhed
     </h2>
     <p class="mb-[24px] text-MarketMidnight-500">
@@ -45,7 +45,7 @@ import { Image } from "astro:assets";
   <div class="flex flex-col justify-center">
     <StickyScrollReveal client:load />
     <UdoverMarkederne />
-    <div class="relative w-full layout">
+    <div class="relative w-full layout px-5 lg:px-[167px]">
       <Image
         src={Bær}
         alt="Illustration af blomst"
