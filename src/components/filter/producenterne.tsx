@@ -55,7 +55,7 @@ const producenterData: Producent[] = [
     subtitle: "Hindsholm, Danmark",
     city: "Hindsholm",
     country: "Danmark",
-    text: "Øko svinekød, slagtet på stedet. Grisene lever udendørs året rundt på mindst 100 m2 hver, opvokset langsomt og efter deres natur.",
+    text: "Øko svinekød, slagtet på stedet. Grisene lever udendørs året rundt på mindst 100 m2 hver, opvokset langsomt og efter deres natur.",
     link: "https://www.hindsholmgrisen.dk/",
     type: "Kød",
   },
@@ -114,7 +114,7 @@ const producenterData: Producent[] = [
     link: "https://www.oenshave.dk/",
     type: "Grøntsager",
   },
-{
+  {
     id: 10,
     titel: "Bybi",
     image: "/producenterne/cards/10.webp",
@@ -125,7 +125,7 @@ const producenterData: Producent[] = [
     link: "https://bybi.dk/",
     type: "Honning",
   },
-{
+  {
     id: 11,
     titel: "Mosegaarden Jordbrug",
     image: "/producenterne/cards/11.webp",
@@ -136,7 +136,7 @@ const producenterData: Producent[] = [
     link: "http://mosegaardenjordbrug.dk/",
     type: "Grøntsager",
   },
-{
+  {
     id: 12,
     titel: "Hyldemarken",
     image: "/producenterne/cards/12.webp",
@@ -147,7 +147,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/hyldemarken/",
     type: "Grøntsager",
   },
-{
+  {
     id: 13,
     titel: "Langebjerggaard",
     image: "/producenterne/cards/13.webp",
@@ -158,7 +158,7 @@ const producenterData: Producent[] = [
     link: "https://www.langebjerggard.dk/",
     type: "Kød",
   },
-{
+  {
     id: 14,
     titel: "Lindegaarden",
     image: "/producenterne/cards/14.webp",
@@ -169,7 +169,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/lindegaarden_lillelyngby/",
     type: "Grøntsager",
   },
-{
+  {
     id: 15,
     titel: "Nordhavn Eddikebryggeri",
     image: "/producenterne/cards/15.webp",
@@ -180,7 +180,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/eddike_cph",
     type: "Sylt og blandet",
   },
-{
+  {
     id: 16,
     titel: "Søndergård",
     image: "/producenterne/cards/16.webp",
@@ -191,7 +191,7 @@ const producenterData: Producent[] = [
     link: "https://www.xn--sndergrd-f0a8p.com/",
     type: "Grøntsager",
   },
-{
+  {
     id: 17,
     titel: "Det Vilde Spinderi",
     image: "/producenterne/cards/17.webp",
@@ -202,7 +202,7 @@ const producenterData: Producent[] = [
     link: "https://www.detvildespinderi.dk/",
     type: "Uld",
   },
-{
+  {
     id: 18,
     titel: "Copenhagen Goat Milk",
     image: "/producenterne/cards/18.webp",
@@ -213,9 +213,9 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/copenhagengoatmilk/",
     type: "Mejeri",
   },
-{
+  {
     id: 19,
-    titel: "Søagergård",
+    titel: "Søagergård",
     image: "/producenterne/cards/19.webp",
     subtitle: "Smørum, Danmark",
     city: "Smørum",
@@ -224,7 +224,7 @@ const producenterData: Producent[] = [
     link: "http://www.soeagergaard.dk/",
     type: "Mejeri",
   },
-{
+  {
     id: 20,
     titel: "Applied Poetry",
     image: "/producenterne/cards/20.webp",
@@ -235,7 +235,7 @@ const producenterData: Producent[] = [
     link: "https://www.appliedpoetry.net/",
     type: "Vilde planter og urter",
   },
-{
+  {
     id: 21,
     titel: "Table Ferments",
     image: "/producenterne/cards/21.webp",
@@ -246,7 +246,7 @@ const producenterData: Producent[] = [
     link: "https://tableferments.com/",
     type: "Sylt og blandet",
   },
-{
+  {
     id: 22,
     titel: "Bruuns Baghaver",
     image: "/producenterne/cards/22.webp",
@@ -257,7 +257,7 @@ const producenterData: Producent[] = [
     link: "https://bruunsbaghave.dk/",
     type: "Sylt og blandet",
   },
-{
+  {
     id: 23,
     titel: "Søtoftes Gårdmejeri",
     image: "/producenterne/cards/23.webp",
@@ -268,7 +268,7 @@ const producenterData: Producent[] = [
     link: "https://www.soetoftesgaardmejeri.dk/",
     type: "Mejeri",
   },
-{
+  {
     id: 24,
     titel: "Stråhatten Markedshave",
     image: "/producenterne/cards/24.webp",
@@ -279,7 +279,7 @@ const producenterData: Producent[] = [
     link: "https://filosoffenshave.dk/",
     type: "Grøntsager",
   },
-{
+  {
     id: 25,
     titel: "Slowburn Brewing Co-op",
     image: "/producenterne/cards/25.webp",
@@ -290,7 +290,7 @@ const producenterData: Producent[] = [
     link: "https://slowburn.coop/",
     type: "Drikkevare",
   },
-{
+  {
     id: 26,
     titel: "Österlensaffran AB",
     image: "/producenterne/cards/26.webp",
@@ -301,7 +301,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/osterlensaffran/?hl=en",
     type: "Vilde planter og urter",
   },
-{
+  {
     id: 27,
     titel: "Lille bakery",
     image: "/producenterne/cards/27.webp",
@@ -312,7 +312,7 @@ const producenterData: Producent[] = [
     link: "https://www.lillegrocery.com/",
     type: "Bageri",
   },
-{
+  {
     id: 28,
     titel: "Folkets Pops",
     image: "/producenterne/cards/28.webp",
@@ -323,7 +323,7 @@ const producenterData: Producent[] = [
     link: "https://www.avijll.dk/",
     type: "Is",
   },
-{
+  {
     id: 29,
     titel: "Sigtemøllevejen",
     image: "/producenterne/cards/29.webp",
@@ -334,7 +334,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/sigtemoellevejenciderogvin/",
     type: "Drikkevare",
   },
-{
+  {
     id: 30,
     titel: "Nagelsbjergvin",
     image: "/producenterne/cards/30.webp",
@@ -345,7 +345,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/nagelsbjergvin/",
     type: "Drikkevare",
   },
-{
+  {
     id: 31,
     titel: "Sønderstrand",
     image: "/producenterne/cards/31.webp",
@@ -356,7 +356,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/soenderstrandvin/",
     type: "Drikkevare",
   },
-{
+  {
     id: 32,
     titel: "Garbolund",
     image: "/producenterne/cards/32.webp",
@@ -367,7 +367,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/garbolundnaturvin/",
     type: "Drikkevare",
   },
-{
+  {
     id: 33,
     titel: "Klarskov Frugt",
     image: "/producenterne/cards/33.webp",
@@ -378,7 +378,7 @@ const producenterData: Producent[] = [
     link: "https://www.klarskovfrugt.dk/",
     type: "Æbler",
   },
-{
+  {
     id: 34,
     titel: "Æbibo",
     image: "/producenterne/cards/34.webp",
@@ -389,7 +389,7 @@ const producenterData: Producent[] = [
     link: "https://aebibo.dk/",
     type: "Æbler",
   },
-{
+  {
     id: 35,
     titel: "Planteskolen Evigt Liv",
     image: "/producenterne/cards/35.webp",
@@ -400,7 +400,7 @@ const producenterData: Producent[] = [
     link: "https://evigt-liv.dk/",
     type: "Vilde planter og urter",
   },
-{
+  {
     id: 36,
     titel: "Naturlig Blomst",
     image: "/producenterne/cards/36.webp",
@@ -411,7 +411,7 @@ const producenterData: Producent[] = [
     link: "https://www.langebjerggard.dk/",
     type: "Vilde planter og urter",
   },
-{
+  {
     id: 37,
     titel: "Ærtebjerg Jordbrug",
     image: "/producenterne/cards/37.webp",
@@ -422,7 +422,7 @@ const producenterData: Producent[] = [
     link: "https://www.aertebjerg-jordbrug.dk/",
     type: "Grøntsager",
   },
-{
+  {
     id: 38,
     titel: "Dansk Camelina",
     image: "/producenterne/cards/38.webp",
@@ -433,7 +433,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/danskcamelina/",
     type: "Olier",
   },
-{
+  {
     id: 39,
     titel: "Twisted Herbal",
     image: "/producenterne/cards/39.webp",
@@ -444,7 +444,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/twistedherbal",
     type: "Vilde planter og urter",
   },
-{
+  {
     id: 40,
     titel: "CPH Seasonal Foods",
     image: "/producenterne/cards/40.webp",
@@ -455,7 +455,7 @@ const producenterData: Producent[] = [
     link: "https://cvrapi.dk/virksomhed/dk/copenhagen-seasonal-foods/43979787",
     type: "Sylt og blandet",
   },
-{
+  {
     id: 41,
     titel: "Orupdal Jordbrug",
     image: "/producenterne/cards/41.webp",
@@ -466,7 +466,7 @@ const producenterData: Producent[] = [
     link: "https://www.instagram.com/orupdal_jordbrug/",
     type: "Grøntsager",
   },
-{
+  {
     id: 42,
     titel: "Meta Fermentary",
     image: "/producenterne/cards/42.webp",
@@ -483,7 +483,7 @@ const producenterData: Producent[] = [
 const ProducentCard: React.FC<{ producent: Producent }> = ({ producent }) => {
   return (
     <div className="w-full md:w-1/2 lg:w-3/10 p-4 mb-10">
-      <article className="  overflow-hidden h-full flex flex-col">
+      <article className="overflow-hidden h-full flex flex-col">
         <img
           src={producent.image || "/placeholder.svg"}
           alt={producent.titel}
@@ -497,6 +497,7 @@ const ProducentCard: React.FC<{ producent: Producent }> = ({ producent }) => {
             href={producent.link}
             target="_blank"
             className="inline-block mt-auto text-MarketMidnight-500 font-bold border-b border-MarketMidnight-500 hover:opacity-70"
+            rel="noreferrer"
           >
             Læs mere
           </a>
@@ -506,13 +507,14 @@ const ProducentCard: React.FC<{ producent: Producent }> = ({ producent }) => {
   );
 };
 
-// Filtrering
+// Filtrering og showAll
 const Producenter: React.FC<{ producenter?: Producent[] }> = ({
   producenter = producenterData,
 }) => {
   const [countryFilter, setCountryFilter] = useState<string>("all");
   const [cityFilter, setCityFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   // Får unike lande, byer og typer fra daten
   const countries = Array.from(new Set(producenter.map((producent) => producent.country)));
@@ -527,6 +529,14 @@ const Producenter: React.FC<{ producenter?: Producent[] }> = ({
 
     return matchesCountry && matchesCity && matchesType;
   });
+
+  // Bestem antal af producenter at vise
+  const producersToShow = showAll ? filteredProducenter : filteredProducenter.slice(0, 9);
+  const hasMoreProducers = filteredProducenter.length > 9;
+
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -590,12 +600,23 @@ const Producenter: React.FC<{ producenter?: Producent[] }> = ({
       </div>
 
       {/* Grid */}
-
       <div className="flex flex-wrap -mx-4 justify-between">
-        {filteredProducenter.map((producent) => (
+        {producersToShow.map((producent) => (
           <ProducentCard key={producent.id} producent={producent} />
         ))}
       </div>
+
+      {/* Show all button */}
+      {!showAll && hasMoreProducers && (
+        <div className="text-center mt-8">
+          <button
+            onClick={handleShowAll}
+            className="bg-HarvestRose-600 hover:bg-HarvestRose-500 text-MarketLinen-500 rounded-[20px] px-[20px] py-[10px] min-w-[167px] text-xs md:text-sm cursor-pointer"
+          >
+            Se alle producenterne
+          </button>
+        </div>
+      )}
 
       {/* Empty state */}
       {filteredProducenter.length === 0 && (
