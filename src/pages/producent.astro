@@ -29,25 +29,65 @@ import Grøntsager2 from "src/assets/images/illustrationer/Grøntsager2.webp";
   <Image
     src={Bær}
     alt="Illustration af bær"
-    class="h-40 w-auto absolute top-20 left-2 rotate-300"
+    class="h-40 w-auto absolute top-20 left-2 rotate-300 hidden sm:block"
   />
-  <div class="sm:h-[324px]"></div>
-  <GridCard
-    title="Producent sektionen"
-    image={b1}
-    text1="Velkommen til producent sektionen. Her finder du den information, du har brug for som nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand, overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt velkommen."
-    text2="Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe et marked præget af kvalitet, gennemsigtighed og godt samarbejde."
-    text3="Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden inden du ansøger:"
-    dot1="<a href='#forventninger'><u>Forventninger</u></a>"
-    dot2="<a href='#retningslinjer'><u>Retningslinjer og priser</u></a>"
-    text4="Det giver dig et klart billede af, om dine produkter og værdier matcher Grønt Markeds. Du finder information om, hvordan du ansøger, længere nede på siden under Hvordan bliver du Grønt Marked producent."
-    text5="Vi glæder os til at høre fra dig – og til at lære dine produkter at kende."
-    button1="Ansøg nu"
-    link1="https://groentmk.mymarket.org/forms/signup "
-    target1="_blank"
-    direction="-reverse"
-  />
+  <div class="h-[146px] sm:h-0 bg-ForestFresh-500"></div>
+  <section class="relative sm:hidden mb-[60px]">
+    <Image src={b1} alt="Producent" class="w-full h-100 object-cover mb-[24px]" />
+    <h1 class="text-MarketLinen-500 absolute top-40">Producent sektionen</h1>
+    <div class="px-5">
+      <h2 class="text-MarketMidnight-500 mb-[24px]">Bliv producent på Grønt Marked</h2>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Velkommen til producent sektionen. Her finder du den information, du har brug for som
+        nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand,
+        overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt
+        velkommen.
+      </p>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles
+        forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe
+        et marked præget af kvalitet, gennemsigtighed og godt samarbejde.
+      </p>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden
+        inden du ansøger:
+      </p>
+      <ul class="mb-[24px] list-disc pl-5">
+        <li><a href="#forventninger"><u>Forventninger</u></a></li>
+        <li><a href="#retningslinjer"><u>Retningslinjer og priser</u></a></li>
+      </ul>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Det giver dig et klart billede af, om dine produkter og værdier matcher Grønt Markeds. Du
+        finder information om, hvordan du ansøger, længere nede på siden under Hvordan bliver du
+        Grønt Marked producent.
+      </p>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Vi glæder os til at høre fra dig – og til at lære dine produkter at kende.
+      </p>
+      <a href="https://groentmk.mymarket.org/forms/signup">
+        <Button variant="primary" size="large">Ansøg nu</Button></a
+      >
+    </div>
+  </section>
 
+  <div class="sm:h-[324px]"></div>
+  <section class="hidden sm:block">
+    <GridCard
+      title="Producent sektionen"
+      image={b1}
+      text1="Velkommen til producent sektionen. Her finder du den information, du har brug for som nuværende eller kommende producent på Grønt Marked. Uanset om du allerede har en stand, overvejer at blive en del af fællesskabet, eller blot er nysgerrig, er du hjerteligt velkommen."
+      text2="Vi opfordrer alle producenter til at orientere sig grundigt her på siden. En fælles forståelse af Grønt Markeds værdier, retningslinjer og ambitioner er afgørende for at skabe et marked præget af kvalitet, gennemsigtighed og godt samarbejde."
+      text3="Hvis du ønsker at blive producent, anbefaler vi, at du læser følgende afsnit her på siden inden du ansøger:"
+      dot1="<a href='#forventninger'><u>Forventninger</u></a>"
+      dot2="<a href='#retningslinjer'><u>Retningslinjer og priser</u></a>"
+      text4="Det giver dig et klart billede af, om dine produkter og værdier matcher Grønt Markeds. Du finder information om, hvordan du ansøger, længere nede på siden under Hvordan bliver du Grønt Marked producent."
+      text5="Vi glæder os til at høre fra dig – og til at lære dine produkter at kende."
+      button1="Ansøg nu"
+      link1="https://groentmk.mymarket.org/forms/signup"
+      target1="_blank"
+      direction="-reverse"
+    />
+  </section>
   <Image
     class="ml-auto mb-[-1px] -mt-[108px] sm:mt-[-285px]"
     src={HjørneGold}

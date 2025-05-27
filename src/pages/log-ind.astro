@@ -7,6 +7,7 @@ import Hjørne from "src/assets/images/vector/HjørneGreen.svg";
 import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
 import Bær from "src/assets/images/illustrationer/Bær.webp";
 import Grøntsager3 from "src/assets/images/illustrationer/Grøntsager3.webp";
+import Button from "@/components/Button.astro";
 ---
 
 <MainLayout variant="secondary" title="Mød producenterne" ig="hidden" class="relative">
@@ -14,10 +15,36 @@ import Grøntsager3 from "src/assets/images/illustrationer/Grøntsager3.webp";
   <Image
     src={Bær}
     alt="Illustration af bær"
-    class="h-40 w-auto absolute top-20 left-2 rotate-300"
+    class="h-40 w-auto absolute top-20 left-2 rotate-300 hidden sm:block"
   />
+  <div class="h-[146px] sm:h-0 bg-ForestFresh-500"></div>
+  <section class="relative sm:hidden mb-[60px]">
+    <Image src={b1} alt="Producent" class="w-full h-100 object-cover mb-[24px]" />
+    <h1
+      class="text-MarketLinen-500 absolute flex justify-center top-20 left-16 bg-ForestFresh-opacity"
+    >
+      Bliv en del af <br /> Grønt Marked
+    </h1>
+    <div class="px-5">
+      <h2 class="text-MarketMidnight-500 mb-[24px]">Ansøg nu eller log ind</h2>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Vil du være producent hos Grønt Marked? Så start med at læse vores forventninger og
+        retningslinjer, inden du sender din ansøgning.
+      </p>
+      <p class="text-MarketMidnight-500 mb-[24px]">
+        Har du allerede en profil eller sendt en ansøgning, kan du logge ind for at se din
+        brugerprofil.
+      </p>
+      <a href="https://groentmk.mymarket.org/">
+        <Button variant="primary" size="large">Log ind</Button></a
+      >
+      <a href="https://groentmk.mymarket.org/forms/signup">
+        <Button variant="secondary" size="large">Ansøg nu</Button></a
+      >
+    </div>
+  </section>
   <div class="sm:h-[324px]"></div>
-  <section class="relative -mb-150">
+  <section class="hidden sm:block relative -mb-150">
     <GridCard
       image={b1}
       title="Bliv en del af Grønt Marked"
