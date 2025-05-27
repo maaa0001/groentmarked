@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Hero from "../assets/images/Hero.svg";
 import BigButton from "./animationer/BigButton.astro";
 import Bær from "src/assets/images/illustrationer/Bær.webp";
+import VectorProducent from "src/assets/images/vector/HeroProducent.svg";
 
 const {
   title = "",
@@ -12,34 +13,121 @@ const {
   btext = "",
   link = "",
   bg = "",
-  tsize = "",
+  tsize = "text-4xl md:text-6xl lg:text-7xl",
 } = Astro.props;
 ---
 
-<section class={`w-screen ${bg} mb-[-300px] overflow-hidden`}>
-  <Image src={Hero} alt="Green background" class="w-full object-cover lg:h-auto h-[1413px]" />
-  <div class="w-full flex flex-col absolute top-0">
-    <Image src={image} alt={image} class="w-full max-w-[756px] absolute top-0 right-0" />
-    <div class="relative mt-50 ml-10 w-5/6 max-h-<20>px">
-      <h1 class={`font-display text-MarketLinen-500 ${tsize}`}>
-        {title}
-      </h1>
-      <p class="text-MarketLinen-500 max-h-[20px]" set:html={text} />
-      <div class="text-MarketLinen-500" set:html={textl} />
-      {btext && <BigButton link={link} text={btext} />}
+<section class={`relative w-full ${bg} overflow-hidden min-h-screen`}>
+  <!-- Background SVG -->
+  <div class="absolute inset-0 w-full h-full">
+    <Image 
+      src={Hero} 
+      alt="Green background" 
+      class="w-full h-full object-cover"
+    />
+  </div>
 
-      <div class="animate-bounce">
-        <img
-          class="flex place-self-end rotate-90"
-          src="/src/assets/images/icons/Arrow.svg"
-          alt=""
-        />
+  <!-- Top Right Image - Desktop Only -->
+  {image && (
+    <div class="hidden lg:block absolute top-0 right-0 z-5 w-1/2 max-w-[750px]">
+      <Image 
+        src={image} 
+        alt="Grønt Marked farmers market" 
+        class="w-full h-auto"
+      />
+    </div>
+  )}
+
+  <!-- Main Content Container -->
+  <div class="relative z-5 w-full min-h-screen">
+    <div class="container mx-auto pb-20  lg:py-24">
+      
+      <!-- Mobile Image with overlaid title -->
+      {image && (
+        <div class="lg:hidden mb-8 relative">
+          <Image 
+            src={image} 
+            alt="Grønt Marked farmers market" 
+            class="w-full h-auto"
+          />
+          <!-- Mobile title overlay - positioned at bottom of image -->
+          <div class="absolute bottom-10 sm:bottom-40 not-first: left-4 right-4">
+            <h1 class={`font-display text-MarketLinen-500 pb-50 text-center leading-tight ${tsize}`}>
+              {title}
+            </h1>
+            
+          </div>
+          <div class="absolute bottom-15 bg-ForestFresh-opacity z-2">
+           <p class="px-5 text-MarketLinen-500 leading-relaxed" set:html={text} />
+            <div class="text-MarketLinen-500 leading-relaxed" set:html={textl} />
+          </div>
+        </div>
+      )}
+
+      <!-- Content - Left side on desktop, full width on mobile -->
+      <div class="lg:w-2/3 lg:pr-8 space-y-6 lg:space-y-8 ">
+        <!-- Desktop title - can overflow into image area -->
+        <h1 class={`hidden lg:block pl-5 font-display text-MarketLinen-500  ${tsize}`}>
+          {title}
+        </h1>
+        
+        <div class="hidden lg:block pl-5 text-MarketLinen-500">
+          <p class=" leading-relaxed" set:html={text} />
+          <div class=" leading-relaxed" set:html={textl} />
+        </div>
+        
+        {btext && (
+          <div class="relative -top-30 lg:top-0 z-2">
+            <BigButton link={link} text={btext} />
+          </div>
+        )}
+
+        {!btext && (
+          <div class="h-[256px]"></div>
+        )}
+        
+        <!-- Scroll indicator - only show on larger screens -->
+        <div class="hidden lg:flex pt-8">
+          <div class="animate-bounce">
+            <svg 
+              class="w-6 h-6 text-MarketLinen-500 transform rotate-90" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
+     <Image class="xl:hidden absolute bottom-40 lg:bottom-10 left-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+
+    <!-- Berry Illustration - positioned at bottom left -->
+    <div class="absolute bottom-0 left-0 z-5">
+      <Image
+        src={Bær}
+        alt="Illustration af bær"
+        class="h-32 md:h-48 lg:h-64 w-auto opacity-90"
+      />
+    </div>
+
+    
   </div>
-  <Image
-    src={Bær}
-    alt="Illustration af bær"
-    class="h-80 w-auto relative bottom-100 left-0 rotate-300"
-  />
 </section>
+
+<style>
+  .container {
+    max-width: 1200px;
+  }
+  @media (max-width: 768px) {
+    .min-h-screen {
+      min-height: 100vh;
+    }
+  }
+</style>
