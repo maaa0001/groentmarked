@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../assets/images/GM_logo.svg";
-import footer from "../assets/images/VektorFooter.svg";
-import footerBillede from "../assets/images/footer_billede.webp";
 import IG from "../assets/images/icons/Instagram.svg";
 import FB from "../assets/images/icons/Facebook.svg";
 import Newsletter from "./Newsletter.astro";
@@ -56,7 +54,9 @@ const { ig = "" } = Astro.props;
 
           <div>
             <p class="text-MarketLinen-500 text-base font-bold pb-5">Kontakt</p>
-            <p class="pb-3 text-base text-MarketLinen-500">hello@groentmarked.dk</p>
+            <p class="pb-3 text-base text-MarketLinen-500">
+              <a href="mailto:hello@groentmarked.dk">hello@groentmarked.dk</a>
+            </p>
           </div>
         </div>
         <div class="flex justify-items-end mb-48 lg:mb-10">
