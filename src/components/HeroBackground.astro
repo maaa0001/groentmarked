@@ -67,17 +67,17 @@ const {
       <!-- Content - Left side on desktop, full width on mobile -->
       <div class="lg:w-2/3 lg:pr-8 space-y-6 lg:space-y-8 ">
         <!-- Desktop title - can overflow into image area -->
-        <h1 class={`hidden lg:block pl-5 font-display text-MarketLinen-500  ${tsize}`}>
+        <h1 class={`hidden lg:block absolute pl-5 pt-30 font-display text-MarketLinen-500 ${tsize}`}>
           {title}
         </h1>
         
-        <div class="hidden lg:block pl-5 text-MarketLinen-500 max-w-[487px]">
+        <div class="hidden lg:block pl-5 pt-50 text-MarketLinen-500 max-w-[487px]">
           <p class=" leading-relaxed" set:html={text} />
           <div class=" leading-relaxed" set:html={textl} />
         </div>
         
         {btext && (
-          <div class="min-h-[256px] relative -top-30 lg:top-0 z-2">
+          <div class="min-h-[256px] relative -top-30 lg:-top-15 z-2">
             <BigButton link={link} text={btext} />
           </div>
         )}
