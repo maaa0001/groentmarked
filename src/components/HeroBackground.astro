@@ -52,12 +52,12 @@ const {
           />
           <!-- Mobile title overlay - positioned at bottom of image -->
           <div class="absolute bottom-10 sm:bottom-40 not-first: left-4 right-4">
-            <h1 class={`font-display text-MarketLinen-500 pb-50 text-center leading-tight ${tsize}`}>
+            <h1 class={`font-display text-MarketLinen-500 pb-50 text-center  ${tsize}`}>
               {title}
             </h1>
             
           </div>
-          <div class="absolute bottom-15 bg-ForestFresh-opacity z-2 ">
+          <div class="absolute -bottom-40 bg-ForestFresh-opacity z-2 ">
            <p class="px-5 text-MarketLinen-500  leading-relaxed" set:html={text} />
             <div class="text-MarketLinen-500   leading-relaxed" set:html={textl} />
           </div>
@@ -67,17 +67,17 @@ const {
       <!-- Content - Left side on desktop, full width on mobile -->
       <div class="lg:w-2/3 lg:pr-8 space-y-6 lg:space-y-8 ">
         <!-- Desktop title - can overflow into image area -->
-        <h1 class={`hidden lg:block absolute pl-5 pt-30 font-display text-MarketLinen-500 ${tsize}`}>
+        <h1 class={`hidden lg:block absolute pl-5 pt-20 font-display text-MarketLinen-500 ${tsize}`}>
           {title}
         </h1>
         
-        <div class="hidden lg:block pl-5 pt-50 text-MarketLinen-500 max-w-[487px]">
+        <div class="hidden lg:block pl-5 pt-70 text-MarketLinen-500 max-w-[487px]">
           <p class=" leading-relaxed" set:html={text} />
           <div class=" leading-relaxed" set:html={textl} />
         </div>
         
         {btext && (
-          <div class="min-h-[256px] relative -top-30 lg:-top-15 z-2">
+          <div class="min-h-[256px] relative -top-30 lg:-top-15 z-2 opacity-0 sm:opacity-100 pb-60">
             <BigButton link={link} text={btext} />
           </div>
         )}
@@ -86,30 +86,13 @@ const {
           <div class="h-[256px]"></div>
         )}
         
-        <!-- Scroll indicator - only show on larger screens -->
-        <div class="hidden lg:flex pt-8">
-          <div class="animate-bounce">
-            <svg 
-              class="w-6 h-6 text-MarketLinen-500 transform rotate-90" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                stroke-linecap="round" 
-                stroke-linejoin="round" 
-                stroke-width="2" 
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </div>
-        </div>
+     
       </div>
     </div>
-     <Image class="xl:hidden absolute bottom-40 lg:bottom-10 left-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
+     <Image class="xl:hidden absolute bottom-28 sm:bottom-30 lg:bottom-10 left-0 w-full h-auto" src={VectorProducent} alt="Grøn vector baggrund" />
 
     <!-- Berry Illustration - positioned at bottom left -->
-    <div class="absolute bottom-0 left-0 z-5">
+    <div class="absolute bottom-0 lg:bottom-20 left-0 z-5">
       <Image
         src={Bær}
         alt="Illustration af bær"
