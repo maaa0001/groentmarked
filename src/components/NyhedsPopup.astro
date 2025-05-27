@@ -7,7 +7,7 @@ import Kryds from "src/assets/images/icons/KrydsSort.svg";
 
 <article
   id="newsletter-popup"
-  class="aspect-130/125 w-90 sm:w-130 sm:h-125 rounded-3xl overflow-hidden fixed bottom-5 right-5 bg-CreamCanvas-500 z-40 hidden"
+  class="aspect-130/125 w-90 sm:w-130 sm:h-125 rounded-3xl border-[1.2px] border-MarketMidnight-500 overflow-hidden fixed bottom-5 right-5 bg-CreamCanvas-500 z-40 hidden"
 >
   <div class="relative w-full h-full">
     <Image
@@ -53,7 +53,7 @@ import Kryds from "src/assets/images/icons/KrydsSort.svg";
       if (popup) {
         popup.classList.remove("hidden");
       }
-    }, 10000);
+    }, 10);
     if (closeButton) {
       closeButton.addEventListener("click", () => {
         if (popup) {
