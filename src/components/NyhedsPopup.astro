@@ -7,7 +7,7 @@ import Kryds from "src/assets/images/icons/KrydsSort.svg";
 
 <article
   id="newsletter-popup"
-  class="w-130 h-125 rounded-3xl overflow-hidden fixed bottom-5 right-5 bg-CreamCanvas-500 z-40 hidden"
+  class="aspect-130/125 w-90 sm:w-130 sm:h-125 rounded-3xl overflow-hidden fixed bottom-5 right-5 bg-CreamCanvas-500 z-40 hidden"
 >
   <div class="relative w-full h-full">
     <Image
@@ -16,19 +16,19 @@ import Kryds from "src/assets/images/icons/KrydsSort.svg";
       class="object-cover w-full h-full absolute inset-0 z-0"
     />
     <button id="close-popup" class="w-12 h-auto absolute top-6 right-6 z-50 cursor-pointer">
-      <Image src={Kryds} alt="Kryds icon" class="w-full h-full" />
+      <Image src={Kryds} alt="Kryds icon" class="w-8 sm:w-full h-auto" />
     </button>
-    <div class="pl-15 pr-10 pt-24 absolute inset-0 z-10 flex flex-col items-start">
+    <div class="pl-15 pr-10 pt-13 sm:pt-24 absolute inset-0 z-10 flex flex-col items-start">
       <h3 class="text-MarketMidnight-500">Tilmeld dig vores nyhedsbrev!</h3>
       <p class="text-MarketMidnight-500 mb-4">
         Få nyheder om kommende markedsdage, sæsonens råvarer og spændende arrangementer direkte i
         din indbakke.
       </p>
-      <div class="relative w-full max-w-100 min-w-[250px]">
+      <div class="relative w-full max-w-100 min-w-[250px] text-sm sm:text-base">
         <input
           type="email"
           placeholder="Indtast din e-mail"
-          class="py-2 pl-5 pr-20 w-full rounded-[20px] border border-MarketMidnight-500 text-MarketLinen-800 text-base bg-transparent"
+          class="py-2 pl-2 sm:pl-5 pr-20 w-full rounded-[20px] border border-MarketMidnight-500 text-MarketLinen-800 text-base bg-transparent"
         />
         <div id="submit-newsletter" class="absolute inset-y-0 right-0 flex items-center">
           <Button variant="primary" size="large">Tilmeld</Button>
@@ -53,7 +53,7 @@ import Kryds from "src/assets/images/icons/KrydsSort.svg";
       if (popup) {
         popup.classList.remove("hidden");
       }
-    }, 10000);
+    }, 10);
     if (closeButton) {
       closeButton.addEventListener("click", () => {
         if (popup) {
