@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 import HeaderP from "@/components/Header/HeaderP.astro";
-const { variant = "primary", title } = Astro.props;
+const { variant = "primary", title, ig } = Astro.props;
 ---
 
 <html lang="en">
@@ -34,7 +34,7 @@ const { variant = "primary", title } = Astro.props;
     </main>
 
     <footer>
-      {variant === "secondary" ? <Footer ig="hidden" /> : <Footer />}
+      {ig === "hidden" ? <Footer ig="hidden" /> : <Footer />}
     </footer>
   </body>
 </html>
