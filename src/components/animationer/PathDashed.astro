@@ -1,46 +1,24 @@
-<!-- <svg
-  width="1103"
-  height="2045"
-  viewBox="0 0 1103 2045"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  class="Path"
->
-  <path
-    d="M447 49.4993C447 49.4993 1075.03 -91.4542 1095 137.5C1123 458.5 23.5269 181.332 25.0003 638C26.4523 1088 1055.71 788.32 1010 1236C968.538 1642.03 -158.23 1413.05 25.5016 1777.5C126.887 1978.6 484.999 2038 484.999 2038"
-    stroke="#10200A"
-    stroke-width="13"
-    stroke-linecap="round"
-    stroke-dasharray="63 63"></path>
-</svg> -->
 <svg
-  width="1338"
-  height="2273"
-  viewBox="0 0 1338 2273"
+  width="1384"
+  height="2231"
+  viewBox="0 0 1384 2231"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  class="Path"
+  class="Path hidden 1130:block 1480:hidden"
 >
   <path
-    d="M1117.5 1C1441.06 376.662 -74.5 634.5 41.0002 395C72.0873 330.538 126.887 316.643 193 375.5C275 448.5 20.3347 588.425 41.0002 834C71.0001 1190.5 746.266 1052.51 936.5 1098.5C1073 1131.5 1261.49 1115.52 1332 1403C1429.5 1800.5 97.3671 1976.5 6.00002 1776C-28.012 1701.36 120.688 1608.27 197.5 1720.5C262.5 1815.47 -40.6859 2112.44 198 2272"
+    d="M1244.83 1C1568.39 376.662 94 726.396 94 460.5C94 408 141.627 381.223 181 460.5C218 535 55.661 550.925 76.3265 796.5C106.326 1153 839.266 1037.01 1029.5 1083C1166 1116 1307.49 1081.52 1378 1369C1475.5 1766.5 133.368 1945 42.0009 1744.5C7.98889 1669.86 64.6884 1632.27 141.5 1744.5C206.5 1839.47 -155.36 2070.94 83.3262 2230.5"
     stroke="black"
-    stroke-width="2"
     stroke-dasharray="20 20"></path>
 </svg>
 
 <style>
-  body {
-    min-height: 200vh;
-  }
   svg.Path {
-    display: flex;
-    align-self: center;
     position: absolute;
-    top: 1590px;
-    right: 134px;
-    width: 80%;
+    top: 510px;
+    right: 20px;
+    width: 92%;
     height: auto;
-    z-index: 1;
   }
 </style>
 
@@ -70,13 +48,30 @@
     // Apply the mask to the original path
     path.setAttribute("mask", "url(#path-reveal-mask)");
 
+    // Get the section that contains the path
+    const section = document.querySelector("#markederne");
+
     // Update mask on scroll
     function updateOnScroll() {
-      const scrollProgress = Math.min(
-        Math.max(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight), 0),
-        1
-      );
-      maskPath.setAttribute("stroke-dashoffset", pathLength - scrollProgress * pathLength * 2.5);
+      const sectionRect = section.getBoundingClientRect();
+      const sectionTop = sectionRect.top + window.scrollY;
+      const sectionHeight = sectionRect.height;
+
+      // Calculate when the section starts coming into view
+      const triggerPoint = sectionTop - window.innerHeight * 0.1;
+      const endPoint = sectionTop + sectionHeight;
+
+      // Calculate scroll progress relative to the section
+      const currentScroll = window.scrollY;
+
+      let scrollProgress = 0;
+      if (currentScroll > triggerPoint) {
+        const activeScrollDistance = endPoint - triggerPoint;
+        const scrolledDistance = currentScroll - triggerPoint;
+        scrollProgress = Math.min(Math.max(scrolledDistance / activeScrollDistance, 0), 1);
+      }
+
+      maskPath.setAttribute("stroke-dashoffset", pathLength - scrollProgress * pathLength * 1.5);
     }
 
     // Initialize and add listener
