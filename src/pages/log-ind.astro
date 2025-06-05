@@ -20,6 +20,15 @@ import Button from "@/components/Button.astro";
   <div class="h-[146px] sm:h-0 bg-ForestFresh-500"></div>
   <section class="relative sm:hidden mb-[60px]">
     <Image src={b1} alt="Producent" class="w-full h-100 object-cover mb-[24px]" />
+    <nav class="text-MarketMidnight-500 mt-1 mb-5 ml-5" aria-label="Breadcrumb">
+      <ol class="flex space-x-2 text-sm">
+        <li>
+          <a href="/producent" class="opacity-50 hover:underline">Producent sektionen</a>
+        </li>
+        <li>/</li>
+        <li class="underline">Log ind</li>
+      </ol>
+    </nav>
     <h1
       class="text-MarketLinen-500 absolute flex justify-center top-20 left-16 bg-ForestFresh-opacity"
     >
@@ -43,8 +52,16 @@ import Button from "@/components/Button.astro";
       >
     </div>
   </section>
-  <div class="sm:h-[324px]"></div>
-  <section class="hidden sm:block relative -mb-50">
+  <section class="hidden pt-[250px] sm:block relative">
+    <nav class="text-MarketMidnight-500 -mt-20 mb-10 ml-[167px]" aria-label="Breadcrumb">
+      <ol class="flex space-x-2 text-base">
+        <li>
+          <a href="/producent" class="opacity-50 hover:underline">Producent sektionen</a>
+        </li>
+        <li>/</li>
+        <li class="underline">Log ind</li>
+      </ol>
+    </nav>
     <GridCard
       image={b1}
       title="Bliv en del af Grønt Marked"
