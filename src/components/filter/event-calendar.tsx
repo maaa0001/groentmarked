@@ -320,7 +320,7 @@ const EventCard: React.FC<{ event: Event; onClick: () => void }> = ({ event, onC
   return (
     <div className="flex-1/4">
       <article
-        className="w-[200px] h-[315px] m-auto flex-1/3 cursor-pointer hover:opacity-80 transition-opacity"
+        className="w-[200px] h-[315px] m-auto flex-1/3 cursor-pointer hover:opacity-80 transform transition-all duration-500 hover:scale-105 "
         onClick={onClick}
       >
         <div className="text-sm border-b-1 border-black">{event.day}</div>
