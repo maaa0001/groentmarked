@@ -39,7 +39,7 @@ const showList = dot1 || dot2 || dot3 || dot4 || dot5;
 <section class="flex justify-center mb-[64px] sm:mb-[163px] layout px-5 lg:px-0">
   <div class={`flex ${flexDirection} justify-center flex-wrap sm:gap-[68px]`}>
     <h2 class="mb-[35px] w-screen text-MarketMidnight-500 lg:hidden">{title}</h2>
-    <div class="w-[531px] h-[600px]">
+    <div class="w-[531px] h-full max-h-[800px] rounded-3xl overflow-hidden">
       <Image
         class={`w-full h-auto min-h-140 max-h-${mh} object-cover rounded-3xl`}
         src={image}

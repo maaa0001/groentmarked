@@ -18,14 +18,15 @@ import { Image } from "astro:assets";
 <Image class="ml-auto mb-[-1px] -mt-[108px] sm:mt-[-290px]" src={Hjørne} alt="Vector Hjørne" />
 <section
   id="markederne"
-  class="bg-GoldenGrain-300 pt-[64px] sm:pt-[163px] px-5 lg:px-[167px] w-full relative"
+  class="bg-GoldenGrain-300 pt-[64px] sm:pt-[163px] px-5 lg:px-[167px] w-full relative overflow-hidden"
 >
+  <PathDashed />
   <Image
     src={Grøntsager2}
     alt="Illustration af grøntsager"
     class="absolute top-10 right-20 h-60 w-auto z-1 hidden sm:block"
   />
-  <div class="layout">
+  <div class="layout relative">
     <div class="m-auto flex justify-center layout">
       <h2 class="text-MarketMidnight-500 mb-[24px]">Lokationer for Grønne markeder</h2>
       <p class="mb-[35px] sm:mb-[82px] w-full sm:w-1/2 text-MarketMidnight-500">
@@ -45,7 +46,7 @@ import { Image } from "astro:assets";
         <Image
           src={Jordbær}
           alt="Illustration af blomst"
-          class="absolute top-200 -left-5 h-60 w-auto z-1 hidden sm:block"
+          class="absolute top-200 -left-42 h-60 w-auto z-1 hidden sm:block"
         />
         <Market
           image={b4}
@@ -58,7 +59,7 @@ import { Image } from "astro:assets";
         <Image
           src={Gulerod}
           alt="Illustration af blomst"
-          class="absolute bottom-350 right-10 h-40 w-auto rotate-150 z-1"
+          class="absolute bottom-350 -right-10 h-40 w-auto rotate-150 z-1"
         />
         <Market
           image={b5}
@@ -78,7 +79,7 @@ import { Image } from "astro:assets";
         <Image
           src={Bær3}
           alt="Illustration af blomst"
-          class="absolute bottom-35 right-10 h-25 sm:h-40 w-auto z-1"
+          class="absolute bottom-35 right-2 lg:-right-20 h-25 sm:h-40 w-auto z-1"
         />
       </div>
       <BigButtonBlack text="Se vores kalender" link="/kalender" />
